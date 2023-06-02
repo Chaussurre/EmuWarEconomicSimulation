@@ -1,0 +1,18 @@
+{
+    "name": "CombatSystem.Tests",
+    "rootNamespace": "CombatSystem.Tests",
+    "references": [
+        "GUID:e3e17ec05ec762746aa4a6bb6eac64a7"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
