@@ -1,28 +1,28 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
-using DataModificationBuffer = CombatSystem.DataWatcher<CombatSystem.ResourcesManager.ResourceModification>.DataWatcherBuffer;
+using DataModificationBuffer = CombatSystem.IDataWatcher<CombatSystem.ResourceModification>.DataWatcherBuffer;
 
 namespace CombatSystem.Tests
 {
-    public class ResourcesManagerTests
+    public class UnityEventResourceManagerTests
     {
-        private ResourcesManager manager;
-        private ResourcesManager.ResourceData resourceData;
+        private UnityEventResourceManager manager;
+        private UnityEventResourceManager.ResourceData resourceData;
 
         [SetUp]
         public void SetUp()
         {
-            manager = new GameObject().AddComponent<ResourcesManager>();
-            resourceData = new ResourcesManager.ResourceData
+            manager = new GameObject().AddComponent<UnityEventResourceManager>();
+            resourceData = new UnityEventResourceManager.ResourceData
             {
                 Resource = ScriptableObject.CreateInstance<Resource>(),
                 MaxValue = 100,
                 MinValue = 0,
                 Value = 50,
-                DataWatcher = new DataWatcher<ResourcesManager.ResourceModification>()
+                DataWatcher = new UnityEventDataWatcher<ResourceModification>()
             };
-            manager.Resources = new List<ResourcesManager.ResourceData> { resourceData };
+            manager.Resources = new List<UnityEventResourceManager.ResourceData> { resourceData };
         }
 
         [Test]
@@ -49,7 +49,7 @@ namespace CombatSystem.Tests
         public void ModifiesResourceWithModifiers()
         {
             // Arrange
-            manager.Resources[0].DataWatcher.Modifiers.AddListener(Add10);
+            manager.Resources[0].DataWatcher.AddModifier(Add10);
 
             // Act
             manager.ChangeResource(resourceData.Resource, -20, null, null);

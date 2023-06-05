@@ -6,12 +6,12 @@ using UnityEngine.Events;
 namespace CombatSystem.Tests
 {
 
-    public class DataWatcherTests
+    public class UnityEventDataWatcherTests
     {
         [Test]
         public void NoDataTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
 
             int result = dataWatcher.WatchData(bufferData);
@@ -22,11 +22,11 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifierCalledTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
 
             bool modifiersCalled = false;
-            dataWatcher.Modifiers.AddListener(data =>
+            dataWatcher.AddModifier(data =>
             {
                 modifiersCalled = true;
             });
@@ -39,16 +39,16 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifierRemovedTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
 
             bool modifiersCalled = false;
-            UnityAction<DataWatcher<int>.DataWatcherBuffer> action = data =>
+            UnityAction<IDataWatcher<int>.DataWatcherBuffer> action = data =>
             {
                 modifiersCalled = true;
             };
 
-            dataWatcher.Modifiers.AddListener(action);
+            dataWatcher.AddModifier(action);
             dataWatcher.RemoveModifier(action);
 
             dataWatcher.WatchData(bufferData);
@@ -59,11 +59,11 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifierChageBufferTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
             
 
-            dataWatcher.Modifiers.AddListener(data =>
+            dataWatcher.AddModifier(data =>
             {
                 data.DataBuffer += 10;
             });
@@ -77,16 +77,16 @@ namespace CombatSystem.Tests
         [Test]
         public void SeveralModifiersChageBufferTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
             
 
-            dataWatcher.Modifiers.AddListener(data =>
+            dataWatcher.AddModifier(data =>
             {
                 data.DataBuffer += 10;
             });
 
-            dataWatcher.Modifiers.AddListener(data =>
+            dataWatcher.AddModifier(data =>
             {
                 data.DataBuffer *= 2;
             });
@@ -99,12 +99,12 @@ namespace CombatSystem.Tests
         [Test]
         public void ReactionCalledTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
             
 
             bool reactionsCalled = false;
-            dataWatcher.Reactions.AddListener(data =>
+            dataWatcher.AddReaction(data =>
             {
                 reactionsCalled = true;
             });
@@ -118,7 +118,7 @@ namespace CombatSystem.Tests
         [Test]
         public void ReactionRemovedTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
 
             bool reactionCalled = false;
@@ -127,7 +127,7 @@ namespace CombatSystem.Tests
                 reactionCalled = true;
             };
 
-            dataWatcher.Reactions.AddListener(action);
+            dataWatcher.AddReaction(action);
             dataWatcher.RemoveReaction(action);
 
             dataWatcher.WatchData(bufferData);
@@ -138,17 +138,17 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifiersAndReactionsCalledTest()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
             
 
             bool modifiersCalled = false;
             bool reactionsCalled = false;
-            dataWatcher.Modifiers.AddListener(data =>
+            dataWatcher.AddModifier(data =>
             {
                 modifiersCalled = true;
             });
-            dataWatcher.Reactions.AddListener(data =>
+            dataWatcher.AddReaction(data =>
             {
                 reactionsCalled = true;
             });
@@ -163,15 +163,15 @@ namespace CombatSystem.Tests
         [Test]
         public void ReactionSeesModifiersChange()
         {
-            var dataWatcher = new DataWatcher<int>();
+            var dataWatcher = new UnityEventDataWatcher<int>();
             int bufferData = 42;
             bool seeingChange = false;
             
-            dataWatcher.Modifiers.AddListener(data =>
+            dataWatcher.AddModifier(data =>
             {
                 data.DataBuffer += 10;
             });
-            dataWatcher.Reactions.AddListener(data =>
+            dataWatcher.AddReaction(data =>
             {
                 seeingChange = data == bufferData + 10;
             });

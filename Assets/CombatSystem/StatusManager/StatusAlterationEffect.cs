@@ -26,7 +26,7 @@ namespace CombatSystem
             public ICombatSystemSource Source;
         }
 
-        public DataWatcher<StatusStackChange> DataWatcher = new();
+        public UnityEventDataWatcher<StatusStackChange> DataWatcher = new();
 
         public void ChangeStacks(int delta, ICombatSystemSource source)
         {
