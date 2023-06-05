@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using DataModificationBuffer = CombatSystem.DataWatcher<CombatSystem.ResourcesManager.ResourceModification>.DataWatcherBuffer;
 
 namespace CombatSystem.Tests
 {
@@ -57,7 +58,7 @@ namespace CombatSystem.Tests
             Assert.AreEqual(40, manager.Resources[0].Value);
         }
 
-        private void Add10(DataWatcher<ResourcesManager.ResourceModification>.DataWatcherBuffer buffer)
+        private void Add10(DataModificationBuffer buffer)
         {
             buffer.DataBuffer.delta += 10;
         }

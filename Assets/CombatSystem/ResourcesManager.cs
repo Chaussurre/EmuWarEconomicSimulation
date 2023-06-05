@@ -16,11 +16,9 @@ namespace CombatSystem
             public int min;
             public int delta;
             public float multiplier;
-            public IResourceModificationSource source;
+            public ICombatSystemSource source;
             public List<string> tags;
         }
-
-        public interface IResourceModificationSource { }
 
         [Serializable]
         public struct ResourceData
@@ -34,7 +32,7 @@ namespace CombatSystem
 
         public List<ResourceData> Resources;
 
-        public void ChangeResource(Resource resource, int delta, IResourceModificationSource source, List<string> tags)
+        public void ChangeResource(Resource resource, int delta, ICombatSystemSource source, List<string> tags)
         {
             if (Resources.All(x => x.Resource != resource))
                 throw new ArgumentOutOfRangeException("resource");
