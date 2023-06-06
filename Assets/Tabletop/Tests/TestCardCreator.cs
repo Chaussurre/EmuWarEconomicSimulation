@@ -7,7 +7,7 @@ namespace Tabletop
     public class TestCardCreator : MonoBehaviour
     {
         public CardManager<int> Manager;
-        public CardEmplacement<int> Emplacement;
+        public CardStack<int> Emplacement;
         public Card<int>.CardInstance CardToCreate;
 
         [ContextMenu("Create Card")]

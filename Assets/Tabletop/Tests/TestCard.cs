@@ -6,6 +6,6 @@ namespace Tabletop
 {
     public class TestCard : Card<int>
     {
-        
+
     }
 }

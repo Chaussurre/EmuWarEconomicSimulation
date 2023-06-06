@@ -6,7 +6,7 @@ namespace Tabletop
     {
         public TMP_Text text;
 
-        public override void UpdateData(int cardData)
+        protected override void UpdateInternData(int cardData)
         {
             text.text = cardData.ToString();
         }

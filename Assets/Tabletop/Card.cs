@@ -12,6 +12,14 @@ namespace Tabletop
             public TCardData data;
         }
 
-        public CardVisual<TCardData> VisualPrefab;
+        [SerializeField] private CardVisual<TCardData> VisualPrefab;
+
+        public CardVisual<TCardData> CreateVisual(CardInstance Card, CardManager<TCardData> manager)
+        {
+            var visual = Instantiate(VisualPrefab);
+            visual.InitID(Card.ID, manager);
+            visual.UpdateData(Card);
+            return visual;
+        }
     }
 }

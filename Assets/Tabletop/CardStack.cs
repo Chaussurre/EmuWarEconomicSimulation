@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Tabletop
 {
-    public class CardEmplacement<TCardData> : MonoBehaviour where TCardData : struct
+    public class CardStack<TCardData> : MonoBehaviour where TCardData : struct
     {
         Card<TCardData>.CardInstance? Card;
         CardVisual<TCardData> CardVisual;
@@ -35,12 +35,11 @@ namespace Tabletop
 
             if (CardVisual)
             {
-                CardVisual.UpdateData(Card.Value.data);
+                CardVisual.UpdateData(Card.Value);
                 return;
             }
 
-            CardVisual = Instantiate(manager.GetCard(Card.Value).VisualPrefab, transform);
-            CardVisual.UpdateData(Card.Value.data);
+            CardVisual = manager.GetCard(Card.Value).CreateVisual(Card.Value, manager);
         }
     }
 }

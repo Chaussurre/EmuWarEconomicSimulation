@@ -4,5 +4,5 @@ using UnityEngine;
 
 namespace Tabletop
 {
-    public class TestCardEmplacement : CardEmplacement<int> {}
+    public class TestCardEmplacement : CardStack<int> {}
 }
