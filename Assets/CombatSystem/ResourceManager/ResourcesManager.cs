@@ -5,21 +5,21 @@ using System.Linq;
 
 namespace CombatSystem
 {
-    public struct ResourceModification
-    {
-        public int originalValue;
-        public int originalMax;
-        public int max;
-        public int originalMin;
-        public int min;
-        public int delta;
-        public float multiplier;
-        public ICombatSystemSource source;
-        public List<string> tags;
-    }
 
-    public class ResourcesManager<DataWatcher> : MonoBehaviour where DataWatcher : IDataWatcher<ResourceModification>
+    public class ResourcesManager : MonoBehaviour
     {
+        public struct ResourceModification
+        {
+            public int originalValue;
+            public int originalMax;
+            public int max;
+            public int originalMin;
+            public int min;
+            public int delta;
+            public float multiplier;
+            public ICombatSystemSource source;
+            public List<string> tags;
+        }
 
         [Serializable]
         public struct ResourceData
@@ -28,7 +28,7 @@ namespace CombatSystem
             public int MaxValue;
             public int MinValue;
             public int Value;
-            public DataWatcher DataWatcher;
+            public DataWatcher<ResourceModification> DataWatcher;
         }
 
         public List<ResourceData> Resources;

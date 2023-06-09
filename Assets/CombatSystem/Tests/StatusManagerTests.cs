@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace CombatSystem.Tests
 {
-    public class UnityEventStatusManagerTests
+    public class StatusManagerTests
     {
-        private UnityEventStatusManager unityEventStatusManager;
+        private StatusManager unityEventStatusManager;
         private StatusAlteration statusAlteration;
 
         [SetUp]
         public void Setup()
         {
-            unityEventStatusManager = new GameObject().AddComponent<UnityEventStatusManager>();
+            unityEventStatusManager = new GameObject().AddComponent<StatusManager>();
             statusAlteration = ScriptableObject.CreateInstance<StatusAlteration>();
             statusAlteration.EffectPrefab = new GameObject().AddComponent<StatusAlterationEffect>();
         }

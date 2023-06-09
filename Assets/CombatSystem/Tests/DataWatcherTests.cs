@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,12 +7,12 @@ using UnityEngine.Events;
 namespace CombatSystem.Tests
 {
 
-    public class UnityEventDataWatcherTests
+    public class DataWatcherTests
     {
         [Test]
         public void NoDataTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
 
             int result = dataWatcher.WatchData(bufferData);
@@ -22,7 +23,7 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifierCalledTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
 
             bool modifiersCalled = false;
@@ -39,11 +40,11 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifierRemovedTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
 
             bool modifiersCalled = false;
-            UnityAction<IDataWatcher<int>.DataWatcherBuffer> action = data =>
+            Action<DataWatcher<int>.DataWatcherBuffer> action = data =>
             {
                 modifiersCalled = true;
             };
@@ -59,7 +60,7 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifierChageBufferTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
             
 
@@ -77,7 +78,7 @@ namespace CombatSystem.Tests
         [Test]
         public void SeveralModifiersChageBufferTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
             
 
@@ -97,9 +98,33 @@ namespace CombatSystem.Tests
         }
 
         [Test]
+        public void ReorderModifiersTest()
+        {
+            var dataWatcher = new DataWatcher<int>();
+            int bufferData = 42;
+
+            dataWatcher.AddModifier(data =>
+            {
+                data.DataBuffer += 10;
+            });
+
+            dataWatcher.AddModifier(data =>
+            {
+                data.DataBuffer *= 2;
+            });
+
+            dataWatcher.ModifierActions.Reverse();
+            dataWatcher.UpdateActionList();
+
+            int result = dataWatcher.WatchData(bufferData);
+
+            Assert.AreEqual(bufferData * 2 + 10, result);
+        }
+
+        [Test]
         public void ReactionCalledTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
             
 
@@ -118,11 +143,11 @@ namespace CombatSystem.Tests
         [Test]
         public void ReactionRemovedTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
 
             bool reactionCalled = false;
-            UnityAction<int> action = data =>
+            Action<int> action = data =>
             {
                 reactionCalled = true;
             };
@@ -138,7 +163,7 @@ namespace CombatSystem.Tests
         [Test]
         public void ModifiersAndReactionsCalledTest()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
             
 
@@ -158,12 +183,39 @@ namespace CombatSystem.Tests
             Assert.IsTrue(modifiersCalled);
             Assert.IsTrue(reactionsCalled);
         }
+        [Test]
+        public void ReorderReactionsTest()
+        {
+            var dataWatcher = new DataWatcher<int>();
+            int bufferData = 42;
+
+            bool firstReaction = false;
+            bool secondReaction = false;
+
+            dataWatcher.AddReaction(data =>
+            {
+                firstReaction = secondReaction;
+            });
+
+            dataWatcher.AddReaction(data =>
+            {
+                secondReaction = true;
+            });
+
+            dataWatcher.ReactionActions.Reverse();
+            dataWatcher.UpdateActionList();
+
+            int result = dataWatcher.WatchData(bufferData);
+
+            Assert.IsTrue(firstReaction);
+            Assert.IsTrue(secondReaction);
+        }
 
 
         [Test]
         public void ReactionSeesModifiersChange()
         {
-            var dataWatcher = new UnityEventDataWatcher<int>();
+            var dataWatcher = new DataWatcher<int>();
             int bufferData = 42;
             bool seeingChange = false;
             

@@ -173,6 +173,7 @@ MonoBehaviour:
   Cards:
   - {fileID: 623839527}
   - {fileID: 968058209}
+  HiddenCardTemplate: {fileID: 0}
 --- !u!114 &132755559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,11 +186,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5230c1050e3e56b40b3f0e179aab9f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 132755558}
-  Emplacement: {fileID: 270430954}
-  CardToCreate:
-    ID: 0
-    data: 14
+  CardPool: {fileID: 132755558}
+  Stack: {fileID: 270430954}
+  CardToCreate: {fileID: 623839527}
+  CardData: 3
+  Index: 0
 --- !u!1 &270430952
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,8 +201,9 @@ GameObject:
   m_Component:
   - component: {fileID: 270430953}
   - component: {fileID: 270430954}
+  - component: {fileID: 270430955}
   m_Layer: 0
-  m_Name: Card Emplacement
+  m_Name: Card Stack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,6 +236,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36339dced84c92945818c4e39c935884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardsToInitialize:
+  - Card: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+    data: 0
+  - Card: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+    data: 1
+  - Card: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+    data: 2
+  DataWatcher:
+    Modifiers:
+      m_PersistentCalls:
+        m_Calls: []
+    Reactions:
+      m_PersistentCalls:
+        m_Calls: []
+  CardPool: {fileID: 132755558}
+--- !u!114 &270430955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270430952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08c576888d43a14d92c132267b8de72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardStack: {fileID: 270430954}
+  Style: 0
+  FixedSpacing: 0.5
+  margins: 1
+  MoveSpeed: 10
+  Size: {x: 10, y: 0}
 --- !u!1 &337306954
 GameObject:
   m_ObjectHideFlags: 0

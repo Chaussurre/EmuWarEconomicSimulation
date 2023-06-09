@@ -6,20 +6,28 @@ namespace Tabletop
 {
     public class TestCardCreator : MonoBehaviour
     {
-        public CardManager<int> Manager;
-        public CardStack<int> Emplacement;
-        public Card<int>.CardInstance CardToCreate;
+        public TestCardPool CardPool;
+        public TestCardStack Stack;
+        public Card<int> CardToCreate;
+        public int CardData;
+        public int Index;
 
         [ContextMenu("Create Card")]
         public void Create()
         {
-            Emplacement.AddCard(CardToCreate, Manager);
+            Stack.InsertCard(CardPool.CreateInstance(CardToCreate.name, CardData), Index);
+        }
+
+        [ContextMenu("Update Card")]
+        public void UpdateCard()
+        {
+            Stack.UpdateCard(CardPool.CreateInstance(CardToCreate, CardData), Index);
         }
 
         [ContextMenu("Remove Card")]
         public void Remove()
         {
-            Emplacement.RemoveCard(Manager);
+            Stack.RemoveCard(Index);
         }
     }
 }

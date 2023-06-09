@@ -6,23 +6,22 @@ using UnityEngine;
 
 namespace CombatSystem
 {
-    public struct StatusStackChange
+    public class StatusManager : MonoBehaviour
     {
-        public int Stacks;
-        public int? MaxStacks;
-        public int Delta;
-        public ICombatSystemSource Source;
-    }
-
-    public abstract class StatusManager<TDataWatcher> : MonoBehaviour where TDataWatcher : IDataWatcher<StatusStackChange>
-    {
+        public struct StatusStackChange
+        {
+            public int Stacks;
+            public int? MaxStacks;
+            public int Delta;
+            public ICombatSystemSource Source;
+        }
 
         [Serializable]
         public struct StatusAlterationData
         {
             public StatusAlteration Status;
             public StatusAlterationEffect StatusGameObject;
-            public TDataWatcher DataWatcher;
+            public DataWatcher<StatusStackChange> DataWatcher;
         }
 
         public List<StatusAlterationData> StatusAlterations = new();
@@ -51,7 +50,7 @@ namespace CombatSystem
             {
                 StatusAlterationData statusData = new() {
                     Status = status,
-                    DataWatcher = InitDataWatcher(),
+                    DataWatcher = new(),
                 };
                 StatusAlterations.Add(statusData);
                 InitGameObject(StatusAlterations.Count - 1);
@@ -78,13 +77,11 @@ namespace CombatSystem
             statusData.StatusGameObject.AddStacks(data.Delta);
         }
 
-        public IDataWatcher<StatusStackChange> GetDataWatcher(StatusAlteration status)
+        public DataWatcher<StatusStackChange> GetDataWatcher(StatusAlteration status)
         {
             var statusData = GetStatusData(status);
 
             return statusData.DataWatcher;
         }
-
-        protected abstract TDataWatcher InitDataWatcher();
     }
 }

@@ -7,22 +7,25 @@ namespace Tabletop
     public abstract class CardVisual<TCardData> : MonoBehaviour where TCardData : struct
     {
         private int OriginalCardID;
-        private CardManager<TCardData> Manager;
+        private CardPool<TCardData> CardPool;
 
-        public void InitID(int ID, CardManager<TCardData> manager)
+        private Vector3 localTarget;
+        [SerializeField] private float speedLerp;
+
+        public void InitID(int ID, CardPool<TCardData> cardPool)
         {
             OriginalCardID = ID;
-            Manager = manager;
+            CardPool = cardPool;
         }
 
         public CardVisual<TCardData> UpdateData(Card<TCardData>.CardInstance Card)
         {
-            if (Card.ID != OriginalCardID)
+            if (Card.CardID != OriginalCardID)
             {
                 Destroy(gameObject);
 
-                return Manager.GetCard(Card)
-                    .CreateVisual(Card, Manager);
+                return CardPool.GetCard(Card)
+                    .CreateVisual(Card, CardPool);
             }
          
             
@@ -31,5 +34,17 @@ namespace Tabletop
         }
 
         abstract protected void UpdateInternData(TCardData cardData);
+
+        abstract public void SetRenderingOrder(int order);
+
+        public void MoveTo(Vector3 localTarget)
+        {
+            this.localTarget = localTarget;
+        }
+
+        private void Update()
+        {
+            transform.localPosition = Vector3.Lerp(transform.localPosition, localTarget, speedLerp * Time.deltaTime);
+        }
     }
 }

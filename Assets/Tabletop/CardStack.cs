@@ -1,4 +1,5 @@
-using System.Collections;
+using CombatSystem;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,40 +7,112 @@ namespace Tabletop
 {
     public class CardStack<TCardData> : MonoBehaviour where TCardData : struct
     {
-        Card<TCardData>.CardInstance? Card;
-        CardVisual<TCardData> CardVisual;
-
-        public void AddCard(Card<TCardData>.CardInstance card, CardManager<TCardData> manager)
+        public struct CardStackDataChange
         {
-            Card = card;
-            UpdateVisuals(manager);
-        }
-
-        public Card<TCardData>.CardInstance? GetCard() => Card;
-
-        public void RemoveCard(CardManager<TCardData> manager)
-        {
-            Card = null;
-            UpdateVisuals(manager);
-        }
-
-        public void UpdateVisuals(CardManager<TCardData> manager)
-        {
-            if (!Card.HasValue && CardVisual)
+            public enum ChangeType
             {
-                Destroy(CardVisual.gameObject);
-                CardVisual = null;
-
-                return;
+                ADD, REMOVE, UPDATE
             }
 
-            if (CardVisual)
-            {
-                CardVisual.UpdateData(Card.Value);
-                return;
-            }
+            public int CardChangedIndex;
+            public ChangeType Change;
+            public Card<TCardData>.CardInstance OldCard;
+            public Card<TCardData>.CardInstance NewCard;
+        }
 
-            CardVisual = manager.GetCard(Card.Value).CreateVisual(Card.Value, manager);
+        [Serializable]
+        struct CardInit
+        {
+            public Card<TCardData> Card;
+            public TCardData data;
+        }
+
+        [SerializeField] List<CardInit> CardsToInitialize = new();
+        List<Card<TCardData>.CardInstance> Cards = new();
+        public DataWatcher<CardStackDataChange> DataWatcher;
+        public CardPool<TCardData> CardPool;
+
+        private void Awake()
+        {
+            if (CardPool == null)
+                CardPool = FindObjectOfType<CardPool<TCardData>>();
+        }
+
+        private void Start()
+        {
+            foreach (var card in CardsToInitialize)
+                AddCard(CardPool.CreateInstance(card.Card.name, card.data));
+        }
+
+        public int Size => Cards.Count;
+
+        public Card<TCardData>.CardInstance GetCard(int index) => Cards[index];
+
+
+        public void AddCard(Card<TCardData>.CardInstance card)
+        {
+            InsertCard(card, Cards.Count);
+        }
+
+        public void InsertCard(Card<TCardData>.CardInstance card, int index)
+        {
+            if (index < 0 || index > Cards.Count)
+                throw new ArgumentOutOfRangeException("index");
+
+            CardStackDataChange CardChangeData = new()
+            {
+                Change = CardStackDataChange.ChangeType.ADD,
+                CardChangedIndex = index,
+                NewCard = card,
+            };
+
+            CardChangeData = DataWatcher.WatchData(CardChangeData);
+
+            if (CardChangeData.CardChangedIndex < 0 || CardChangeData.CardChangedIndex > Cards.Count)
+                throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
+
+            Cards.Insert(CardChangeData.CardChangedIndex, CardChangeData.NewCard);
+        }
+
+        public void UpdateCard(Card<TCardData>.CardInstance card, int index)
+        {
+            if (index < 0 || index >= Cards.Count)
+                throw new ArgumentOutOfRangeException("index");
+
+            CardStackDataChange CardChangeData = new()
+            {
+                Change = CardStackDataChange.ChangeType.UPDATE,
+                CardChangedIndex = index,
+                OldCard = Cards[index],
+                NewCard = card,
+            };
+
+            CardChangeData = DataWatcher.WatchData(CardChangeData);
+
+            if (CardChangeData.CardChangedIndex < 0 || CardChangeData.CardChangedIndex >= Cards.Count)
+                throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
+
+            Cards[CardChangeData.CardChangedIndex] = CardChangeData.NewCard;
+        }
+
+        public void RemoveCard(int index)
+        {
+            if (index < 0 || index >= Cards.Count)
+                throw new ArgumentOutOfRangeException("index");
+
+            CardStackDataChange CardChangeData = new()
+            {
+                Change = CardStackDataChange.ChangeType.REMOVE,
+                CardChangedIndex = index,
+                OldCard = Cards[index],
+            };
+
+            CardChangeData = DataWatcher.WatchData(CardChangeData);
+
+            if (CardChangeData.CardChangedIndex < 0 || CardChangeData.CardChangedIndex >= Cards.Count)
+                throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
+
+            Cards.RemoveAt(CardChangeData.CardChangedIndex);
         }
     }
 }
