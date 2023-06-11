@@ -1,37 +1,24 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
 namespace CombatSystem
 {
-
-    public class ResourcesManager : MonoBehaviour
+    public abstract class ResourcesManager<TResourceData, TResourceModification> : MonoBehaviour 
+        where TResourceData : struct
+        where TResourceModification : struct
     {
-        public struct ResourceModification
-        {
-            public int originalValue;
-            public int originalMax;
-            public int max;
-            public int originalMin;
-            public int min;
-            public int delta;
-            public float multiplier;
-            public ICombatSystemSource source;
-            public List<string> tags;
-        }
 
         [Serializable]
-        public struct ResourceData
+        public struct ResourceValue
         {
             public Resource Resource;
-            public int MaxValue;
-            public int MinValue;
-            public int Value;
-            public DataWatcher<ResourceModification> DataWatcher;
+            public TResourceData Data;
+            public DataWatcher<TResourceModification> DataWatcher;
         }
 
-        public List<ResourceData> Resources;
+        public List<ResourceValue> Resources;
 
         public void ChangeResource(Resource resource, int delta, ICombatSystemSource source, List<string> tags)
         {
@@ -40,29 +27,26 @@ namespace CombatSystem
 
             int index = Resources.FindIndex(x => x.Resource == resource);
 
-            var data = Resources[index];
+            var ResourceValue = Resources[index];
+            var data = ResourceValue.Data;
 
-            ResourceModification modification = new()
+            TResourceModification modification = InitResourceModificationStruct(data, resource, delta, source, tags);
+
+            modification = ResourceValue.DataWatcher.WatchData(modification);
+
+            data = ApplyModification(data, modification);
+
+            Resources[index] = new()
             {
-                originalValue = data.Value,
-                multiplier = 1f,
-                originalMax = data.MaxValue,
-                max = data.MaxValue,
-                originalMin = data.MinValue,
-                min = data.MinValue,
-                delta = delta,
-                source = source,
-                tags = tags,
+                Resource = ResourceValue.Resource,
+                Data = data,
+                DataWatcher = ResourceValue.DataWatcher,
             };
-
-            modification = data.DataWatcher.WatchData(modification);
-
-            data.MaxValue = modification.max;
-            data.MinValue = Mathf.Min(modification.max, modification.min);
-            data.Value += Mathf.RoundToInt(modification.delta * modification.multiplier);
-            data.Value = Mathf.Clamp(data.Value, data.MinValue, data.MaxValue);
-
-            Resources[index] = data;
         }
+
+        protected abstract TResourceModification InitResourceModificationStruct (TResourceData Data, Resource resource, int delta, ICombatSystemSource source, List<string> tags);
+
+        protected abstract TResourceData ApplyModification(TResourceData data, TResourceModification resourceModification);
+
     }
 }

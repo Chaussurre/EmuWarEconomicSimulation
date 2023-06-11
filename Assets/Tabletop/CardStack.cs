@@ -20,14 +20,6 @@ namespace Tabletop
             public Card<TCardData>.CardInstance NewCard;
         }
 
-        [Serializable]
-        struct CardInit
-        {
-            public Card<TCardData> Card;
-            public TCardData data;
-        }
-
-        [SerializeField] List<CardInit> CardsToInitialize = new();
         List<Card<TCardData>.CardInstance> Cards = new();
         public DataWatcher<CardStackDataChange> DataWatcher;
         public CardPool<TCardData> CardPool;
@@ -36,12 +28,6 @@ namespace Tabletop
         {
             if (CardPool == null)
                 CardPool = FindObjectOfType<CardPool<TCardData>>();
-        }
-
-        private void Start()
-        {
-            foreach (var card in CardsToInitialize)
-                AddCard(CardPool.CreateInstance(card.Card.name, card.data));
         }
 
         public int Size => Cards.Count;

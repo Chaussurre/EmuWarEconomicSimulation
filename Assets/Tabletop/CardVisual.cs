@@ -37,12 +37,12 @@ namespace Tabletop
 
         abstract public void SetRenderingOrder(int order);
 
-        public void MoveTo(Vector3 localTarget)
+        public virtual void MoveTo(Vector3 localTarget)
         {
             this.localTarget = localTarget;
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             transform.localPosition = Vector3.Lerp(transform.localPosition, localTarget, speedLerp * Time.deltaTime);
         }

@@ -1,38 +1,41 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
-using DataModificationBuffer = CombatSystem.DataWatcher<CombatSystem.ResourcesManager.ResourceModification>.DataWatcherBuffer;
+using DataModificationBuffer = CombatSystem.DataWatcher<CombatSystem.StandardResourcesManager.ResourceModification>.DataWatcherBuffer;
 
 namespace CombatSystem.Tests
 {
-    public class ResourcesManagerTests
+    public class StandartResourcesManagerTests
     {
-        private ResourcesManager manager;
-        private ResourcesManager.ResourceData resourceData;
+        private StandardResourcesManager manager;
+        private StandardResourcesManager.ResourceValue ResourceValue;
 
         [SetUp]
         public void SetUp()
         {
-            manager = new GameObject().AddComponent<ResourcesManager>();
-            resourceData = new ResourcesManager.ResourceData
+            manager = new GameObject().AddComponent<StandardResourcesManager>();
+            ResourceValue = new()
             {
                 Resource = ScriptableObject.CreateInstance<Resource>(),
-                MaxValue = 100,
-                MinValue = 0,
-                Value = 50,
-                DataWatcher = new()
+                Data = new()
+                {
+                    MaxValue = 100,
+                    MinValue = 0,
+                    Value = 50,
+                },
+                DataWatcher = new(),
             };
-            manager.Resources = new List<ResourcesManager.ResourceData> { resourceData };
+            manager.Resources = new List<StandardResourcesManager.ResourceValue> { ResourceValue };
         }
 
         [Test]
         public void ModifiesResourceCorrectly()
         {
             // Act
-            manager.ChangeResource(resourceData.Resource, -20, null, null);
+            manager.ChangeResource(ResourceValue.Resource, -20, null, null);
 
             // Assert
-            Assert.AreEqual(30, manager.Resources[0].Value);
+            Assert.AreEqual(30, manager.Resources[0].Data.Value);
         }
 
         [Test]
@@ -52,10 +55,10 @@ namespace CombatSystem.Tests
             manager.Resources[0].DataWatcher.AddModifier(Add10);
 
             // Act
-            manager.ChangeResource(resourceData.Resource, -20, null, null);
+            manager.ChangeResource(ResourceValue.Resource, -20, null, null);
 
             // Assert
-            Assert.AreEqual(40, manager.Resources[0].Value);
+            Assert.AreEqual(40, manager.Resources[0].Data.Value);
         }
 
         private void Add10(DataModificationBuffer buffer)
