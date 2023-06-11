@@ -2,16 +2,17 @@ using CombatSystem;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 namespace Tabletop
 {
-    public class CardStack<TCardData> : MonoBehaviour where TCardData : struct
+    public abstract class CardStack<TCardData> : NetworkBehaviour where TCardData : struct
     {
         public struct CardStackDataChange
         {
             public enum ChangeType
             {
-                ADD, REMOVE, UPDATE
+                CREATE, DESTROY, UPDATE
             }
 
             public int CardChangedIndex;
@@ -20,7 +21,7 @@ namespace Tabletop
             public Card<TCardData>.CardInstance NewCard;
         }
 
-        List<Card<TCardData>.CardInstance> Cards = new();
+        SyncList<Card<TCardData>.CardInstance> Cards = new();
         public DataWatcher<CardStackDataChange> DataWatcher;
         public CardPool<TCardData> CardPool;
 
@@ -34,20 +35,21 @@ namespace Tabletop
 
         public Card<TCardData>.CardInstance GetCard(int index) => Cards[index];
 
-
-        public void AddCard(Card<TCardData>.CardInstance card)
+        [Server]
+        public virtual void AddCard(Card<TCardData>.CardInstance card)
         {
             InsertCard(card, Cards.Count);
         }
 
-        public void InsertCard(Card<TCardData>.CardInstance card, int index)
+        [Server]
+        public virtual void InsertCard(Card<TCardData>.CardInstance card, int index)
         {
             if (index < 0 || index > Cards.Count)
                 throw new ArgumentOutOfRangeException("index");
 
             CardStackDataChange CardChangeData = new()
             {
-                Change = CardStackDataChange.ChangeType.ADD,
+                Change = CardStackDataChange.ChangeType.CREATE,
                 CardChangedIndex = index,
                 NewCard = card,
             };
@@ -58,9 +60,12 @@ namespace Tabletop
                 throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
 
             Cards.Insert(CardChangeData.CardChangedIndex, CardChangeData.NewCard);
+
+            DataChangeReact(CardChangeData);
         }
 
-        public void UpdateCard(Card<TCardData>.CardInstance card, int index)
+        [Server]
+        public virtual void UpdateCard(Card<TCardData>.CardInstance card, int index)
         {
             if (index < 0 || index >= Cards.Count)
                 throw new ArgumentOutOfRangeException("index");
@@ -79,16 +84,19 @@ namespace Tabletop
                 throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
 
             Cards[CardChangeData.CardChangedIndex] = CardChangeData.NewCard;
+
+            DataChangeReact(CardChangeData);
         }
 
-        public void RemoveCard(int index)
+        [Server]
+        public virtual void RemoveCard(int index)
         {
             if (index < 0 || index >= Cards.Count)
                 throw new ArgumentOutOfRangeException("index");
 
             CardStackDataChange CardChangeData = new()
             {
-                Change = CardStackDataChange.ChangeType.REMOVE,
+                Change = CardStackDataChange.ChangeType.DESTROY,
                 CardChangedIndex = index,
                 OldCard = Cards[index],
             };
@@ -99,6 +107,10 @@ namespace Tabletop
                 throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
 
             Cards.RemoveAt(CardChangeData.CardChangedIndex);
+
+            DataChangeReact(CardChangeData);
         }
+
+        protected abstract void DataChangeReact(CardStackDataChange dataChange);
     }
 }

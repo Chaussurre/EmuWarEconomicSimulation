@@ -25,29 +25,17 @@ namespace CombatSystem
         private UnityEvent<DataWatcherBuffer> Modifiers = new();
         [SerializeField]
         private UnityEvent<Data> Reactions = new();
+
         public void AddModifier(Action<DataWatcherBuffer> action)
         {
             ModifierActions.Add(action);
             AddModifierToUnityEvent(action);
         }
 
-        private void AddModifierToUnityEvent(Action<DataWatcherBuffer> action)
-        {
-            var UnityAction = CreateDelegate(action);
-            ModifierUnityActions.Add(UnityAction);
-            Modifiers.AddListener(UnityAction);
-        }
-
         public void AddReaction(Action<Data> action)
         {
             ReactionActions.Add(action);
             AddReactionToUnityEvent(action);
-        }
-        private void AddReactionToUnityEvent(Action<Data> action)
-        {
-            var UnityAction = CreateDelegate(action);
-            ReactionUnityActions.Add(UnityAction);
-            Reactions.AddListener(UnityAction);
         }
 
         public void RemoveModifier(Action<DataWatcherBuffer> action)
@@ -74,9 +62,12 @@ namespace CombatSystem
 
         public void UpdateActionList()
         {
-            Modifiers.RemoveAllListeners();
+            foreach (var modif in ModifierUnityActions)
+                Modifiers.RemoveListener(modif);
             ModifierUnityActions.Clear();
-            Reactions.RemoveAllListeners();
+
+            foreach (var react in ReactionUnityActions)
+                Reactions.RemoveListener(react);
             ReactionUnityActions.Clear();
 
             ModifierActions.ForEach(AddModifierToUnityEvent);
@@ -91,6 +82,24 @@ namespace CombatSystem
             Reactions.Invoke(Buffer.DataBuffer);
 
             return Buffer.DataBuffer;
+        }
+
+        public void ForceReact(Data Data)
+        {
+            Reactions.Invoke(Data);
+        }
+
+        private void AddModifierToUnityEvent(Action<DataWatcherBuffer> action)
+        {
+            var UnityAction = CreateDelegate(action);
+            ModifierUnityActions.Add(UnityAction);
+            Modifiers.AddListener(UnityAction);
+        }
+        private void AddReactionToUnityEvent(Action<Data> action)
+        {
+            var UnityAction = CreateDelegate(action);
+            ReactionUnityActions.Add(UnityAction);
+            Reactions.AddListener(UnityAction);
         }
 
         private UnityAction<T> CreateDelegate<T>(Action<T> action)

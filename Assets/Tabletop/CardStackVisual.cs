@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Tabletop
@@ -32,12 +31,12 @@ namespace Tabletop
 
         public void OnChange(CardStack<TCardData>.CardStackDataChange Change)
         {
-            switch(Change.Change)
+            switch (Change.Change)
             {
-                case CardStack<TCardData>.CardStackDataChange.ChangeType.ADD:
+                case CardStack<TCardData>.CardStackDataChange.ChangeType.CREATE:
                     OnAdd(Change.CardChangedIndex, Change.NewCard);
                     break;
-                case CardStack<TCardData>.CardStackDataChange.ChangeType.REMOVE:
+                case CardStack<TCardData>.CardStackDataChange.ChangeType.DESTROY:
                     OnRemove(Change.CardChangedIndex);
                     break;
                 case CardStack<TCardData>.CardStackDataChange.ChangeType.UPDATE:
@@ -54,6 +53,7 @@ namespace Tabletop
             var visual = CardStack.CardPool.CreateVisual(newCard);
             visual.transform.parent = transform;
             visual.transform.localPosition = Vector3.zero;
+
             CardVisuals.Insert(cardChangedIndex, visual);
         }
 
@@ -78,7 +78,7 @@ namespace Tabletop
 
         private float GetPos(int index)
         {
-            switch(Style)
+            switch (Style)
             {
                 case DisplayStyle.FixedSpacingFromLeft:
                     return GetFixedPos(index, 0);

@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Tabletop
 {
-    public class TestCardStackVisual : CardStackVisual<int> {}
+    public class TestCardStackVisual : CardStackVisual<int> { }
 }

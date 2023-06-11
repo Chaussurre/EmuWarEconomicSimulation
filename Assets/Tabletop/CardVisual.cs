@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Tabletop
@@ -27,8 +25,8 @@ namespace Tabletop
                 return CardPool.GetCard(Card)
                     .CreateVisual(Card, CardPool);
             }
-         
-            
+
+
             UpdateInternData(Card.data);
             return this;
         }
