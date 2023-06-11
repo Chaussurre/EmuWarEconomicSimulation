@@ -1,6 +1,6 @@
 using Mirror;
 
-namespace Tabletop
+namespace Tabletop.Example
 {
     public class TestCard : Card<int>
     {

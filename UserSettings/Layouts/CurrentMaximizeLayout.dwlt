@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 15}
+  - {fileID: 17}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -24,8 +24,970 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 2160
+  controlID: 5678
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 264
+    y: 73.6
+    width: 650.8
+    height: 312.6
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 5698
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 182.4
+    - 60.800003
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 243.2
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 2}
+    m_NewResultList:
+    - id: 1018
+      uniqueId: '[EmuWarEconomicSimulation][suite]'
+      name: EmuWarEconomicSimulation
+      fullName: EmuWarEconomicSimulation
+      resultStatus: 2
+      duration: 0.440824
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1014
+      uniqueId: '[Tabletop.Tests.dll][suite]'
+      name: Tabletop.Tests.dll
+      fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/Tabletop.Tests.dll
+      resultStatus: 2
+      duration: 0.4033584
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[EmuWarEconomicSimulation][suite]'
+    - id: 1015
+      uniqueId: Tabletop.Tests.dll/[Tabletop][suite]
+      name: Tabletop
+      fullName: Tabletop
+      resultStatus: 2
+      duration: 0.3972049
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: '[Tabletop.Tests.dll][suite]'
+    - id: 1016
+      uniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
+      name: Tests
+      fullName: Tabletop.Tests
+      resultStatus: 2
+      duration: 0.39146
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1015
+      parentUniqueId: Tabletop.Tests.dll/[Tabletop][suite]
+    - id: 1001
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
+      name: CardPoolTests
+      fullName: Tabletop.Tests.CardPoolTests
+      resultStatus: 1
+      duration: 0.2061181
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1016
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
+    - id: 1006
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithDefaultData]
+      name: CreatesInstanceFromNameWithDefaultData
+      fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithDefaultData
+      resultStatus: 1
+      duration: 0.1712651
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
+    - id: 1007
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithGivenData]
+      name: CreatesInstanceFromNameWithGivenData
+      fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithGivenData
+      resultStatus: 1
+      duration: 0.0015111
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
+    - id: 1004
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceWithDefaultData]
+      name: CreatesInstanceWithDefaultData
+      fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceWithDefaultData
+      resultStatus: 1
+      duration: 0.0010172
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
+    - id: 1005
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceWithGivenData]
+      name: CreatesInstanceWithGivenData
+      fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceWithGivenData
+      resultStatus: 1
+      duration: 0.001132
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
+    - id: 1002
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.ReturnsCorrectCard]
+      name: ReturnsCorrectCard
+      fullName: Tabletop.Tests.CardPoolTests.ReturnsCorrectCard
+      resultStatus: 1
+      duration: 0.001171
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
+    - id: 1003
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.ReturnsHiddenCardTemplate]
+      name: ReturnsHiddenCardTemplate
+      fullName: Tabletop.Tests.CardPoolTests.ReturnsHiddenCardTemplate
+      resultStatus: 1
+      duration: 0.0010338
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
+    - id: 1008
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+      name: CardStackTests
+      fullName: Tabletop.Tests.CardStackTests
+      resultStatus: 2
+      duration: 0.3840276
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1016
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
+    - id: 1009
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.AddsCardToStack]
+      name: AddsCardToStack
+      fullName: Tabletop.Tests.CardStackTests.AddsCardToStack
+      resultStatus: 1
+      duration: 0.2253711
+      messages: 
+      output: 'KcpTransport initialized!
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1010
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.InsertsCardAtGivenIndex]
+      name: InsertsCardAtGivenIndex
+      fullName: Tabletop.Tests.CardStackTests.InsertsCardAtGivenIndex
+      resultStatus: 1
+      duration: 0.0008448
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1013
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact]
+      name: InvokesDataWatcherForceReact
+      fullName: Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact
+      resultStatus: 2
+      duration: 0.0576795
+      messages: 'System.ArgumentOutOfRangeException : Index was out of range. Must
+        be non-negative and less than the size of the collection.
+
+        Parameter
+        name: index'
+      output: 
+      stacktrace: "  at System.Collections.Generic.List`1[T].get_Item (System.Int32
+        index) [0x00009] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n  at Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact
+        () [0x00015] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:116
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1012
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.RemovesCardAtGivenIndex]
+      name: RemovesCardAtGivenIndex
+      fullName: Tabletop.Tests.CardStackTests.RemovesCardAtGivenIndex
+      resultStatus: 1
+      duration: 0.0268284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1011
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.UpdatesCardAtGivenIndex]
+      name: UpdatesCardAtGivenIndex
+      fullName: Tabletop.Tests.CardStackTests.UpdatesCardAtGivenIndex
+      resultStatus: 1
+      duration: 0.0013658
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    m_ResultText: "InvokesDataWatcherForceReact (0,058s)\n---\nSystem.ArgumentOutOfRangeException
+      : Index was out of range. Must be non-negative and less than the size of the
+      collection.\r\nParameter name: index\n---\nat System.Collections.Generic.List`1[T].get_Item
+      (System.Int32 index) [0x00009] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n 
+      at Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact () [0x00015]
+      in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:116
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0"
+    m_ResultStacktrace: "  at System.Collections.Generic.List`1[T].get_Item (System.Int32
+      index) [0x00009] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n  at Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact
+      () [0x00015] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:116
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 "
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 114c0302
+      m_LastClickedID: 33770513
+      m_ExpandedIDs: eeaebbc191bb25caca3b2acb6abc59d8007e2dfcd8772c6987f4c069ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 2}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[EmuWarEconomicSimulation][suite]'
+      name: EmuWarEconomicSimulation
+      fullName: EmuWarEconomicSimulation
+      resultStatus: 1
+      duration: 0.5456031
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1015
+      uniqueId: '[CombatSystem.Tests.dll][suite]'
+      name: CombatSystem.Tests.dll
+      fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/CombatSystem.Tests.dll
+      resultStatus: 1
+      duration: 0.4014153
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[EmuWarEconomicSimulation][suite]'
+    - id: 1016
+      uniqueId: CombatSystem.Tests.dll/[CombatSystem][suite]
+      name: CombatSystem
+      fullName: CombatSystem
+      resultStatus: 1
+      duration: 0.3994516
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1015
+      parentUniqueId: '[CombatSystem.Tests.dll][suite]'
+    - id: 1017
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
+      name: Tests
+      fullName: CombatSystem.Tests
+      resultStatus: 1
+      duration: 0.3980376
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1016
+      parentUniqueId: CombatSystem.Tests.dll/[CombatSystem][suite]
+    - id: 1001
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+      name: DataWatcherTests
+      fullName: CombatSystem.Tests.DataWatcherTests
+      resultStatus: 1
+      duration: 0.0963398
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1026
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
+    - id: 1003
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifierCalledTest]
+      name: ModifierCalledTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ModifierCalledTest
+      resultStatus: 1
+      duration: 0.0270664
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1005
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifierChageBufferTest]
+      name: ModifierChageBufferTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ModifierChageBufferTest
+      resultStatus: 1
+      duration: 0.0064392
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1004
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifierRemovedTest]
+      name: ModifierRemovedTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ModifierRemovedTest
+      resultStatus: 1
+      duration: 0.0015909
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1010
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifiersAndReactionsCalledTest]
+      name: ModifiersAndReactionsCalledTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ModifiersAndReactionsCalledTest
+      resultStatus: 1
+      duration: 0.0016512
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1002
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.NoDataTest]
+      name: NoDataTest
+      fullName: CombatSystem.Tests.DataWatcherTests.NoDataTest
+      resultStatus: 1
+      duration: 0.0004322
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1008
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReactionCalledTest]
+      name: ReactionCalledTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ReactionCalledTest
+      resultStatus: 1
+      duration: 0.0005785
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1009
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReactionRemovedTest]
+      name: ReactionRemovedTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ReactionRemovedTest
+      resultStatus: 1
+      duration: 0.0012385
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1012
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReactionSeesModifiersChange]
+      name: ReactionSeesModifiersChange
+      fullName: CombatSystem.Tests.DataWatcherTests.ReactionSeesModifiersChange
+      resultStatus: 1
+      duration: 0.0007526
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1007
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReorderModifiersTest]
+      name: ReorderModifiersTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ReorderModifiersTest
+      resultStatus: 1
+      duration: 0.0016725
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1011
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReorderReactionsTest]
+      name: ReorderReactionsTest
+      fullName: CombatSystem.Tests.DataWatcherTests.ReorderReactionsTest
+      resultStatus: 1
+      duration: 0.0008084
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1006
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.SeveralModifiersChageBufferTest]
+      name: SeveralModifiersChageBufferTest
+      fullName: CombatSystem.Tests.DataWatcherTests.SeveralModifiersChageBufferTest
+      resultStatus: 1
+      duration: 0.0007398
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
+    - id: 1013
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StandartResourcesManagerTests][suite]
+      name: StandartResourcesManagerTests
+      fullName: CombatSystem.Tests.StandartResourcesManagerTests
+      resultStatus: 1
+      duration: 0.0594488
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1026
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
+    - id: 1014
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StandartResourcesManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StandartResourcesManagerTests.ModifiesResourceCorrectly]
+      name: ModifiesResourceCorrectly
+      fullName: CombatSystem.Tests.StandartResourcesManagerTests.ModifiesResourceCorrectly
+      resultStatus: 1
+      duration: 0.0364176
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StandartResourcesManagerTests][suite]
+    - id: 1016
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StandartResourcesManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StandartResourcesManagerTests.ModifiesResourceWithModifiers]
+      name: ModifiesResourceWithModifiers
+      fullName: CombatSystem.Tests.StandartResourcesManagerTests.ModifiesResourceWithModifiers
+      resultStatus: 1
+      duration: 0.0013402
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StandartResourcesManagerTests][suite]
+    - id: 1015
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StandartResourcesManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StandartResourcesManagerTests.ThrowsExceptionForInvalidResource]
+      name: ThrowsExceptionForInvalidResource
+      fullName: CombatSystem.Tests.StandartResourcesManagerTests.ThrowsExceptionForInvalidResource
+      resultStatus: 1
+      duration: 0.0040733
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StandartResourcesManagerTests][suite]
+    - id: 1017
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
+      name: StatusManagerTests
+      fullName: CombatSystem.Tests.StatusManagerTests
+      resultStatus: 1
+      duration: 0.2340916
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1026
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
+    - id: 1018
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.AddStacks]
+      name: AddStacks
+      fullName: CombatSystem.Tests.StatusManagerTests.AddStacks
+      resultStatus: 1
+      duration: 0.198642
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
+    - id: 1019
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.AddStacksWithMax]
+      name: AddStacksWithMax
+      fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithMax
+      resultStatus: 1
+      duration: 0.0007997
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
+    - id: 1020
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.AddStacksWithModifier]
+      name: AddStacksWithModifier
+      fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithModifier
+      resultStatus: 1
+      duration: 0.0041916
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
+    - id: 1023
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.GetDataWatcher]
+      name: GetDataWatcher
+      fullName: CombatSystem.Tests.StatusManagerTests.GetDataWatcher
+      resultStatus: 1
+      duration: 0.0045081
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
+    - id: 1021
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.RemoveStacks]
+      name: RemoveStacks
+      fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacks
+      resultStatus: 1
+      duration: 0.0035186
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
+    - id: 1022
+      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.RemoveStacksNegative]
+      name: RemoveStacksNegative
+      fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacksNegative
+      resultStatus: 1
+      duration: 0.0021861
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
+    m_ResultText: Tests (0,398s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: c50c2fed
+      m_LastClickedID: -315683643
+      m_ExpandedIDs: 2eca7da1eeaebbc191bb25caca3b2acb75a77ddfc50c2fedd8772c6987f4c0696cd9057a4d7d957affffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 916.8
+    height: 730.8
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 5679
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 916.8
+    height: 333.6
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 5680
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 264
+    height: 333.6
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 6}
+  m_Panes:
+  - {fileID: 6}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,7 +1020,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 769effff24fbffff
+      m_ExpandedIDs: fe6cffff406dffffae6effff4a7bffff8c7bfffff87cffff0481ffff4681ffff9282ffffd882ffff1a83ffff8684ffff5887ffff9a87ffffde88ffff2c89ffff6e89ffffb88affffc08dffff028effff4e8fffff888fffffca8fffff1691ffff5491ffff9691ffffe292ffffc493ffff0694ffff3a95ffff6a96ffffac96ffff5898ffff9a98ffffdc98ffff2a9affff489bffff8a9bffffd89cffff229dffff649dffff129fffff549fffff969fffff6eb2ffffb0b2ffff04b4ffffa0b7ffffe2b7ffff14b9ffff62b9ffffa4b9ffff8ec2ffffd0c2ffff14c4fffffec4ffff40c5ffff84c6ffff7cc7ffffbec7ffff02c9ffff5ccbffff9ecbffffe2ccffffd0cdffff12ceffff56cfffffd4d0ffff16d1ffff5ad2fffff0d8ffff32d9ffff90daffff2cdcffff6edcffffccddfffface3ffffeee3ffff3ae5fffff4e8ffff36e9ffff96eaffffd4eaffff16ebffff74edffff40f6ffff24fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -82,57 +1044,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
-  - {fileID: 8}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 916.8
-    height: 730.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 2161
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 5}
-  - {fileID: 6}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 916.8
-    height: 333.6
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 2162
---- !u!114 &5
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,33 +1054,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneHierarchyWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 264
-    height: 333.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 2}
-  m_Panes:
-  - {fileID: 2}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -177,14 +1063,15 @@ MonoBehaviour:
     y: 0
     width: 652.8
     height: 333.6
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 7}
+  m_ActualView: {fileID: 2}
   m_Panes:
-  - {fileID: 7}
-  m_Selected: 0
+  - {fileID: 8}
+  - {fileID: 2}
+  m_Selected: 1
   m_LastSelected: 0
---- !u!114 &7
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,9 +1329,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.21538706, y: -0.101354025, z: -0.1546183}
+    m_Target: {x: -2.65981, y: 1.5772022, z: -0.21932034}
     speed: 2
-    m_Value: {x: -0.21538706, y: -0.101354025, z: -0.1546183}
+    m_Value: {x: -2.65981, y: 1.5772022, z: -0.21932034}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -494,9 +1381,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.4840056
+    m_Target: 6.8803635
     speed: 2
-    m_Value: 0.4840056
+    m_Value: 6.8803635
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -521,7 +1408,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &8
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,8 +1421,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 11}
+  - {fileID: 10}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -545,8 +1432,8 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 2247
---- !u!114 &9
+  controlID: 5766
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -567,12 +1454,13 @@ MonoBehaviour:
     height: 397.19998
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 10}
+  m_ActualView: {fileID: 11}
   m_Panes:
-  - {fileID: 10}
+  - {fileID: 11}
+  - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &10
+  m_LastSelected: 1
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -613,22 +1501,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tabletop
+    - Assets/Tabletop/Tests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Tabletop
+  - Assets/Tabletop/Tests
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Chaussure\Documents\Unity\EmuWarEconomicSimulation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 259}
-    m_SelectedIDs: dc640000
-    m_LastClickedID: 25820
-    m_ExpandedIDs: 00000000d0640000d2640000d4640000d6640000d8640000da640000dc64000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 107.80002}
+    m_SelectedIDs: 2c650000
+    m_LastClickedID: 25900
+    m_ExpandedIDs: 00000000d0640000d2640000d4640000d6640000d8640000da640000dc64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,7 +1532,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 9}
+      m_ClientGUIView: {fileID: 7}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -656,7 +1544,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d0640000d2640000d4640000d6640000d8640000da640000dc64000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000d0640000d2640000d4640000d6640000d8640000da640000dc64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -683,7 +1571,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000828800001cc6000020c600007e880000806a0000ea6b0000f86d0000406f0000846b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -700,7 +1588,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 9}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -712,7 +1600,35 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 212
---- !u!114 &11
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 407.2
+    width: 403.8
+    height: 376.19998
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -733,14 +1649,14 @@ MonoBehaviour:
     height: 397.19998
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 13}
   - {fileID: 14}
+  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 2
---- !u!114 &12
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -803,7 +1719,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
+    m_HSlider: 1
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -817,18 +1733,18 @@ MonoBehaviour:
       y: 21
       width: 510
       height: 355.19998
-    m_Scale: {x: 0.33203125, y: 0.33203125}
-    m_Translation: {x: 255, y: 177.59999}
+    m_Scale: {x: 0.34199217, y: 0.34199217}
+    m_Translation: {x: 248.934, y: 177.59999}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -768
-      y: -534.8894
-      width: 1536
-      height: 1069.7788
+      x: -727.89386
+      y: -519.3101
+      width: 1491.2622
+      height: 1038.6202
     m_MinimalGUI: 1
   m_defaultScale: 0.33203125
   m_LastWindowPixelSize: {x: 637.5, y: 470.24997}
@@ -839,7 +1755,7 @@ MonoBehaviour:
   m_RenderTexture: {fileID: 0}
   m_showToolbar: 1
   m_showToolbarOnFullscreen: 0
---- !u!114 &13
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -903,7 +1819,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &14
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -933,33 +1849,8 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25596
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 16}
-  - {fileID: 21}
-  m_Position:
-    serializedVersion: 2
-    x: 916.8
-    y: 0
-    width: 619.2
-    height: 730.8
-  m_MinSize: {x: 100, y: 200}
-  m_MaxSize: {x: 8096, y: 16192}
-  vertical: 1
-  controlID: 2320
---- !u!114 &16
+  m_LastSelectedObjectID: 27738
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -969,26 +1860,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 916.8
     y: 0
     width: 619.2
-    height: 486.4
-  m_MinSize: {x: 101, y: 121}
+    height: 730.8
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 2
+  m_Selected: 0
   m_LastSelected: 0
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1011,7 +1901,7 @@ MonoBehaviour:
     x: 916.8
     y: 73.6
     width: 618.2
-    height: 465.4
+    height: 709.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1022,14 +1912,14 @@ MonoBehaviour:
     m_CachedPref: 176
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 25596
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1057,598 +1947,6 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 916.8
-    y: 73.6
-    width: 618.2
-    height: 465.4
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_Spl:
-    ID: 2284
-    splitterInitialOffset: 0
-    currentActiveSplitter: -1
-    realSizes:
-    - 296.8
-    - 99.20001
-    relativeSizes:
-    - 0.75
-    - 0.25
-    minSizes:
-    - 32
-    - 32
-    maxSizes:
-    - 0
-    - 0
-    lastTotalSize: 396
-    splitSize: 6
-    xOffset: 0
-    m_Version: 1
-    oldRealSizes: 
-    oldMinSizes: 
-    oldMaxSizes: 
-    oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 19}
-    m_NewResultList:
-    - id: 1018
-      uniqueId: '[EmuWarEconomicSimulation][suite]'
-      name: EmuWarEconomicSimulation
-      fullName: EmuWarEconomicSimulation
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 87f4c069ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
-    m_SelectedOption: 0
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 19}
-    m_NewResultList:
-    - id: 1000
-      uniqueId: '[EmuWarEconomicSimulation][suite]'
-      name: EmuWarEconomicSimulation
-      fullName: EmuWarEconomicSimulation
-      resultStatus: 1
-      duration: 0.3490198
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1015
-      uniqueId: '[CombatSystem.Tests.dll][suite]'
-      name: CombatSystem.Tests.dll
-      fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/CombatSystem.Tests.dll
-      resultStatus: 1
-      duration: 0.3243814
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[EmuWarEconomicSimulation][suite]'
-    - id: 1016
-      uniqueId: CombatSystem.Tests.dll/[CombatSystem][suite]
-      name: CombatSystem
-      fullName: CombatSystem
-      resultStatus: 1
-      duration: 0.3216342
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1015
-      parentUniqueId: '[CombatSystem.Tests.dll][suite]'
-    - id: 1017
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
-      name: Tests
-      fullName: CombatSystem.Tests
-      resultStatus: 1
-      duration: 0.3193756
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1016
-      parentUniqueId: CombatSystem.Tests.dll/[CombatSystem][suite]
-    - id: 1001
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-      name: DataWatcherTests
-      fullName: CombatSystem.Tests.DataWatcherTests
-      resultStatus: 1
-      duration: 0.0136784
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1026
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
-    - id: 1003
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifierCalledTest]
-      name: ModifierCalledTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ModifierCalledTest
-      resultStatus: 1
-      duration: 0.0006706
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1005
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifierChageBufferTest]
-      name: ModifierChageBufferTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ModifierChageBufferTest
-      resultStatus: 1
-      duration: 0.0003061
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1004
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifierRemovedTest]
-      name: ModifierRemovedTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ModifierRemovedTest
-      resultStatus: 1
-      duration: 0.0002752
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1010
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ModifiersAndReactionsCalledTest]
-      name: ModifiersAndReactionsCalledTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ModifiersAndReactionsCalledTest
-      resultStatus: 1
-      duration: 0.0002837
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1002
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.NoDataTest]
-      name: NoDataTest
-      fullName: CombatSystem.Tests.DataWatcherTests.NoDataTest
-      resultStatus: 1
-      duration: 0.0003067
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1008
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReactionCalledTest]
-      name: ReactionCalledTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ReactionCalledTest
-      resultStatus: 1
-      duration: 0.0002903
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1009
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReactionRemovedTest]
-      name: ReactionRemovedTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ReactionRemovedTest
-      resultStatus: 1
-      duration: 0.0003089
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1012
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReactionSeesModifiersChange]
-      name: ReactionSeesModifiersChange
-      fullName: CombatSystem.Tests.DataWatcherTests.ReactionSeesModifiersChange
-      resultStatus: 1
-      duration: 0.0002702
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1007
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReorderModifiersTest]
-      name: ReorderModifiersTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ReorderModifiersTest
-      resultStatus: 1
-      duration: 0.0003128
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1011
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.ReorderReactionsTest]
-      name: ReorderReactionsTest
-      fullName: CombatSystem.Tests.DataWatcherTests.ReorderReactionsTest
-      resultStatus: 1
-      duration: 0.0002793
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1006
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/DataWatcherTests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests.SeveralModifiersChageBufferTest]
-      name: SeveralModifiersChageBufferTest
-      fullName: CombatSystem.Tests.DataWatcherTests.SeveralModifiersChageBufferTest
-      resultStatus: 1
-      duration: 0.0002601
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.DataWatcherTests][suite]
-    - id: 1013
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.ResourcesManagerTests][suite]
-      name: ResourcesManagerTests
-      fullName: CombatSystem.Tests.ResourcesManagerTests
-      resultStatus: 1
-      duration: 0.2676664
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1026
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
-    - id: 1014
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/ResourcesManagerTests/[CombatSystem.Tests][CombatSystem.Tests.ResourcesManagerTests.ModifiesResourceCorrectly]
-      name: ModifiesResourceCorrectly
-      fullName: CombatSystem.Tests.ResourcesManagerTests.ModifiesResourceCorrectly
-      resultStatus: 1
-      duration: 0.2538979
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.ResourcesManagerTests][suite]
-    - id: 1016
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/ResourcesManagerTests/[CombatSystem.Tests][CombatSystem.Tests.ResourcesManagerTests.ModifiesResourceWithModifiers]
-      name: ModifiesResourceWithModifiers
-      fullName: CombatSystem.Tests.ResourcesManagerTests.ModifiesResourceWithModifiers
-      resultStatus: 1
-      duration: 0.0012265
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.ResourcesManagerTests][suite]
-    - id: 1015
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/ResourcesManagerTests/[CombatSystem.Tests][CombatSystem.Tests.ResourcesManagerTests.ThrowsExceptionForInvalidResource]
-      name: ThrowsExceptionForInvalidResource
-      fullName: CombatSystem.Tests.ResourcesManagerTests.ThrowsExceptionForInvalidResource
-      resultStatus: 1
-      duration: 0.0047443
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.ResourcesManagerTests][suite]
-    - id: 1017
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-      name: StatusManagerTests
-      fullName: CombatSystem.Tests.StatusManagerTests
-      resultStatus: 1
-      duration: 0.0331565
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1026
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/[CombatSystem.Tests][CombatSystem.Tests][suite]
-    - id: 1018
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.AddStacks]
-      name: AddStacks
-      fullName: CombatSystem.Tests.StatusManagerTests.AddStacks
-      resultStatus: 1
-      duration: 0.0079163
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-    - id: 1019
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.AddStacksWithMax]
-      name: AddStacksWithMax
-      fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithMax
-      resultStatus: 1
-      duration: 0.0008255
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-    - id: 1020
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.AddStacksWithModifier]
-      name: AddStacksWithModifier
-      fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithModifier
-      resultStatus: 1
-      duration: 0.0021664
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-    - id: 1023
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.GetDataWatcher]
-      name: GetDataWatcher
-      fullName: CombatSystem.Tests.StatusManagerTests.GetDataWatcher
-      resultStatus: 1
-      duration: 0.0038671
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-    - id: 1021
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.RemoveStacks]
-      name: RemoveStacks
-      fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacks
-      resultStatus: 1
-      duration: 0.0007235
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-    - id: 1022
-      uniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/StatusManagerTests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests.RemoveStacksNegative]
-      name: RemoveStacksNegative
-      fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacksNegative
-      resultStatus: 1
-      duration: 0.0006506
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-    m_ResultText: Tests (0,319s)
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c50c2fed
-      m_LastClickedID: -315683643
-      m_ExpandedIDs: 2eca7da132ac8cacc50c2fed36a213fc87f4c0696cd9057affffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1673,60 +1971,6 @@ MonoBehaviour:
     y: 73.6
     width: 618.2
     height: 465.4
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 486.4
-    width: 619.2
-    height: 244.4
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 916.8
-    y: 560
-    width: 618.2
-    height: 223.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

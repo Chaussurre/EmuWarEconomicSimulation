@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Tabletop
+namespace Tabletop.Example
 {
     public class TestCardVisual : CardVisual<int>
     {

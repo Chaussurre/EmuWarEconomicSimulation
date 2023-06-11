@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Tabletop
+namespace Tabletop.Example
 {
     public class TestCardCreator : MonoBehaviour
     {

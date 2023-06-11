@@ -12,7 +12,7 @@ namespace Tabletop
         {
             public enum ChangeType
             {
-                CREATE, DESTROY, UPDATE
+                CREATE, DESTROY, UPDATE, CLEAR
             }
 
             public int CardChangedIndex;
@@ -34,6 +34,21 @@ namespace Tabletop
         public int Size => Cards.Count;
 
         public Card<TCardData>.CardInstance GetCard(int index) => Cards[index];
+
+        [Server]
+        public virtual void Clear()
+        {
+            CardStackDataChange CardChangeData = new()
+            {
+                Change = CardStackDataChange.ChangeType.CLEAR,
+            };
+
+            CardChangeData = DataWatcher.WatchData(CardChangeData);
+
+            Cards.Clear();
+
+            DataChangeReact(CardChangeData);
+        }
 
         [Server]
         public virtual void AddCard(Card<TCardData>.CardInstance card)
