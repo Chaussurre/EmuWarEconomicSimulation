@@ -8,6 +8,7 @@ namespace Tabletop
         [Serializable]
         public struct CardInstance
         {
+            public int CardModelID;
             public int CardID;
             public bool hidden;
             public TCardData data;
@@ -20,7 +21,7 @@ namespace Tabletop
         public CardVisual<TCardData> CreateVisual(CardInstance Card, CardPool<TCardData> cardPool)
         {
             var visual = Instantiate(VisualPrefab);
-            visual.InitID(Card.CardID, cardPool);
+            visual.InitID(Card.CardModelID, cardPool);
             visual.UpdateData(Card);
             return visual;
         }

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 5678
+  controlID: 149
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -54,7 +54,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 5698
+    ID: 589
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -86,7 +86,7 @@ MonoBehaviour:
       name: EmuWarEconomicSimulation
       fullName: EmuWarEconomicSimulation
       resultStatus: 2
-      duration: 0.440824
+      duration: 0.2025128
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -97,12 +97,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1014
+    - id: 1104
       uniqueId: '[Tabletop.Tests.dll][suite]'
       name: Tabletop.Tests.dll
       fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/Tabletop.Tests.dll
       resultStatus: 2
-      duration: 0.4033584
+      duration: 0.1715921
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -111,14 +111,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1000
+      parentId: 1090
       parentUniqueId: '[EmuWarEconomicSimulation][suite]'
-    - id: 1015
+    - id: 1105
       uniqueId: Tabletop.Tests.dll/[Tabletop][suite]
       name: Tabletop
       fullName: Tabletop
       resultStatus: 2
-      duration: 0.3972049
+      duration: 0.1643872
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -127,14 +127,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1014
+      parentId: 1104
       parentUniqueId: '[Tabletop.Tests.dll][suite]'
-    - id: 1016
+    - id: 1106
       uniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
       name: Tests
       fullName: Tabletop.Tests
       resultStatus: 2
-      duration: 0.39146
+      duration: 0.158765
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -143,14 +143,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1015
+      parentId: 1105
       parentUniqueId: Tabletop.Tests.dll/[Tabletop][suite]
-    - id: 1001
+    - id: 1091
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
       name: CardPoolTests
       fullName: Tabletop.Tests.CardPoolTests
       resultStatus: 1
-      duration: 0.2061181
+      duration: 0.0514332
       messages: 
       output: 
       stacktrace: 
@@ -159,14 +159,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1016
+      parentId: 1106
       parentUniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
-    - id: 1006
+    - id: 1096
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithDefaultData]
       name: CreatesInstanceFromNameWithDefaultData
       fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithDefaultData
       resultStatus: 1
-      duration: 0.1712651
+      duration: 0.0250643
       messages: 
       output: 
       stacktrace: 
@@ -176,14 +176,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1091
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
-    - id: 1007
+    - id: 1097
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithGivenData]
       name: CreatesInstanceFromNameWithGivenData
       fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceFromNameWithGivenData
       resultStatus: 1
-      duration: 0.0015111
+      duration: 0.0008774
       messages: 
       output: 
       stacktrace: 
@@ -193,14 +193,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1091
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
-    - id: 1004
+    - id: 1094
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceWithDefaultData]
       name: CreatesInstanceWithDefaultData
       fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceWithDefaultData
       resultStatus: 1
-      duration: 0.0010172
+      duration: 0.0009663
       messages: 
       output: 
       stacktrace: 
@@ -210,14 +210,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1091
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
-    - id: 1005
+    - id: 1095
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.CreatesInstanceWithGivenData]
       name: CreatesInstanceWithGivenData
       fullName: Tabletop.Tests.CardPoolTests.CreatesInstanceWithGivenData
       resultStatus: 1
-      duration: 0.001132
+      duration: 0.0007938
       messages: 
       output: 
       stacktrace: 
@@ -227,14 +227,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1091
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
-    - id: 1002
+    - id: 1092
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.ReturnsCorrectCard]
       name: ReturnsCorrectCard
       fullName: Tabletop.Tests.CardPoolTests.ReturnsCorrectCard
       resultStatus: 1
-      duration: 0.001171
+      duration: 0.0007719
       messages: 
       output: 
       stacktrace: 
@@ -244,14 +244,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1091
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
-    - id: 1003
+    - id: 1093
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardPoolTests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests.ReturnsHiddenCardTemplate]
       name: ReturnsHiddenCardTemplate
       fullName: Tabletop.Tests.CardPoolTests.ReturnsHiddenCardTemplate
       resultStatus: 1
-      duration: 0.0010338
+      duration: 0.0005788
       messages: 
       output: 
       stacktrace: 
@@ -261,14 +261,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1091
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
-    - id: 1008
+    - id: 1098
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
       name: CardStackTests
       fullName: Tabletop.Tests.CardStackTests
       resultStatus: 2
-      duration: 0.3840276
+      duration: 0.1519405
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -277,59 +277,34 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1016
+      parentId: 1106
       parentUniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
-    - id: 1009
+    - id: 1099
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.AddsCardToStack]
       name: AddsCardToStack
       fullName: Tabletop.Tests.CardStackTests.AddsCardToStack
-      resultStatus: 1
-      duration: 0.2253711
-      messages: 
+      resultStatus: 2
+      duration: 0.0700651
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object
+
+        TearDown : System.NullReferenceException
+        : Object reference not set to an instance of an object'
       output: 'KcpTransport initialized!
 
 '
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
-    - id: 1010
-      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.InsertsCardAtGivenIndex]
-      name: InsertsCardAtGivenIndex
-      fullName: Tabletop.Tests.CardStackTests.InsertsCardAtGivenIndex
-      resultStatus: 1
-      duration: 0.0008448
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
-    - id: 1013
-      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact]
-      name: InvokesDataWatcherForceReact
-      fullName: Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact
-      resultStatus: 2
-      duration: 0.0576795
-      messages: 'System.ArgumentOutOfRangeException : Index was out of range. Must
-        be non-negative and less than the size of the collection.
-
-        Parameter
-        name: index'
-      output: 
-      stacktrace: "  at System.Collections.Generic.List`1[T].get_Item (System.Int32
-        index) [0x00009] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n  at Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact
-        () [0x00015] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:116
+      stacktrace: "--SetUp\r\n  at Tabletop.CardStack`1[TCardData].InsertCard (Tabletop.Card`1+CardInstance[TCardData]
+        card, System.Int32 index) [0x000bd] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:93
+        \r\n  at Tabletop.CardStack`1[TCardData].AddCard (Tabletop.Card`1+CardInstance[TCardData]
+        card) [0x00016] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:70
+        \r\n  at Tabletop.Tests.CardStackTests.Setup () [0x000a1] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:46
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0
+        \r\n--TearDown\r\n  at Tabletop.CardStack`1[TCardData].Clear () [0x0004c]
+        in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:60
+        \r\n  at Tabletop.Tests.CardStackTests.TearDown () [0x0000d] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:122
         \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
         at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
         invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
@@ -340,64 +315,192 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1008
+      parentId: 1098
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
-    - id: 1012
+    - id: 1101
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.ClearCards]
+      name: ClearCards
+      fullName: Tabletop.Tests.CardStackTests.ClearCards
+      resultStatus: 2
+      duration: 0.0006563
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object
+
+        TearDown : System.NullReferenceException
+        : Object reference not set to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tabletop.CardStack`1[TCardData].InsertCard (Tabletop.Card`1+CardInstance[TCardData]
+        card, System.Int32 index) [0x000bd] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:93
+        \r\n  at Tabletop.CardStack`1[TCardData].AddCard (Tabletop.Card`1+CardInstance[TCardData]
+        card) [0x00016] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:70
+        \r\n  at Tabletop.Tests.CardStackTests.Setup () [0x000a1] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:46
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0
+        \r\n--TearDown\r\n  at Tabletop.CardStack`1[TCardData].Clear () [0x0004c]
+        in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:60
+        \r\n  at Tabletop.Tests.CardStackTests.TearDown () [0x0000d] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:122
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1098
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1100
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.InsertsCardAtGivenIndex]
+      name: InsertsCardAtGivenIndex
+      fullName: Tabletop.Tests.CardStackTests.InsertsCardAtGivenIndex
+      resultStatus: 2
+      duration: 0.0005721
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object
+
+        TearDown : System.NullReferenceException
+        : Object reference not set to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tabletop.CardStack`1[TCardData].InsertCard (Tabletop.Card`1+CardInstance[TCardData]
+        card, System.Int32 index) [0x000bd] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:93
+        \r\n  at Tabletop.CardStack`1[TCardData].AddCard (Tabletop.Card`1+CardInstance[TCardData]
+        card) [0x00016] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:70
+        \r\n  at Tabletop.Tests.CardStackTests.Setup () [0x000a1] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:46
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0
+        \r\n--TearDown\r\n  at Tabletop.CardStack`1[TCardData].Clear () [0x0004c]
+        in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:60
+        \r\n  at Tabletop.Tests.CardStackTests.TearDown () [0x0000d] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:122
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1098
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1103
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.RemovesCardAtGivenIndex]
       name: RemovesCardAtGivenIndex
       fullName: Tabletop.Tests.CardStackTests.RemovesCardAtGivenIndex
-      resultStatus: 1
-      duration: 0.0268284
-      messages: 
+      resultStatus: 2
+      duration: 0.0005397
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object
+
+        TearDown : System.NullReferenceException
+        : Object reference not set to an instance of an object'
       output: 
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tabletop.CardStack`1[TCardData].InsertCard (Tabletop.Card`1+CardInstance[TCardData]
+        card, System.Int32 index) [0x000bd] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:93
+        \r\n  at Tabletop.CardStack`1[TCardData].AddCard (Tabletop.Card`1+CardInstance[TCardData]
+        card) [0x00016] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:70
+        \r\n  at Tabletop.Tests.CardStackTests.Setup () [0x000a1] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:46
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0
+        \r\n--TearDown\r\n  at Tabletop.CardStack`1[TCardData].Clear () [0x0004c]
+        in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:60
+        \r\n  at Tabletop.Tests.CardStackTests.TearDown () [0x0000d] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:122
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1008
+      parentId: 1098
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
-    - id: 1011
+    - id: 1102
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.UpdatesCardAtGivenIndex]
       name: UpdatesCardAtGivenIndex
       fullName: Tabletop.Tests.CardStackTests.UpdatesCardAtGivenIndex
-      resultStatus: 1
-      duration: 0.0013658
-      messages: 
+      resultStatus: 2
+      duration: 0.0005445
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object
+
+        TearDown : System.NullReferenceException
+        : Object reference not set to an instance of an object'
       output: 
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tabletop.CardStack`1[TCardData].InsertCard (Tabletop.Card`1+CardInstance[TCardData]
+        card, System.Int32 index) [0x000bd] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:93
+        \r\n  at Tabletop.CardStack`1[TCardData].AddCard (Tabletop.Card`1+CardInstance[TCardData]
+        card) [0x00016] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:70
+        \r\n  at Tabletop.Tests.CardStackTests.Setup () [0x000a1] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:46
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0
+        \r\n--TearDown\r\n  at Tabletop.CardStack`1[TCardData].Clear () [0x0004c]
+        in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:60
+        \r\n  at Tabletop.Tests.CardStackTests.TearDown () [0x0000d] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:122
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1008
+      parentId: 1098
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
-    m_ResultText: "InvokesDataWatcherForceReact (0,058s)\n---\nSystem.ArgumentOutOfRangeException
-      : Index was out of range. Must be non-negative and less than the size of the
-      collection.\r\nParameter name: index\n---\nat System.Collections.Generic.List`1[T].get_Item
-      (System.Int32 index) [0x00009] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n 
-      at Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact () [0x00015]
-      in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:116
+    m_ResultText: "AddsCardToStack (0,070s)\n---\nSetUp : System.NullReferenceException
+      : Object reference not set to an instance of an object\r\nTearDown : System.NullReferenceException
+      : Object reference not set to an instance of an object\n---\n--SetUp\r\n  at
+      Tabletop.CardStack`1[TCardData].InsertCard (Tabletop.Card`1+CardInstance[TCardData]
+      card, System.Int32 index) [0x000bd] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:93
+      \r\n  at Tabletop.CardStack`1[TCardData].AddCard (Tabletop.Card`1+CardInstance[TCardData]
+      card) [0x00016] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:70
+      \r\n  at Tabletop.Tests.CardStackTests.Setup () [0x000a1] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:46
       \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
       at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
       invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0"
-    m_ResultStacktrace: "  at System.Collections.Generic.List`1[T].get_Item (System.Int32
-      index) [0x00009] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n  at Tabletop.Tests.CardStackTests.InvokesDataWatcherForceReact
-      () [0x00015] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:116
+      culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n--TearDown\r\n 
+      at Tabletop.CardStack`1[TCardData].Clear () [0x0004c] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:60
+      \r\n  at Tabletop.Tests.CardStackTests.TearDown () [0x0000d] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:122
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0\n---\nKcpTransport
+      initialized!"
+    m_ResultStacktrace: "--SetUp\r\n  at Tabletop.CardStack`1[TCardData].InsertCard
+      (Tabletop.Card`1+CardInstance[TCardData] card, System.Int32 index) [0x000bd]
+      in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:93
+      \r\n  at Tabletop.CardStack`1[TCardData].AddCard (Tabletop.Card`1+CardInstance[TCardData]
+      card) [0x00016] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:70
+      \r\n  at Tabletop.Tests.CardStackTests.Setup () [0x000a1] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:46
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 \r\n--TearDown\r\n 
+      at Tabletop.CardStack`1[TCardData].Clear () [0x0004c] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardStack.cs:60
+      \r\n  at Tabletop.Tests.CardStackTests.TearDown () [0x0000d] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardStackTests.cs:122
       \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
       at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
       invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
       culture) [0x0006a] in <3dd5df5ef4974f29afeb2d3ba227c5da>:0 "
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 114c0302
-      m_LastClickedID: 33770513
-      m_ExpandedIDs: eeaebbc191bb25caca3b2acb6abc59d8007e2dfcd8772c6987f4c069ffffff7f
+      m_SelectedIDs: 1335a380
+      m_LastClickedID: -2136787693
+      m_ExpandedIDs: eeaebbc191bb25caca3b2acbd8772c6987f4c069ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -432,7 +535,7 @@ MonoBehaviour:
       name: EmuWarEconomicSimulation
       fullName: EmuWarEconomicSimulation
       resultStatus: 1
-      duration: 0.5456031
+      duration: 0.6655154
       messages: 
       output: 
       stacktrace: 
@@ -448,7 +551,7 @@ MonoBehaviour:
       name: CombatSystem.Tests.dll
       fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/CombatSystem.Tests.dll
       resultStatus: 1
-      duration: 0.4014153
+      duration: 0.3992886
       messages: 
       output: 
       stacktrace: 
@@ -464,7 +567,7 @@ MonoBehaviour:
       name: CombatSystem
       fullName: CombatSystem
       resultStatus: 1
-      duration: 0.3994516
+      duration: 0.1416079
       messages: 
       output: 
       stacktrace: 
@@ -480,7 +583,7 @@ MonoBehaviour:
       name: Tests
       fullName: CombatSystem.Tests
       resultStatus: 1
-      duration: 0.3980376
+      duration: 0.1265625
       messages: 
       output: 
       stacktrace: 
@@ -496,7 +599,7 @@ MonoBehaviour:
       name: DataWatcherTests
       fullName: CombatSystem.Tests.DataWatcherTests
       resultStatus: 1
-      duration: 0.0963398
+      duration: 0.0579918
       messages: 
       output: 
       stacktrace: 
@@ -512,7 +615,7 @@ MonoBehaviour:
       name: ModifierCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierCalledTest
       resultStatus: 1
-      duration: 0.0270664
+      duration: 0.0195412
       messages: 
       output: 
       stacktrace: 
@@ -529,7 +632,7 @@ MonoBehaviour:
       name: ModifierChageBufferTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierChageBufferTest
       resultStatus: 1
-      duration: 0.0064392
+      duration: 0.0060507
       messages: 
       output: 
       stacktrace: 
@@ -546,7 +649,7 @@ MonoBehaviour:
       name: ModifierRemovedTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierRemovedTest
       resultStatus: 1
-      duration: 0.0015909
+      duration: 0.0010029
       messages: 
       output: 
       stacktrace: 
@@ -563,7 +666,7 @@ MonoBehaviour:
       name: ModifiersAndReactionsCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifiersAndReactionsCalledTest
       resultStatus: 1
-      duration: 0.0016512
+      duration: 0.0011763
       messages: 
       output: 
       stacktrace: 
@@ -580,7 +683,7 @@ MonoBehaviour:
       name: NoDataTest
       fullName: CombatSystem.Tests.DataWatcherTests.NoDataTest
       resultStatus: 1
-      duration: 0.0004322
+      duration: 0.0002459
       messages: 
       output: 
       stacktrace: 
@@ -597,7 +700,7 @@ MonoBehaviour:
       name: ReactionCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionCalledTest
       resultStatus: 1
-      duration: 0.0005785
+      duration: 0.0003583
       messages: 
       output: 
       stacktrace: 
@@ -614,7 +717,7 @@ MonoBehaviour:
       name: ReactionRemovedTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionRemovedTest
       resultStatus: 1
-      duration: 0.0012385
+      duration: 0.0006409
       messages: 
       output: 
       stacktrace: 
@@ -631,7 +734,7 @@ MonoBehaviour:
       name: ReactionSeesModifiersChange
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionSeesModifiersChange
       resultStatus: 1
-      duration: 0.0007526
+      duration: 0.00043
       messages: 
       output: 
       stacktrace: 
@@ -648,7 +751,7 @@ MonoBehaviour:
       name: ReorderModifiersTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReorderModifiersTest
       resultStatus: 1
-      duration: 0.0016725
+      duration: 0.0013341
       messages: 
       output: 
       stacktrace: 
@@ -665,7 +768,7 @@ MonoBehaviour:
       name: ReorderReactionsTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReorderReactionsTest
       resultStatus: 1
-      duration: 0.0008084
+      duration: 0.0005295
       messages: 
       output: 
       stacktrace: 
@@ -682,7 +785,7 @@ MonoBehaviour:
       name: SeveralModifiersChageBufferTest
       fullName: CombatSystem.Tests.DataWatcherTests.SeveralModifiersChageBufferTest
       resultStatus: 1
-      duration: 0.0007398
+      duration: 0.0006598
       messages: 
       output: 
       stacktrace: 
@@ -699,7 +802,7 @@ MonoBehaviour:
       name: StandartResourcesManagerTests
       fullName: CombatSystem.Tests.StandartResourcesManagerTests
       resultStatus: 1
-      duration: 0.0594488
+      duration: 0.0280171
       messages: 
       output: 
       stacktrace: 
@@ -715,7 +818,7 @@ MonoBehaviour:
       name: ModifiesResourceCorrectly
       fullName: CombatSystem.Tests.StandartResourcesManagerTests.ModifiesResourceCorrectly
       resultStatus: 1
-      duration: 0.0364176
+      duration: 0.0079243
       messages: 
       output: 
       stacktrace: 
@@ -732,7 +835,7 @@ MonoBehaviour:
       name: ModifiesResourceWithModifiers
       fullName: CombatSystem.Tests.StandartResourcesManagerTests.ModifiesResourceWithModifiers
       resultStatus: 1
-      duration: 0.0013402
+      duration: 0.0010161
       messages: 
       output: 
       stacktrace: 
@@ -749,7 +852,7 @@ MonoBehaviour:
       name: ThrowsExceptionForInvalidResource
       fullName: CombatSystem.Tests.StandartResourcesManagerTests.ThrowsExceptionForInvalidResource
       resultStatus: 1
-      duration: 0.0040733
+      duration: 0.004231
       messages: 
       output: 
       stacktrace: 
@@ -766,7 +869,7 @@ MonoBehaviour:
       name: StatusManagerTests
       fullName: CombatSystem.Tests.StatusManagerTests
       resultStatus: 1
-      duration: 0.2340916
+      duration: 0.0366345
       messages: 
       output: 
       stacktrace: 
@@ -782,7 +885,7 @@ MonoBehaviour:
       name: AddStacks
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacks
       resultStatus: 1
-      duration: 0.198642
+      duration: 0.0164526
       messages: 
       output: 
       stacktrace: 
@@ -799,7 +902,7 @@ MonoBehaviour:
       name: AddStacksWithMax
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithMax
       resultStatus: 1
-      duration: 0.0007997
+      duration: 0.0006722
       messages: 
       output: 
       stacktrace: 
@@ -816,7 +919,7 @@ MonoBehaviour:
       name: AddStacksWithModifier
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithModifier
       resultStatus: 1
-      duration: 0.0041916
+      duration: 0.0016352
       messages: 
       output: 
       stacktrace: 
@@ -833,7 +936,7 @@ MonoBehaviour:
       name: GetDataWatcher
       fullName: CombatSystem.Tests.StatusManagerTests.GetDataWatcher
       resultStatus: 1
-      duration: 0.0045081
+      duration: 0.0037027
       messages: 
       output: 
       stacktrace: 
@@ -850,7 +953,7 @@ MonoBehaviour:
       name: RemoveStacks
       fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacks
       resultStatus: 1
-      duration: 0.0035186
+      duration: 0.0006714
       messages: 
       output: 
       stacktrace: 
@@ -867,7 +970,7 @@ MonoBehaviour:
       name: RemoveStacksNegative
       fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacksNegative
       resultStatus: 1
-      duration: 0.0021861
+      duration: 0.0004871
       messages: 
       output: 
       stacktrace: 
@@ -879,13 +982,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1017
       parentUniqueId: CombatSystem.Tests.dll/CombatSystem/Tests/[CombatSystem.Tests][CombatSystem.Tests.StatusManagerTests][suite]
-    m_ResultText: Tests (0,398s)
+    m_ResultText: Tests (0,127s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: c50c2fed
       m_LastClickedID: -315683643
-      m_ExpandedIDs: 2eca7da1eeaebbc191bb25caca3b2acb75a77ddfc50c2fedd8772c6987f4c0696cd9057a4d7d957affffff7f
+      m_ExpandedIDs: 2eca7da132ac8cacc50c2fed87f4c0696cd9057affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -935,7 +1038,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 5679
+  controlID: 150
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -960,7 +1063,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 5680
+  controlID: 151
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1020,21 +1123,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fe6cffff406dffffae6effff4a7bffff8c7bfffff87cffff0481ffff4681ffff9282ffffd882ffff1a83ffff8684ffff5887ffff9a87ffffde88ffff2c89ffff6e89ffffb88affffc08dffff028effff4e8fffff888fffffca8fffff1691ffff5491ffff9691ffffe292ffffc493ffff0694ffff3a95ffff6a96ffffac96ffff5898ffff9a98ffffdc98ffff2a9affff489bffff8a9bffffd89cffff229dffff649dffff129fffff549fffff969fffff6eb2ffffb0b2ffff04b4ffffa0b7ffffe2b7ffff14b9ffff62b9ffffa4b9ffff8ec2ffffd0c2ffff14c4fffffec4ffff40c5ffff84c6ffff7cc7ffffbec7ffff02c9ffff5ccbffff9ecbffffe2ccffffd0cdffff12ceffff56cfffffd4d0ffff16d1ffff5ad2fffff0d8ffff32d9ffff90daffff2cdcffff6edcffffccddfffface3ffffeee3ffff3ae5fffff4e8ffff36e9ffff96eaffffd4eaffff16ebffff74edffff40f6ffff24fbffff
+      m_ExpandedIDs: ae6cfffff06cffff7ae7ffffaaf4ffffecf4ffff96f7ffffdef8ffff30fbffff48660000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Card 1
+        m_OriginalName: Card 1
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -32838
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -1063,8 +1166,8 @@ MonoBehaviour:
     y: 0
     width: 652.8
     height: 333.6
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -1138,7 +1241,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 1
       id: unity-search-toolbar
       index: 1
@@ -1149,7 +1252,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Open Tile Palette
       index: 2
@@ -1160,7 +1263,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Tilemap Focus
       index: 3
@@ -1181,9 +1284,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: 67.5, y: -202}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 2
       id: Orientation
       index: 0
       layout: 4
@@ -1193,7 +1296,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Light Settings
       index: 0
@@ -1215,7 +1318,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Cloth Constraints
       index: 2
@@ -1226,7 +1329,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Cloth Collisions
       index: 3
@@ -1237,7 +1340,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Navmesh Display
       index: 4
@@ -1248,7 +1351,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Agent Display
       index: 5
@@ -1259,7 +1362,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Obstacle Display
       index: 6
@@ -1270,7 +1373,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Occlusion Culling
       index: 7
@@ -1281,7 +1384,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Physics Debugger
       index: 8
@@ -1292,7 +1395,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Scene Visibility
       index: 9
@@ -1303,7 +1406,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Particles
       index: 10
@@ -1314,7 +1417,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 24.8}
       snapCorner: 0
       id: Scene View/Path
       index: 0
@@ -1324,14 +1427,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.65981, y: 1.5772022, z: -0.21932034}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -2.65981, y: 1.5772022, z: -0.21932034}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1359,17 +1462,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -1377,17 +1480,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 6.8803635
+    m_Target: 10
     speed: 2
-    m_Value: 6.8803635
+    m_Value: 10
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1432,7 +1535,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 5766
+  controlID: 214
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1443,7 +1546,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1452,14 +1555,14 @@ MonoBehaviour:
     y: 0
     width: 404.8
     height: 397.19998
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1501,22 +1604,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tabletop/Tests
+    - Assets/Tabletop/Standard
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Tabletop/Tests
+  - Assets/Tabletop/Standard
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Chaussure\Documents\Unity\EmuWarEconomicSimulation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 107.80002}
-    m_SelectedIDs: 2c650000
-    m_LastClickedID: 25900
-    m_ExpandedIDs: 00000000d0640000d2640000d4640000d6640000d8640000da640000dc64000000ca9a3b
+    scrollPos: {x: 0, y: 143.80002}
+    m_SelectedIDs: 7a650000
+    m_LastClickedID: 25978
+    m_ExpandedIDs: 000000001465000016650000186500001a6500001c6500001e650000206500009266000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1532,7 +1635,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 7}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1544,7 +1647,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d0640000d2640000d4640000d6640000d8640000da640000dc64000000ca9a3b
+    m_ExpandedIDs: 000000001465000016650000186500001a6500001c6500001e6500002065000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1719,7 +1822,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
+    m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -1733,18 +1836,18 @@ MonoBehaviour:
       y: 21
       width: 510
       height: 355.19998
-    m_Scale: {x: 0.34199217, y: 0.34199217}
-    m_Translation: {x: 248.934, y: 177.59999}
+    m_Scale: {x: 0.33203125, y: 0.33203125}
+    m_Translation: {x: 255, y: 177.59999}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -727.89386
-      y: -519.3101
-      width: 1491.2622
-      height: 1038.6202
+      x: -768
+      y: -534.8894
+      width: 1536
+      height: 1069.7788
     m_MinimalGUI: 1
   m_defaultScale: 0.33203125
   m_LastWindowPixelSize: {x: 637.5, y: 470.24997}
@@ -1849,7 +1952,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 27738
+  m_LastSelectedObjectID: -1234
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1869,8 +1972,8 @@ MonoBehaviour:
     y: 0
     width: 619.2
     height: 730.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}

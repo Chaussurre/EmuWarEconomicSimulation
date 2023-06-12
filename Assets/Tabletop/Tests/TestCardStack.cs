@@ -45,7 +45,7 @@ namespace Tabletop.Tests
         }
         public static void WriteCardInstance(this NetworkWriter writer, TestCard.CardInstance card)
         {
-            writer.WriteInt(card.CardID);
+            writer.WriteInt(card.CardModelID);
             writer.WriteBool(card.hidden);
             writer.WriteInt(card.data);
         }
@@ -54,7 +54,7 @@ namespace Tabletop.Tests
         {
             return new()
             {
-                CardID = reader.ReadInt(),
+                CardModelID = reader.ReadInt(),
                 hidden = reader.ReadBool(),
                 data = reader.ReadInt(),
             };

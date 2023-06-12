@@ -1,5 +1,6 @@
 using Mirror;
 using System;
+using UnityEngine.Events;
 
 namespace Tabletop.Standard
 {
@@ -15,6 +16,8 @@ namespace Tabletop.Standard
 
     public class StandardCard : Card<StandardCardData>
     {
+
+        public UnityEvent<ActionsManager<StandardCardData>> OnPlay = new();
 
     }
 
@@ -43,7 +46,7 @@ namespace Tabletop.Standard
 
         public static void WriteCardInstance(this NetworkWriter writer, StandardCard.CardInstance card)
         {
-            writer.WriteInt(card.CardID);
+            writer.WriteInt(card.CardModelID);
             writer.WriteBool(card.hidden);
             writer.Write(card.data);
         }
@@ -52,7 +55,7 @@ namespace Tabletop.Standard
         {
             return new()
             {
-                CardID = reader.ReadInt(),
+                CardModelID = reader.ReadInt(),
                 hidden = reader.ReadBool(),
                 data = reader.Read<StandardCardData>(),
             };

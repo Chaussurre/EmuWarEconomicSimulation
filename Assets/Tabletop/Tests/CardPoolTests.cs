@@ -35,7 +35,7 @@ namespace Tabletop.Tests
         public void ReturnsCorrectCard()
         {
             // Arrange
-            var cardInstance = new TestCard.CardInstance { CardID = 2 };
+            var cardInstance = new TestCard.CardInstance { CardModelID = 2 };
 
             // Act
             var result = cardPool.GetCard(cardInstance);
@@ -48,7 +48,7 @@ namespace Tabletop.Tests
         public void ReturnsHiddenCardTemplate()
         {
             // Arrange
-            var cardInstance = new TestCard.CardInstance { CardID = -1 };
+            var cardInstance = new TestCard.CardInstance { CardModelID = -1 };
 
             // Act
             var result = cardPool.GetCard(cardInstance);
@@ -95,7 +95,7 @@ namespace Tabletop.Tests
             var result = cardPool.CreateInstance(cardName);
 
             // Assert
-            Assert.AreEqual(expectedIndex, result.CardID);
+            Assert.AreEqual(expectedIndex, result.CardModelID);
             Assert.AreEqual(cards[expectedIndex].DefaultData, result.data);
         }
 
@@ -111,7 +111,7 @@ namespace Tabletop.Tests
             var result = cardPool.CreateInstance(cardName, data);
 
             // Assert
-            Assert.AreEqual(expectedIndex, result.CardID);
+            Assert.AreEqual(expectedIndex, result.CardModelID);
             Assert.AreEqual(data, result.data);
         }
     }

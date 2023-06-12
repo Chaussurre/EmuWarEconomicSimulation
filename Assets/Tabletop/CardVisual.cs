@@ -18,7 +18,7 @@ namespace Tabletop
 
         public CardVisual<TCardData> UpdateData(Card<TCardData>.CardInstance Card)
         {
-            if (Card.CardID != OriginalCardID)
+            if (Card.CardModelID != OriginalCardID)
             {
                 Destroy(gameObject);
 

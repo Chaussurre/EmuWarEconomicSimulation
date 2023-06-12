@@ -10,12 +10,16 @@ namespace Tabletop
         public List<Card<TCardData>> Cards = new();
         public Card<TCardData> HiddenCardTemplate;
 
+        private int InstanceIDIncrementer = 0;
+
+        public Dictionary<int, CardStack<TCardData>.CardPosition> PositionTracker;
+
         public Card<TCardData> GetCard(Card<TCardData>.CardInstance instance)
         {
-            if (instance.CardID < 0)
+            if (instance.CardModelID < 0)
                 return HiddenCardTemplate;
 
-            return Cards[instance.CardID];
+            return Cards[instance.CardModelID];
         }
 
         public CardVisual<TCardData> CreateVisual(Card<TCardData>.CardInstance card)
@@ -59,7 +63,6 @@ namespace Tabletop
             return CreateInstanceFromIndex(index, data);
         }
 
-
         protected int NameIndex(string name)
         {
             for (int i = 0; i < Cards.Count; i++)
@@ -73,7 +76,8 @@ namespace Tabletop
         {
             return new()
             {
-                CardID = index,
+                CardModelID = index,
+                CardID = InstanceIDIncrementer++,
                 hidden = false,
                 data = data ?? Cards[index].DefaultData,
             };

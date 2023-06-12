@@ -8,6 +8,17 @@ namespace Tabletop
 {
     public abstract class CardStack<TCardData> : NetworkBehaviour where TCardData : struct
     {
+        public struct CardPosition
+        {
+            public CardStack<TCardData> stack;
+            public int index;
+
+            public Card<TCardData>.CardInstance GetCard()
+            {
+                return stack.GetCard(index);
+            }
+        }
+
         public struct CardStackDataChange
         {
             public enum ChangeType
@@ -45,6 +56,9 @@ namespace Tabletop
 
             CardChangeData = DataWatcher.WatchData(CardChangeData);
 
+            foreach (var card in Cards)
+                CardPool.PositionTracker.Remove(card.CardID);
+
             Cards.Clear();
 
             DataChangeReact(CardChangeData);
@@ -75,6 +89,7 @@ namespace Tabletop
                 throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
 
             Cards.Insert(CardChangeData.CardChangedIndex, CardChangeData.NewCard);
+            UpdateTracker();
 
             DataChangeReact(CardChangeData);
         }
@@ -100,6 +115,9 @@ namespace Tabletop
 
             Cards[CardChangeData.CardChangedIndex] = CardChangeData.NewCard;
 
+            CardPool.PositionTracker.Remove(CardChangeData.OldCard.CardID);
+            UpdateTracker();
+
             DataChangeReact(CardChangeData);
         }
 
@@ -122,8 +140,24 @@ namespace Tabletop
                 throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
 
             Cards.RemoveAt(CardChangeData.CardChangedIndex);
+            CardPool.PositionTracker.Remove(CardChangeData.OldCard.CardID);
+            UpdateTracker();
 
             DataChangeReact(CardChangeData);
+        }
+
+        private void UpdateTracker()
+        {
+            for(int i = 0; i < Cards.Count; i++)
+            {
+                var card = GetCard(i);
+                var pos = new CardPosition()
+                {
+                    stack = this,
+                    index = i,
+                };
+                CardPool.PositionTracker[card.CardID] = pos;
+            }
         }
 
         protected abstract void DataChangeReact(CardStackDataChange dataChange);
