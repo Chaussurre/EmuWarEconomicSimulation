@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5942914655844073835
+--- !u!1001 &7767787403494165903
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4135626018481597900, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4135626018481597900, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,10 +55,22 @@ PrefabInstance:
     - target: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: VisualPrefab
       value: 
-      objectReference: {fileID: 5776712674998366078, guid: 06f29f89e04d93f4f8ddd67746755ad9, type: 3}
+      objectReference: {fileID: 5443868710041573729, guid: f5685024c5b24654e874010038215263, type: 3}
+    - target: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: DefaultData.Hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: DefaultData.MaxHp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: DefaultData.Attack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4135626018481597903, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: m_Name
-      value: Card 2
+      value: Soldier
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

@@ -1,8 +1,8 @@
 using Mirror;
 
-namespace Tabletop.Example
+namespace Tabletop.Standard
 {
-    public class TestCardStack : CardStack<int>
+    public class StandardCardStack : CardStack<StandardCardData>
     {
         protected override void DataChangeReact(CardStackDataChange dataChange)
         {
@@ -21,7 +21,7 @@ namespace Tabletop.Example
 
     public static class TestCardStackDataReaderWriter
     {
-        public static void WriteCardInstance(this NetworkWriter writer, TestCardStack.CardStackDataChange dataChange)
+        public static void WriteCardInstance(this NetworkWriter writer, StandardCardStack.CardStackDataChange dataChange)
         {
             writer.WriteInt((int)dataChange.Change);
             writer.WriteInt(dataChange.CardChangedIndex);
@@ -29,14 +29,14 @@ namespace Tabletop.Example
             writer.Write(dataChange.NewCard);
         }
 
-        public static TestCardStack.CardStackDataChange ReadCardInstance(this NetworkReader reader)
+        public static StandardCardStack.CardStackDataChange ReadCardInstance(this NetworkReader reader)
         {
             return new()
             {
-                Change = (TestCardStack.CardStackDataChange.ChangeType) reader.ReadInt(),
+                Change = (StandardCardStack.CardStackDataChange.ChangeType) reader.ReadInt(),
                 CardChangedIndex = reader.ReadInt(),
-                OldCard = reader.Read<TestCard.CardInstance>(),
-                NewCard = reader.Read<TestCard.CardInstance>(),
+                OldCard = reader.Read<StandardCard.CardInstance>(),
+                NewCard = reader.Read<StandardCard.CardInstance>(),
             };
         }
     }
