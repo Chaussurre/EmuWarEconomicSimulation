@@ -6,160 +6,105 @@ using Mirror;
 
 namespace Tabletop
 {
-    public abstract class CardStack<TCardData> : NetworkBehaviour where TCardData : struct
+    public class CardStack<TCardData> : MonoBehaviour where TCardData : struct
     {
         public struct CardPosition
         {
             public CardStack<TCardData> stack;
-            public int index;
+            public int? index;
 
-            public Card<TCardData>.CardInstance GetCard()
+            public Card<TCardData>.CardInstance? GetCard()
             {
-                return stack.GetCard(index);
+                return stack.GetCard(index ?? stack.Size - 1);
+            }
+
+            public bool CanInsert()
+            {
+                if (!stack)
+                    return false;
+
+                return stack.Size >= (index ?? 0);
+            }
+
+            internal bool InsertCard(Card<TCardData>.CardInstance cardInstance)
+            {
+                return stack.InsertCard(cardInstance, index ?? stack.Size);
+            }
+
+            internal bool UpdateCard(TCardData data)
+            {
+                return stack.UpdateCard(data, index ?? stack.Size - 1);
+            }
+
+            internal bool RemoveCard()
+            {
+                return stack.RemoveCard(index ?? stack.Size - 1);
             }
         }
 
-        public struct CardStackDataChange
-        {
-            public enum ChangeType
-            {
-                CREATE, DESTROY, UPDATE, CLEAR
-            }
-
-            public int CardChangedIndex;
-            public ChangeType Change;
-            public Card<TCardData>.CardInstance OldCard;
-            public Card<TCardData>.CardInstance NewCard;
-        }
-
-        SyncList<Card<TCardData>.CardInstance> Cards = new();
-        public DataWatcher<CardStackDataChange> DataWatcher;
-        public CardPool<TCardData> CardPool;
-
-        private void Awake()
-        {
-            if (CardPool == null)
-                CardPool = FindObjectOfType<CardPool<TCardData>>();
-        }
+        List<Card<TCardData>.CardInstance> Cards = new();
 
         public int Size => Cards.Count;
 
-        public Card<TCardData>.CardInstance GetCard(int index) => Cards[index];
-
-        [Server]
-        public virtual void Clear()
+        public Card<TCardData>.CardInstance? GetCard(int index)
         {
-            CardStackDataChange CardChangeData = new()
-            {
-                Change = CardStackDataChange.ChangeType.CLEAR,
-            };
+            if (index < 0 || index >= Size)
+                return null;
 
-            CardChangeData = DataWatcher.WatchData(CardChangeData);
+            return Cards[index];
+        }
 
-            foreach (var card in Cards)
-                CardPool.PositionTracker.Remove(card.CardID);
-
+        internal void Clear()
+        {
             Cards.Clear();
-
-            DataChangeReact(CardChangeData);
         }
 
-        [Server]
-        public virtual void AddCard(Card<TCardData>.CardInstance card)
+        internal bool AddCard(Card<TCardData>.CardInstance card)
         {
-            InsertCard(card, Cards.Count);
+            return InsertCard(card, Cards.Count);
         }
 
-        [Server]
-        public virtual void InsertCard(Card<TCardData>.CardInstance card, int index)
+        internal bool InsertCard(Card<TCardData>.CardInstance card, int index)
         {
             if (index < 0 || index > Cards.Count)
-                throw new ArgumentOutOfRangeException("index");
+                return false;
 
-            CardStackDataChange CardChangeData = new()
-            {
-                Change = CardStackDataChange.ChangeType.CREATE,
-                CardChangedIndex = index,
-                NewCard = card,
-            };
-
-            CardChangeData = DataWatcher.WatchData(CardChangeData);
-
-            if (CardChangeData.CardChangedIndex < 0 || CardChangeData.CardChangedIndex > Cards.Count)
-                throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
-
-            Cards.Insert(CardChangeData.CardChangedIndex, CardChangeData.NewCard);
-            UpdateTracker();
-
-            DataChangeReact(CardChangeData);
+            Cards.Insert(index, card);
+            return true;
         }
 
-        [Server]
-        public virtual void UpdateCard(Card<TCardData>.CardInstance card, int index)
+        internal CardPosition? GetCardPos(int cardID)
+        {
+            for (int i = 0; i < Cards.Count; i++)
+                if (Cards[i].CardID == cardID)
+                    return new()
+                    {
+                        index = i,
+                        stack = this,
+                    };
+
+            return null;
+        }
+
+        internal bool UpdateCard(TCardData data, int index)
         {
             if (index < 0 || index >= Cards.Count)
-                throw new ArgumentOutOfRangeException("index");
+                return false;
 
-            CardStackDataChange CardChangeData = new()
-            {
-                Change = CardStackDataChange.ChangeType.UPDATE,
-                CardChangedIndex = index,
-                OldCard = Cards[index],
-                NewCard = card,
-            };
+            var card = Cards[index];
+            card.data = data;
+            Cards[index] = card;
 
-            CardChangeData = DataWatcher.WatchData(CardChangeData);
-
-            if (CardChangeData.CardChangedIndex < 0 || CardChangeData.CardChangedIndex >= Cards.Count)
-                throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
-
-            Cards[CardChangeData.CardChangedIndex] = CardChangeData.NewCard;
-
-            CardPool.PositionTracker.Remove(CardChangeData.OldCard.CardID);
-            UpdateTracker();
-
-            DataChangeReact(CardChangeData);
+            return true;
         }
 
-        [Server]
-        public virtual void RemoveCard(int index)
+        internal bool RemoveCard(int index)
         {
             if (index < 0 || index >= Cards.Count)
-                throw new ArgumentOutOfRangeException("index");
+                return false;
 
-            CardStackDataChange CardChangeData = new()
-            {
-                Change = CardStackDataChange.ChangeType.DESTROY,
-                CardChangedIndex = index,
-                OldCard = Cards[index],
-            };
-
-            CardChangeData = DataWatcher.WatchData(CardChangeData);
-
-            if (CardChangeData.CardChangedIndex < 0 || CardChangeData.CardChangedIndex >= Cards.Count)
-                throw new ArgumentOutOfRangeException("CardChangeData.CardChangedIndex");
-
-            Cards.RemoveAt(CardChangeData.CardChangedIndex);
-            CardPool.PositionTracker.Remove(CardChangeData.OldCard.CardID);
-            UpdateTracker();
-
-            DataChangeReact(CardChangeData);
+            Cards.RemoveAt(index);
+            return true;
         }
-
-        private void UpdateTracker()
-        {
-            for(int i = 0; i < Cards.Count; i++)
-            {
-                var card = GetCard(i);
-                var pos = new CardPosition()
-                {
-                    stack = this,
-                    index = i,
-                };
-                CardPool.PositionTracker[card.CardID] = pos;
-            }
-        }
-
-        protected abstract void DataChangeReact(CardStackDataChange dataChange);
     }
 }

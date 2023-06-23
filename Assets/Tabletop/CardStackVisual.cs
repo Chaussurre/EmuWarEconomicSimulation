@@ -13,70 +13,28 @@ namespace Tabletop
             ExpandSpacing
         }
 
+        [SerializeField] private CardVisualManager<TCardData> VisualManager;
         [SerializeField] private CardStack<TCardData> CardStack;
         [SerializeField] protected DisplayStyle Style;
         [SerializeField] protected float FixedSpacing;
         [SerializeField] protected int margins;
 
-        [SerializeField] private float MoveSpeed;
-
         private List<CardVisual<TCardData>> CardVisuals = new();
 
         public Vector2 Size;
 
-        private void Awake()
-        {
-            CardStack.DataWatcher.AddReaction(OnChange);
-        }
-
-        public void OnChange(CardStack<TCardData>.CardStackDataChange Change)
-        {
-            switch (Change.Change)
-            {
-                case CardStack<TCardData>.CardStackDataChange.ChangeType.CREATE:
-                    OnAdd(Change.CardChangedIndex, Change.NewCard);
-                    break;
-                case CardStack<TCardData>.CardStackDataChange.ChangeType.DESTROY:
-                    OnRemove(Change.CardChangedIndex);
-                    break;
-                case CardStack<TCardData>.CardStackDataChange.ChangeType.UPDATE:
-                    OnUpdate(Change.CardChangedIndex, Change.NewCard);
-                    break;
-            }
-
-            for (int i = 0; i < CardVisuals.Count; i++)
-                CardVisuals[i].SetRenderingOrder(CardVisuals.Count - i);
-        }
-
-        private void OnAdd(int cardChangedIndex, Card<TCardData>.CardInstance newCard)
-        {
-            var visual = CardStack.CardPool.CreateVisual(newCard);
-            visual.transform.parent = transform;
-            visual.transform.localPosition = Vector3.zero;
-
-            CardVisuals.Insert(cardChangedIndex, visual);
-        }
-
-        private void OnUpdate(int cardChangedIndex, Card<TCardData>.CardInstance newCard)
-        {
-            var visual = CardVisuals[cardChangedIndex].UpdateData(newCard);
-            visual.transform.parent = transform;
-            visual.transform.localPosition = Vector3.zero;
-        }
-
-        private void OnRemove(int cardChangedIndex)
-        {
-            Destroy(CardVisuals[cardChangedIndex].gameObject);
-            CardVisuals.RemoveAt(cardChangedIndex);
-        }
-
-        public void Update()
+        private void Update()
         {
             for (int i = 0; i < CardVisuals.Count; i++)
-                CardVisuals[i].MoveTo(GetPos(i) * Vector3.right);
+                CardVisuals[i]?.MoveTo(GetPosition(i));
         }
 
-        private float GetPos(int index)
+        private Vector3 GetPosition(int CardIndex)
+        {
+            return GetPosFloat(CardIndex) * Vector3.right + transform.position;
+        }
+
+        private float GetPosFloat(int index)
         {
             switch (Style)
             {
@@ -99,7 +57,8 @@ namespace Tabletop
             var size = FixedSpacing * CardVisuals.Count;
             if (size > Size.x)
                 return GetExpandPos(index);
-            //the size of possible positions for the center
+
+            //the size of possible positions for the center of the list of cards
             var centerSize = Size.x - size;
 
             var centerPos = Mathf.Lerp(-centerSize / 2, centerSize / 2, originLerp);

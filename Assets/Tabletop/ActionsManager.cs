@@ -4,16 +4,20 @@ using UnityEngine;
 
 namespace Tabletop
 {
-    public class ActionsManager<TCardData> : MonoBehaviour where TCardData : struct
+    public abstract class ActionsManager<TCardData> : MonoBehaviour where TCardData : struct
     {
-        public CardPool<TCardData> CardPool;
+        public CardManager<TCardData> CardManager;
 
-        public List<IActionWatcher<TCardData>> ActionWatchers = new();
+        [SerializeField]
+        private List<IActionWatcher<TCardData>> ActionWatchers = new();
 
         Queue<IActionWatcher<TCardData>> actions = new();
 
         private void Awake()
         {
+            foreach (var watcher in GetComponentsInChildren<IActionWatcher<TCardData>>())
+                ActionWatchers.Add(watcher);
+
             foreach (var action in ActionWatchers)
                 action.Init(this);
         }

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using NUnit.Framework;
 using UnityEditor;
-using System;
 
 namespace Tabletop.Tests
 {
+    public class TestCardStack : CardStack<int> { }
     public class TestCard : Card<int> { }
-    public class TestPlayer : NetworkBehaviour { }
 
     public class CardStackTests
     {
@@ -25,7 +24,6 @@ namespace Tabletop.Tests
         {
             if (manager == null)
             {
-                //manager = AssetDatabase.LoadAssetAtPath<NetworkManager>("Assets/Tabletop/Tests/NetworkManagerTest.prefab");
                 var prefabManager = AssetDatabase.LoadAssetAtPath<NetworkManager>("Assets/Tabletop/Tests/NetworkManagerTest.prefab");
                 manager = GameObject.Instantiate(prefabManager);
 
@@ -37,7 +35,7 @@ namespace Tabletop.Tests
 
                 cardPool = new GameObject("CardPool").AddComponent<TestCardPool>();
                 cardPool.PositionTracker = new();
-                cardStack.CardPool = cardPool;
+                cardStack.CardManager = cardPool;
 
                 cardModel = new GameObject("Card Model").AddComponent<TestCard>();
                 cardPool.Cards = new() { cardModel };

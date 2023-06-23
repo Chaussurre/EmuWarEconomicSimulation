@@ -1,11 +1,10 @@
 using CombatSystem;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Tabletop
 {
-    public interface IActionWatcher<TCardData> where TCardData : struct
+    internal interface IActionWatcher<TCardData> where TCardData : struct
     {
         public void Init(ActionsManager<TCardData> manager);
 
@@ -14,14 +13,13 @@ namespace Tabletop
         public int GetSize();
     }
 
-    public class ActionWatcher<TCardData, TActionData> : IActionWatcher<TCardData> where TActionData : struct where TCardData : struct
+    public abstract class ActionWatcher<TCardData, TActionData> : MonoBehaviour, IActionWatcher<TCardData> where TActionData : struct where TCardData : struct
     {
         protected ActionsManager<TCardData> manager;
 
         private Queue<TActionData> Actions = new();
 
         public DataWatcher<TActionData> DataWatcher;
-
 
         public void Init(ActionsManager<TCardData> manager)
         {
@@ -44,9 +42,6 @@ namespace Tabletop
             Apply(data);
         }
 
-        protected virtual void Apply(TActionData actionData)
-        {
-
-        }
+        protected abstract void Apply(TActionData actionData);
     }
 }

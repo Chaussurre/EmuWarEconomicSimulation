@@ -16,12 +16,12 @@ namespace Tabletop.Standard
 
     public class StandardCard : Card<StandardCardData>
     {
+        public bool IsAUnit;
 
-        public UnityEvent<ActionsManager<StandardCardData>> OnPlay = new();
-
+        public UnityEvent<ActionsManager<StandardCardData>, CardInstance> OnPlay = new();
     }
 
-    public static class TestCardInstanceReaderWriter
+    public static class StandardCardInstanceReaderWriter
     {
         public static void WriteCardData(this NetworkWriter writer, StandardCardData data)
         {
@@ -44,21 +44,22 @@ namespace Tabletop.Standard
             };
         }
 
-        public static void WriteCardInstance(this NetworkWriter writer, StandardCard.CardInstance card)
+        public static void WriteCardDataNullable(this NetworkWriter writer, StandardCardData? dataNullable)
         {
-            writer.WriteInt(card.CardModelID);
-            writer.WriteBool(card.hidden);
-            writer.Write(card.data);
+            writer.WriteBool(dataNullable.HasValue);
+
+            if (!dataNullable.HasValue)
+                return;
+
+            writer.Write(dataNullable.Value);
         }
 
-        public static StandardCard.CardInstance ReadCardInstance(this NetworkReader reader)
+        public static StandardCardData? ReadCardDataNullable(this NetworkReader reader)
         {
-            return new()
-            {
-                CardModelID = reader.ReadInt(),
-                hidden = reader.ReadBool(),
-                data = reader.Read<StandardCardData>(),
-            };
+            if (!reader.ReadBool())
+                return null;
+
+            return reader.Read<StandardCardData>();
         }
     }
 }
