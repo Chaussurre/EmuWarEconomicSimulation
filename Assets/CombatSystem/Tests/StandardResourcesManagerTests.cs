@@ -5,7 +5,7 @@ using DataModificationBuffer = CombatSystem.DataWatcher<CombatSystem.StandardRes
 
 namespace CombatSystem.Tests
 {
-    public class StandartResourcesManagerTests
+    public class StandardResourcesManagerTests
     {
         private StandardResourcesManager manager;
         private StandardResourcesManager.ResourceValue ResourceValue;

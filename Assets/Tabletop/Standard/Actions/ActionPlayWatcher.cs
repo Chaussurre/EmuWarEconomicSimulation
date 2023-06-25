@@ -14,17 +14,17 @@ namespace Tabletop.Standard
 
         protected override void Apply(PlayData actionData)
         {
-            var cardInstance = manager.CardManager.GetCardInstance(actionData.CardID);
+            var cardInstance = manager.GetCardInstance(actionData.CardID);
 
             if (!cardInstance.HasValue)
                 return;
 
-            var cardModel = manager.CardManager.CardPool.GetCard(cardInstance.Value) as StandardCard;
+            var cardModel = manager.CardPool.GetCard(cardInstance.Value) as StandardCard;
 
             cardModel.OnPlay?.Invoke(manager, cardInstance.Value);
 
             if (cardModel.IsAUnit)
-                manager.AddAction(new ActionSummonWatcher.SummonData()
+                manager.ActionsManager.AddAction(new ActionSummonWatcher.SummonData()
                 {
                     stack = PlayingField,
                     CardID = cardInstance.Value.CardID,

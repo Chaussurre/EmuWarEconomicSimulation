@@ -1,118 +1,111 @@
+using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
-using NUnit.Framework;
+using Tabletop;
 
 namespace Tabletop.Tests
 {
     public class CardPoolTests
     {
-        class TestCard : Card<int> { }
-        class TestCardPool : CardPool<int> { }
+        public class TestCard : Card<int> { }
 
-        private TestCardPool cardPool;
-        private List<TestCard> cards;
+        private CardPool<int> cardPool;
+        private List<Card<int>> Cards;
+        private TestCard hiddenCard;
 
         [SetUp]
-        public void Setup()
+        public void SetUp()
         {
-            // Create a CardPool and populate it with some cards
-            cardPool = new GameObject().AddComponent<TestCardPool>();
-            cards = new List<TestCard>();
+            // Create a new CardPool instance
+            cardPool = new CardPool<int>();
 
-            for (int i = 0; i < 5; i++)
+            // Create some example cards
+            Cards = new();
+            Cards.Add(new GameObject("Card 1").AddComponent<TestCard>());
+            Cards.Add(new GameObject("Card 2").AddComponent<TestCard>());
+            Cards.Add(new GameObject("Card 3").AddComponent<TestCard>());
+
+            hiddenCard = new GameObject("Hidden Card").AddComponent<TestCard>();
+
+            // Add the cards to the CardPool
+            cardPool.Cards = Cards;
+            cardPool.HiddenCardTemplate = hiddenCard;
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            foreach (var card in Cards)
+                GameObject.DestroyImmediate(card.gameObject);
+
+            GameObject.DestroyImmediate(hiddenCard.gameObject);
+        }
+
+        [Test]
+        public void GetCardFromInstance()
+        {
+            var instance = new Card<int>.CardInstance
             {
-                var card = new GameObject().AddComponent<TestCard>();
-                card.name = $"Card{i}";
-                card.DefaultData = i;
-                cardPool.Cards.Add(card);
-                cards.Add(card);
-            }
+                CardModelID = 0,
+                CardID = 1,
+                hidden = false,
+            };
 
-            cardPool.HiddenCardTemplate = new GameObject().AddComponent<TestCard>();
+            var result = cardPool.GetCard(instance);
+
+            Assert.AreEqual(Cards[0], result);
         }
 
         [Test]
-        public void ReturnsCorrectCard()
+        public void GetCardFromID()
         {
-            // Arrange
-            var cardInstance = new TestCard.CardInstance { CardModelID = 2 };
+            var result = cardPool.GetCard(1); // Index of card2 in the CardPool.Cards list
 
-            // Act
-            var result = cardPool.GetCard(cardInstance);
-
-            // Assert
-            Assert.AreEqual(cards[2], result);
+            Assert.AreEqual(Cards[1], result);
         }
 
         [Test]
-        public void ReturnsHiddenCardTemplate()
+        public void GetCardFromName()
         {
-            // Arrange
-            var cardInstance = new TestCard.CardInstance { CardModelID = -1 };
+            var result = cardPool.GetCard("Card 3");
 
-            // Act
-            var result = cardPool.GetCard(cardInstance);
-
-            // Assert
-            Assert.AreEqual(cardPool.HiddenCardTemplate, result);
+            Assert.AreEqual(Cards[2], result);
         }
 
         [Test]
-        public void CreatesInstanceWithDefaultData()
+        public void GetCardInvalidName()
         {
-            // Arrange
-            var card = cards[1];
+            var result = cardPool.GetCard("Non-existent Card");
 
-            // Act
-            var result = cardPool.CreateInstance(card);
-
-            // Assert
-            Assert.AreEqual(card.DefaultData, result.data);
+            Assert.AreEqual(hiddenCard, result);
         }
 
         [Test]
-        public void CreatesInstanceWithGivenData()
+        public void GetCardIndex()
         {
-            // Arrange
-            var card = cards[2];
-            var data = 42;
+            var result = cardPool.GetCardIndex(Cards[1]);
 
-            // Act
-            var result = cardPool.CreateInstance(card, data);
-
-            // Assert
-            Assert.AreEqual(data, result.data);
+            Assert.AreEqual(1, result);
         }
 
         [Test]
-        public void CreatesInstanceFromNameWithDefaultData()
+        public void GetCardIndexInvalid()
         {
-            // Arrange
-            var cardName = "Card3";
-            var expectedIndex = 3;
+            var nonExistingCard = new GameObject("Non-existing Card").AddComponent<TestCard>();
 
-            // Act
-            var result = cardPool.CreateInstance(cardName);
+            var result = cardPool.GetCardIndex(nonExistingCard);
 
-            // Assert
-            Assert.AreEqual(expectedIndex, result.CardModelID);
-            Assert.AreEqual(cards[expectedIndex].DefaultData, result.data);
+            Assert.AreEqual(-1, result);
+
+            GameObject.DestroyImmediate(nonExistingCard.gameObject);
         }
 
         [Test]
-        public void CreatesInstanceFromNameWithGivenData()
+        public void GetHiddenCardTemplate()
         {
-            // Arrange
-            var cardName = "Card4";
-            var expectedIndex = 4;
-            var data = 24;
+            var result = cardPool.GetHiddenCardTemplate();
 
-            // Act
-            var result = cardPool.CreateInstance(cardName, data);
-
-            // Assert
-            Assert.AreEqual(expectedIndex, result.CardModelID);
-            Assert.AreEqual(data, result.data);
+            Assert.AreEqual(hiddenCard, result);
         }
     }
 }

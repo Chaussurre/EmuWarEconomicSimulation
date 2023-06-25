@@ -30,15 +30,15 @@ namespace Tabletop.Standard
             if (!actionData.dealDamage)
                 return;
 
-            var pos = manager.CardManager.GetCardPos(actionData.CardID);
-            if (!pos.HasValue)
+            var card = manager.GetCardInstance(actionData.CardID);
+            if (!card.HasValue)
                 return;
 
-            var cardData = pos.Value.GetCard().data;
-
+            var cardData = card.Value.data;
+            
             cardData.Hp -= Mathf.Min(actionData.damages, cardData.Hp);
 
-            manager.CardManager.UpdateCard(pos, cardData);
+            manager.UpdateCard(actionData.CardID, cardData);
         }
     }
 }

@@ -1,38 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
+[assembly: InternalsVisibleTo("Tabletop.Tests")]
 namespace Tabletop
 {
-    public abstract class ActionsManager<TCardData> : MonoBehaviour where TCardData : struct
+    public class ActionsManager<TCardData> where TCardData : struct
     {
-        public CardManager<TCardData> CardManager;
-
         [SerializeField]
         private List<IActionWatcher<TCardData>> ActionWatchers = new();
 
-        Queue<IActionWatcher<TCardData>> actions = new();
+        List<IActionWatcher<TCardData>> actions = new();
 
-        private void Awake()
+        bool resolving = false;
+
+        internal ActionsManager(IActionWatcher<TCardData>[] watchers, CardManager<TCardData> CardManager)
         {
-            foreach (var watcher in GetComponentsInChildren<IActionWatcher<TCardData>>())
+            foreach (var watcher in watchers)
                 ActionWatchers.Add(watcher);
 
             foreach (var action in ActionWatchers)
-                action.Init(this);
+                action.Init(CardManager);
         }
 
         public bool AddAction<TActionData>(TActionData actionData) where TActionData : struct
         {
-            foreach(var action in ActionWatchers)
-                if (action is ActionWatcher<TCardData, TActionData> watcher)
-                {
-                    watcher.AddAction(actionData);
-                    actions.Enqueue(watcher);
+            foreach (var watcher in ActionWatchers)
+                if (AddActionToWatcher(watcher, actionData))
                     return true;
-                }
 
             return false;
+        }
+
+        public bool AddActionImmediate<TActionData>(TActionData actionData) where TActionData : struct
+        {
+            foreach (var watcher in ActionWatchers)
+                if (AddActionToWatcher(watcher, actionData, Immediate: true))
+                    return true;
+
+            return false;
+        }
+
+        private bool AddActionToWatcher<TActionData>(IActionWatcher<TCardData> watcher, TActionData actionData, bool Immediate = false) where TActionData : struct
+        {
+            if (watcher is not ActionWatcher<TCardData, TActionData> matchingWatcher)
+                return false;
+
+            if(Immediate)
+            {
+                matchingWatcher.AddActionImmediate(actionData);
+                actions.Insert(0, watcher);
+
+                Resolve();
+                return true;
+            }
+
+            matchingWatcher.AddAction(actionData);
+            actions.Add(watcher);
+
+            Resolve();
+            return true;
         }
 
         public void Trigger()
@@ -40,17 +68,22 @@ namespace Tabletop
             if (actions.Count == 0)
                 return;
 
-            var watcher = actions.Dequeue();
+            var watcher = actions[0];
+            actions.RemoveAt(0);
             watcher.Trigger();
         }
 
-        private void Update()
+        private void Resolve()
         {
-            if (actions.Count == 0)
+            if (resolving)
                 return;
+
+            resolving = true;
 
             while (actions.Count > 0)
                 Trigger();
+
+            resolving = false;
         }
     }
 }

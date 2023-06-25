@@ -1,139 +1,242 @@
-using Mirror;
-using System.Collections.Generic;
-using UnityEngine;
 using NUnit.Framework;
-using UnityEditor;
+using UnityEngine;
+using Tabletop;
+using System.Collections.Generic;
 
 namespace Tabletop.Tests
 {
-    public class TestCardStack : CardStack<int> { }
-    public class TestCard : Card<int> { }
 
     public class CardStackTests
     {
+        class TestCardStack : CardStack<int> { }
+
         private TestCardStack cardStack;
-        private List<TestCard.CardInstance> cards;
-        private TestCardPool cardPool;
-        private TestCard cardModel;
-
-        private NetworkManager manager;
-
+        private List<Card<int>.CardInstance> CardInstances;
+        private Card<int>.CardInstance extraInstance;
 
         [SetUp]
-        public void Setup()
+        public void SetUp()
         {
-            if (manager == null)
+            extraInstance = new()
             {
-                var prefabManager = AssetDatabase.LoadAssetAtPath<NetworkManager>("Assets/Tabletop/Tests/NetworkManagerTest.prefab");
-                manager = GameObject.Instantiate(prefabManager);
+                CardID = 3,
+                CardModelID = 3,
+                data = 300,
+                hidden = false,
+            };
 
-                var cardStackPrefab = AssetDatabase.LoadAssetAtPath<TestCardStack>("Assets/Tabletop/Tests/CardStackTest.prefab");
-
-                manager.StartHost();
-                cardStack = NetworkBehaviour.Instantiate(cardStackPrefab);
-                NetworkServer.Spawn(cardStack.gameObject);
-
-                cardPool = new GameObject("CardPool").AddComponent<TestCardPool>();
-                cardPool.PositionTracker = new();
-                cardStack.CardManager = cardPool;
-
-                cardModel = new GameObject("Card Model").AddComponent<TestCard>();
-                cardPool.Cards = new() { cardModel };
-            }
-
-            // Populate the card stack with some cards
-            cards = new List<TestCard.CardInstance>();
-
-            for (int i = 0; i < 5; i++)
+            // Create a new instance of CardStack and initialize card instances for testing
+            cardStack = new GameObject().AddComponent<TestCardStack>();
+            CardInstances = new()
             {
-                var cardInstance = cardPool.CreateInstance(cardModel, i);
-                cards.Add(cardInstance);
-
-                // Call AddCard on the server
-                cardStack.AddCard(cardInstance);
-            }
+                new()
+                {
+                    CardModelID = 0,
+                    CardID = 0,
+                    hidden = false,
+                    data = 0
+                },
+                new()
+                {
+                    CardModelID = 1,
+                    CardID = 1,
+                    hidden = true,
+                    data = 100
+                },
+                new()
+                {
+                    CardModelID = 2,
+                    CardID = 2,
+                    hidden = false,
+                    data = 200
+                }
+            };
         }
-
-        [Test]
-        public void AddsCardToStack()
+        private void AddCards()
         {
-            // Arrange
-            var newCard = cardPool.CreateInstance(cardModel, 5);
-
-            // Act
-            cardStack.AddCard(newCard);
-
-            // Assert
-            Assert.AreEqual(6, cardStack.Size);
-            Assert.AreEqual(newCard, cardStack.GetCard(5));
-            Assert.AreEqual(5, cardPool.PositionTracker[newCard.CardID].index);
-        }
-
-        [Test]
-        public void InsertsCardAtGivenIndex()
-        {
-            // Arrange
-            var newCard = cardPool.CreateInstance(cardModel, 5);
-            var insertIndex = 2;
-
-            // Act
-            cardStack.InsertCard(newCard, insertIndex);
-
-            // Assert
-            Assert.AreEqual(6, cardStack.Size);
-            Assert.AreEqual(newCard, cardStack.GetCard(insertIndex));
-            Assert.AreEqual(2, cardPool.PositionTracker[newCard.CardID].index);
-            Assert.AreEqual(3, cardPool.PositionTracker[cardStack.GetCard(insertIndex + 1).CardID].index);
-        }
-
-        [Test]
-        public void ClearCards()
-        {
-            // Act
-            cardStack.Clear();
-
-            // Assert
-            Assert.AreEqual(0, cardStack.Size);
-            Assert.AreEqual(0, cardPool.PositionTracker.Count);
-        }
-
-        [Test]
-        public void UpdatesCardAtGivenIndex()
-        {
-            // Arrange
-            var updatedCard = cardPool.CreateInstance(cardModel, 13);
-            var updateIndex = 2;
-
-            // Act
-            cardStack.UpdateCard(updatedCard, updateIndex);
-
-            // Assert
-            Assert.AreEqual(5, cardStack.Size);
-            Assert.AreEqual(updatedCard, cardStack.GetCard(updateIndex));
-            Assert.AreEqual(updateIndex, cardPool.PositionTracker[updatedCard.CardID].index);
-        }
-
-        [Test]
-        public void RemovesCardAtGivenIndex()
-        {
-            // Arrange
-            var removeIndex = 2;
-
-            // Act
-            cardStack.RemoveCard(removeIndex);
-
-            // Assert
-            Assert.AreEqual(4, cardStack.Size);
-            Assert.AreNotEqual(cards[removeIndex], cardStack.GetCard(removeIndex));
-            Assert.AreEqual(removeIndex - 1, cardPool.PositionTracker[cardStack.GetCard(removeIndex - 1).CardID].index);
-            Assert.AreEqual(removeIndex, cardPool.PositionTracker[cardStack.GetCard(removeIndex).CardID].index);
+            foreach (var card in CardInstances)
+                cardStack.AddCard(card);
         }
 
         [TearDown]
         public void TearDown()
         {
-            cards.Clear();
-            cardStack.Clear();
+            // Clean up created objects
+            Object.DestroyImmediate(cardStack.gameObject);
+        }
+
+        [Test]
+        public void SizeNewStack()
+        {
+            // Assert
+            Assert.Zero(cardStack.Size);
+        }
+
+        [Test]
+        public void GetCardInvalidIndex()
+        {
+            AddCards();
+
+            // Act
+            var card = cardStack.GetCard(3);
+
+            // Assert
+            Assert.Null(card);
+        }
+
+        [Test]
+        public void GetCard()
+        {
+            AddCards();
+
+            // Act
+            var card = cardStack.GetCard(1);
+
+            // Assert
+            Assert.AreEqual(CardInstances[1], card);
+        }
+
+        [Test]
+        public void AddNewCardInstance()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.AddCard(extraInstance);
+
+            // Assert
+            Assert.True(result);
+            Assert.AreEqual(4, cardStack.Size);
+            Assert.AreEqual(extraInstance, cardStack.GetCard(3));
+        }
+
+        [Test]
+        public void InsertCardInvalidIndex()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.InsertCard(extraInstance, -1);
+
+            // Assert
+            Assert.False(result);
+            Assert.AreEqual(3, cardStack.Size);
+        }
+
+        [Test]
+        public void InsertCard()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.InsertCard(extraInstance, 1);
+
+            // Assert
+            Assert.True(result);
+            Assert.AreEqual(4, cardStack.Size);
+            Assert.AreEqual(extraInstance, cardStack.GetCard(1));
+        }
+
+        [Test]
+        public void GetCardPosCardIDDoesNotExist()
+        {
+            AddCards();
+
+            // Act
+            var cardPosition = cardStack.GetCardPos(3);
+
+            // Assert
+            Assert.Null(cardPosition);
+        }
+
+        [Test]
+        public void GetCardPos()
+        {
+            AddCards();
+
+            // Act
+            var cardPosition = cardStack.GetCardPos(CardInstances[1].CardID);
+
+            // Assert
+            Assert.NotNull(cardPosition);
+            Assert.AreEqual(1, cardPosition?.index);
+            Assert.AreEqual(cardStack, cardPosition?.stack);
+        }
+
+        [Test]
+        public void UpdateCardInvalidIndex()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.UpdateCard(999, -1);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Test]
+        public void UpdateCard()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.UpdateCard(999, 0);
+
+            // Assert
+            Assert.True(result);
+            Assert.AreEqual(999, cardStack.GetCard(0)?.data);
+        }
+
+        [Test]
+        public void SetCardInvalidIndex()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.SetCard(extraInstance, -1);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Test]
+        public void SetCard()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.SetCard(extraInstance, 0);
+
+            // Assert
+            Assert.True(result);
+            Assert.AreEqual(extraInstance, cardStack.GetCard(0));
+        }
+
+        [Test]
+        public void RemoveCardInvalidIndex()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.RemoveCard(3);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Test]
+        public void RemoveCard()
+        {
+            AddCards();
+
+            // Act
+            var result = cardStack.RemoveCard(1);
+
+            // Assert
+            Assert.True(result);
+            Assert.AreEqual(2, cardStack.Size);
+            Assert.AreEqual(CardInstances[2], cardStack.GetCard(1));
         }
     }
 }

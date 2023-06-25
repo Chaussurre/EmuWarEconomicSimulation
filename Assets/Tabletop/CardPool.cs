@@ -41,7 +41,5 @@ namespace Tabletop
         }
 
         public Card<TCardData> GetHiddenCardTemplate() => HiddenCardTemplate;
-
-        
     }
 }

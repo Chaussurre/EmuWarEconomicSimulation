@@ -21,7 +21,7 @@ namespace Tabletop
 
             var model = CardPool.GetCard(card);
 
-            return model.CreateVisual(card, CardPool);
+            return model.CreateVisual(card);
         }
 
         public void DeleteVisual(int CardID)

@@ -7,9 +7,11 @@ namespace Tabletop
 {
     public class CardManager<TCardData> : MonoBehaviour where TCardData : struct
     {
-        public CardPool<TCardData> CardPool;
+        public CardPool<TCardData> CardPool = new();
 
         public CardVisualManager<TCardData> VisualManager;
+
+        public ActionsManager<TCardData> ActionsManager;
 
         private int InstanceIDIncrementer = 0;
 
@@ -17,8 +19,8 @@ namespace Tabletop
 
         private void Awake()
         {
-            CardPool = new();
             VisualManager = new(CardPool);
+            ActionsManager = new(GetComponentsInChildren<IActionWatcher<TCardData>>(), this);
         }
 
         public Card<TCardData>.CardInstance? CreateInstance(Card<TCardData> Card, CardStack<TCardData>.CardPosition position, TCardData? data = null)
@@ -91,11 +93,20 @@ namespace Tabletop
             if (!pos.HasValue)
                 return false; //CardID doesn't exist
 
-            var data = pos.Value.GetCard().Value.data;
-            pos.Value.RemoveCard();
-            CreateInstance(NewModel, pos.Value, data);
+            var card = pos.Value.GetCard().Value;
 
-            return true;
+            var modelID = CardPool.GetCardIndex(NewModel);
+
+            if (modelID == -1)
+                return false; //Model isn't valid
+
+            return pos.Value.SetCard(new()
+            {
+                CardModelID = modelID,
+                CardID = card.CardID,
+                hidden = card.hidden,
+                data = card.data,
+            });
         }
 
         public CardStack<TCardData>.CardPosition? GetCardPos(int CardID)

@@ -1,27 +1,30 @@
 using CombatSystem;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
+[assembly: InternalsVisibleTo("Tabletop.Tests")]
 namespace Tabletop
 {
     internal interface IActionWatcher<TCardData> where TCardData : struct
     {
-        public void Init(ActionsManager<TCardData> manager);
+        internal void Init(CardManager<TCardData> manager);
 
-        public void Trigger();
+        internal void Trigger();
 
         public int GetSize();
     }
 
+    
     public abstract class ActionWatcher<TCardData, TActionData> : MonoBehaviour, IActionWatcher<TCardData> where TActionData : struct where TCardData : struct
     {
-        protected ActionsManager<TCardData> manager;
+        protected CardManager<TCardData> manager;
 
-        private Queue<TActionData> Actions = new();
+        private List<TActionData> Actions = new();
 
-        public DataWatcher<TActionData> DataWatcher;
+        public DataWatcher<TActionData> DataWatcher = new();
 
-        public void Init(ActionsManager<TCardData> manager)
+        void IActionWatcher<TCardData>.Init(CardManager<TCardData> manager)
         {
             this.manager = manager;
         }
@@ -30,12 +33,21 @@ namespace Tabletop
 
         public void AddAction(TActionData actionData)
         {
-            Actions.Enqueue(actionData);
+            Actions.Add(actionData);
         }
 
-        public void Trigger()
+        public void AddActionImmediate(TActionData actionData)
         {
-            var data = Actions.Dequeue();
+            Actions.Insert(0, actionData);
+        }
+
+        void IActionWatcher<TCardData>.Trigger()
+        {
+            if (Actions.Count == 0)
+                return;
+
+            var data = Actions[0];
+            Actions.RemoveAt(0);
 
             data = DataWatcher.WatchData(data);
 

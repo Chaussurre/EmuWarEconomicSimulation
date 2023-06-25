@@ -18,7 +18,7 @@ namespace Tabletop.Standard
     {
         public bool IsAUnit;
 
-        public UnityEvent<ActionsManager<StandardCardData>, CardInstance> OnPlay = new();
+        public UnityEvent<CardManager<StandardCardData>, CardInstance> OnPlay = new();
     }
 
     public static class StandardCardInstanceReaderWriter

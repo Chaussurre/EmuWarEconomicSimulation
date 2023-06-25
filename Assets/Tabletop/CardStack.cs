@@ -1,9 +1,9 @@
-using CombatSystem;
-using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-using Mirror;
 
+
+[assembly: InternalsVisibleTo("Tabletop.Tests")]
 namespace Tabletop
 {
     public class CardStack<TCardData> : MonoBehaviour where TCardData : struct
@@ -40,6 +40,11 @@ namespace Tabletop
             {
                 return stack.RemoveCard(index ?? stack.Size - 1);
             }
+
+            internal bool SetCard(Card<TCardData>.CardInstance cardInstance)
+            {
+                return stack.SetCard(cardInstance, index ?? stack.Size - 1);
+            }
         }
 
         List<Card<TCardData>.CardInstance> Cards = new();
@@ -70,6 +75,15 @@ namespace Tabletop
                 return false;
 
             Cards.Insert(index, card);
+            return true;
+        }
+
+        internal bool SetCard(Card<TCardData>.CardInstance card, int index)
+        {
+            if (index < 0 || index > Cards.Count - 1)
+                return false;
+
+            Cards[index] = card;
             return true;
         }
 

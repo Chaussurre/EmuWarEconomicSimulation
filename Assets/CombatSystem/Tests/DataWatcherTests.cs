@@ -1,8 +1,5 @@
 using NUnit.Framework;
 using System;
-using System.Reflection;
-using UnityEngine;
-using UnityEngine.Events;
 
 namespace CombatSystem.Tests
 {

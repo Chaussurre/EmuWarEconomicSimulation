@@ -4,15 +4,14 @@ namespace Tabletop.Standard
 {
     public class CardCreator : StandardCardStack
     {
-        public StandardActionManager ActionManager;
+        public StandardCardManager CardManager;
         public StandardCard cardToCreate;
         public int cardToPlay;
 
         [ContextMenu("Create Card")]
         public void Create()
         {
-            var instance = CardManager.CreateInstance(cardToCreate);
-            AddCard(instance);
+            CardManager.CreateInstance(cardToCreate, new() { stack = this, index = null });
         }
 
         [ContextMenu("Play Card")]
@@ -20,11 +19,14 @@ namespace Tabletop.Standard
         {
             var instance = GetCard(cardToPlay);
 
+            if (!instance.HasValue)
+                return;
+
             ActionPlayWatcher.PlayData action = new()
             {
-                CardID = instance.CardID,
+                CardID = instance.Value.CardID,
             };
-            ActionManager.AddAction(action);
+            CardManager.ActionsManager.AddAction(action);
         }
     }
 }

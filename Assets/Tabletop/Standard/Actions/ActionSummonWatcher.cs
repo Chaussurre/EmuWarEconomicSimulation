@@ -25,13 +25,13 @@ namespace Tabletop.Standard
             if (actionData.CardID.HasValue)
             {
                 if (actionData.CardData.HasValue)
-                    manager.CardManager.UpdateCard(actionData.CardID.Value, actionData.CardData.Value);
+                    manager.UpdateCard(actionData.CardID.Value, actionData.CardData.Value);
 
-                manager.CardManager.MoveCard(actionData.CardID.Value, topPos);
+                manager.MoveCard(actionData.CardID.Value, topPos);
                 return;
             }
 
-            manager.CardManager.CreateInstance(actionData.CardModel, topPos, actionData.CardData);
+            manager.CreateInstance(actionData.CardModel, topPos, actionData.CardData);
         }
     }
 }
