@@ -1,21 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Events;
 
 [assembly: InternalsVisibleTo("Tabletop.Tests")]
 namespace Tabletop
 {
+    [Serializable]
     public class ActionsManager<TCardData> where TCardData : struct
     {
-        [SerializeField]
         private List<IActionWatcher<TCardData>> ActionWatchers = new();
 
         List<IActionWatcher<TCardData>> actions = new();
 
         bool resolving = false;
 
-        internal ActionsManager(IActionWatcher<TCardData>[] watchers, CardManager<TCardData> CardManager)
+        public UnityEvent OnResolved = new();
+
+        internal void Init(IActionWatcher<TCardData>[] watchers, CardManager<TCardData> CardManager)
         {
             foreach (var watcher in watchers)
                 ActionWatchers.Add(watcher);
@@ -82,6 +86,8 @@ namespace Tabletop
 
             while (actions.Count > 0)
                 Trigger();
+
+            OnResolved?.Invoke();
 
             resolving = false;
         }

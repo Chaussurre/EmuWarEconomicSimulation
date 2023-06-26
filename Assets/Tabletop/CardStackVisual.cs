@@ -13,7 +13,7 @@ namespace Tabletop
             ExpandSpacing
         }
 
-        [SerializeField] private CardVisualManager<TCardData> VisualManager;
+        [SerializeField] private CardManager<TCardData> CardManager;
         [SerializeField] private CardStack<TCardData> CardStack;
         [SerializeField] protected DisplayStyle Style;
         [SerializeField] protected float FixedSpacing;
@@ -21,12 +21,44 @@ namespace Tabletop
 
         private List<CardVisual<TCardData>> CardVisuals = new();
 
-        public Vector2 Size;
+        [SerializeField] private Vector2 Size;
+
+        private void Start()
+        {
+            CardManager.VisualManager.RegisterStack(CardStack, this);
+        }
 
         private void Update()
         {
             for (int i = 0; i < CardVisuals.Count; i++)
                 CardVisuals[i]?.MoveTo(GetPosition(i));
+        }
+
+        public int Count => CardVisuals.Count;
+
+        public void InsertCard(Card<TCardData>.CardInstance card, int index)
+        {
+            CardVisuals.Insert(index, CardManager.VisualManager.GetVisual(card));
+        }
+
+        public void SetCard(Card<TCardData>.CardInstance card, int index)
+        {
+            CardVisuals[index] = CardManager.VisualManager.GetVisual(card);
+        }
+
+        public void UpdateCard(TCardData data, int index)
+        {
+            CardVisuals[index].UpdateData(data);
+        }
+
+        public void RemoveCard(int index)
+        {
+            CardVisuals.RemoveAt(index);
+        }
+
+        public void Clear()
+        {
+            CardVisuals.Clear();
         }
 
         private Vector3 GetPosition(int CardIndex)

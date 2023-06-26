@@ -53,6 +53,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: IsAUnit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135626018481597901, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: VisualPrefab
       value: 
       objectReference: {fileID: 5443868710041573729, guid: 718f12e62cd07ff4f9e8fabebeee29ad, type: 3}

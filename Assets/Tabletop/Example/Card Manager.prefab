@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2077149334}
   - component: {fileID: 2077149333}
   - component: {fileID: 2077149332}
+  - component: {fileID: 7732695143958914052}
   m_Layer: 0
   m_Name: Watchers
   m_TagString: Untagged
@@ -112,6 +113,25 @@ MonoBehaviour:
     Reactions:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &7732695143958914052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077149330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3550120e0e49bbe44bbc0fa3969acf65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataWatcher:
+    Modifiers:
+      m_PersistentCalls:
+        m_Calls: []
+    Reactions:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &4062185834906769548
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +163,7 @@ Transform:
   m_Children:
   - {fileID: 2077149331}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8788403214041120605
 MonoBehaviour:
@@ -164,3 +184,9 @@ MonoBehaviour:
     - {fileID: 5956019918132699202, guid: 1ed4a86a8ee090e41b44503e6d4dafc7, type: 3}
     - {fileID: 5956019918132699202, guid: 6459e7b696e515746ae15ab49e7cd9c0, type: 3}
     HiddenCardTemplate: {fileID: 5956019918132699202, guid: 5b9be4c6eedee4940bdc11e0cc064eb5, type: 3}
+  VisualManager:
+    DumpVisualsOnActionsEnd: 1
+  ActionsManager:
+    OnResolved:
+      m_PersistentCalls:
+        m_Calls: []

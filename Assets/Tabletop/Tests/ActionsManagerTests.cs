@@ -55,7 +55,8 @@ namespace Tabletop.Tests
             // Set up the dependencies and create an instance of ActionsManager
             simpleWatcher = new GameObject ("simple watcher").AddComponent<SimpleActionWatcher>();
             complexWatcher = new GameObject("complex watcher").AddComponent<ComplexActionWatcher>();
-            actionsManager = new ActionsManager<int>(new IActionWatcher<int>[] { simpleWatcher, complexWatcher }, null);
+            actionsManager = new ActionsManager<int>();
+            actionsManager.Init(new IActionWatcher<int>[] { simpleWatcher, complexWatcher }, null);
             complexWatcher.actionsManager = actionsManager;
         }
 

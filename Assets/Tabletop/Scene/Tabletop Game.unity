@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08c576888d43a14d92c132267b8de72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardManager: {fileID: 4062185834866305258}
   CardStack: {fileID: 270430954}
   Style: 0
   FixedSpacing: 0.5
@@ -475,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08c576888d43a14d92c132267b8de72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardManager: {fileID: 4062185834866305258}
   CardStack: {fileID: 1479513452}
   Style: 3
   FixedSpacing: 0
@@ -492,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b324917e7ca2bae4fa8d41d7e3dcfd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardManager: {fileID: 0}
+  CardManager: {fileID: 4062185834866305258}
   cardToCreate: {fileID: 5956019918132699202, guid: 660f4ce7c333c2c4a8a20746092db04e, type: 3}
   cardToPlay: 0
 --- !u!1 &1648444638
@@ -670,28 +672,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4062185834906769550, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
-    - {fileID: 4062185834866305258, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
---- !u!1 &4062185834866305257 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4062185834906769548, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+--- !u!114 &4062185834866305258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8788403214041120605, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
   m_PrefabInstance: {fileID: 4062185834866305256}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4062185834866305258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4062185834866305257}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3cfc46904a369a4e8e41df310ba6532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardPool:
-    Cards: []
-    HiddenCardTemplate: {fileID: 0}

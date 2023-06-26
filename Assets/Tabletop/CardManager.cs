@@ -19,9 +19,11 @@ namespace Tabletop
 
         private void Awake()
         {
-            VisualManager = new(CardPool);
-            ActionsManager = new(GetComponentsInChildren<IActionWatcher<TCardData>>(), this);
+            ActionsManager.Init(GetComponentsInChildren<IActionWatcher<TCardData>>(), this);
+            VisualManager.Init(this);
         }
+
+        public Dictionary<int, CardStack<TCardData>>.KeyCollection Cards => PositionTracker.Keys;
 
         public Card<TCardData>.CardInstance? CreateInstance(Card<TCardData> Card, CardStack<TCardData>.CardPosition position, TCardData? data = null)
         {

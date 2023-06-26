@@ -7,12 +7,7 @@ namespace Tabletop
         private Vector3 Target;
         [SerializeField] private float speedLerp;
 
-        public void UpdateData(Card<TCardData>.CardInstance NewCardInstance)
-        {
-            UpdateInternData(NewCardInstance.data);
-        }
-
-        abstract protected void UpdateInternData(TCardData cardData);
+        abstract public void UpdateData(TCardData cardData);
 
         abstract public void SetRenderingOrder(int order);
 

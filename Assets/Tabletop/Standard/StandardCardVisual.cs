@@ -12,7 +12,7 @@ namespace Tabletop.Standard
         public TMP_Text TextAttack;
         public TMP_Text TextCost;
 
-        protected override void UpdateInternData(StandardCardData cardData)
+        public override void UpdateData(StandardCardData cardData)
         {
             TextHp.text = cardData.Hp.ToString();
             TextAttack.text = cardData.Attack.ToString();

@@ -21,7 +21,7 @@ namespace Tabletop
         public CardVisual<TCardData> CreateVisual(CardInstance Card)
         {
             var visual = Instantiate(VisualPrefab);
-            visual.UpdateData(Card);
+            visual.UpdateData(Card.data);
             return visual;
         }
     }
