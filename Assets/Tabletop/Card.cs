@@ -22,6 +22,7 @@ namespace Tabletop
         {
             var visual = Instantiate(VisualPrefab);
             visual.UpdateData(Card.data);
+            visual.CardID = Card.CardID;
             return visual;
         }
     }

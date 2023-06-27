@@ -2,11 +2,10 @@ using UnityEngine;
 
 namespace Tabletop.Standard
 {
-    public class CardCreator : StandardCardStack
+    public class CardCreator : CardStack
     {
-        public StandardCardManager CardManager;
-        public StandardCard cardToCreate;
-        public int cardToPlay;
+        public CardManager CardManager;
+        public Card cardToCreate;
 
         [ContextMenu("Create Card")]
         public void Create()
@@ -17,21 +16,6 @@ namespace Tabletop.Standard
                 CardModelID = cardModelID,
                 Position = new() { stack = this }
             });
-        }
-
-        [ContextMenu("Play Card")]
-        public void Play()
-        {
-            var instance = GetCard(cardToPlay);
-
-            if (!instance.HasValue)
-                return;
-
-            ActionPlayWatcher.PlayData action = new()
-            {
-                CardID = instance.Value.CardID,
-            };
-            CardManager.ActionsManager.AddAction(action);
         }
     }
 }

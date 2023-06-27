@@ -10,7 +10,7 @@ namespace Tabletop.Standard
         public struct CreateCardData
         {
             public int CardModelID;
-            public StandardCardStack.CardPosition Position;
+            public CardStack.CardPosition Position;
         }
 
         protected override void Apply(CreateCardData actionData)

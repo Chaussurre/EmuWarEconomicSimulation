@@ -9,16 +9,18 @@ namespace Tabletop.Standard
         public struct SummonData
         {
             public int? CardID;
-            public StandardCard CardModel;
+            public Card CardModel;
             public StandardCardData? CardData;
-            public StandardCardStack stack;
+            //public StandardCardStack stack;
         }
+
+        public CardStack Stack;
 
         protected override void Apply(SummonData actionData)
         {
-            StandardCardStack.CardPosition topPos = new()
+            CardStack.CardPosition topPos = new()
             {
-                stack = actionData.stack,
+                stack = Stack,
                 index = null,
             };
 

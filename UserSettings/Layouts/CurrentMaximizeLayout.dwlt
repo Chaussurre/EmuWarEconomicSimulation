@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 4736
+  controlID: 5760
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 4689
+  controlID: 5678
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4630
+  controlID: 5594
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,9 +160,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 223cffffb83cffff383effffa857ffffb65bffff0e60ffff1063ffff7666ffff9669ffff486dffffc08fffff7e92ffff8e99ffffda9affff38a8ffff36a9ffff96aaffff90abffff54adffff30b1ffffd2b1ffffc4dfffff7ae7ffff40e9ffff40eaffffb8ebffff1aedffff30fbffff
+      m_SelectedIDs: 2a640000
+      m_LastClickedID: 25642
+      m_ExpandedIDs: 22fbffff24fbffff1c640000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -470,9 +470,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.2249071, y: -1.946629, z: 0.09258586}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -0.2249071, y: -1.946629, z: 0.09258586}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -522,9 +522,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.72314745
+    m_Target: 10
     speed: 2
-    m_Value: 0.72314745
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -573,7 +573,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4690
+  controlID: 5679
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -641,22 +641,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tabletop/Tests
+    - Assets/Tabletop/Standard/Visuals/Handlers
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Tabletop/Tests
+  - Assets/Tabletop/Standard/Visuals/Handlers
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Chaussure\Documents\Unity\EmuWarEconomicSimulation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 15.800018}
-    m_SelectedIDs: d4680000
-    m_LastClickedID: 26836
-    m_ExpandedIDs: 000000009c640000a0640000a2640000a4640000a6640000a8640000b0680000cc680000aa6a000000ca9a3b
+    scrollPos: {x: 0, y: 159.80002}
+    m_SelectedIDs: 9a680000
+    m_LastClickedID: 26778
+    m_ExpandedIDs: 00000000026800000468000006680000086800000a6800000c6800000e6800006a6800008c68000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -684,7 +684,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c640000a0640000a2640000a4640000a6640000a8640000b0680000cc680000aa6a000000ca9a3b
+    m_ExpandedIDs: 00000000026800000468000006680000086800000a6800000c6800000e68000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -709,9 +709,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 2a640000
+    m_LastClickedInstanceID: 25642
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000828800001cc6000020c600007e880000806a0000ea6b0000f86d0000406f0000846b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -834,7 +834,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -961,7 +961,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1234
+  m_LastSelectedObjectID: 25642
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -986,7 +986,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 4737
+  controlID: 5761
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1006,16 +1006,16 @@ MonoBehaviour:
     y: 0
     width: 619.2
     height: 486.4
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1051,7 +1051,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 290.40002
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1114,7 +1114,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 4773
+    ID: 194
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1145,9 +1145,9 @@ MonoBehaviour:
       uniqueId: '[EmuWarEconomicSimulation][suite]'
       name: EmuWarEconomicSimulation
       fullName: EmuWarEconomicSimulation
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 0.368339
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1157,13 +1157,27 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    m_ResultText: 
-    m_ResultStacktrace: 
+    m_ResultText: "CreateInstance (0,159s)\n---\nSystem.ArgumentOutOfRangeException
+      : Specified argument was out of the range of valid values.\r\nParameter name:
+      Card\n---\nat Tabletop.CardManager`1[TCardData].CreateInstance (Tabletop.Card`1[TCardData]
+      Card, Tabletop.CardStack`1+CardPosition[TCardData] position, System.Nullable`1[T]
+      data) [0x00019] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardManager.cs:29
+      \r\n  at Tabletop.Tests.CardManagerTests+<CreateInstance>d__13.MoveNext ()
+      [0x00020] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardManagerTests.cs:75
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+      in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Library\\PackageCache\\com.unity.test-framework@1.1.33\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46"
+    m_ResultStacktrace: "  at Tabletop.CardManager`1[TCardData].CreateInstance (Tabletop.Card`1[TCardData]
+      Card, Tabletop.CardStack`1+CardPosition[TCardData] position, System.Nullable`1[T]
+      data) [0x00019] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\CardManager.cs:29
+      \r\n  at Tabletop.Tests.CardManagerTests+<CreateInstance>d__13.MoveNext ()
+      [0x00020] in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Assets\\Tabletop\\Tests\\CardManagerTests.cs:75
+      \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+      in C:\\Users\\Chaussure\\Documents\\Unity\\EmuWarEconomicSimulation\\Library\\PackageCache\\com.unity.test-framework@1.1.33\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 87f4c069ffffff7f
+      m_SelectedIDs: 8d68f31b
+      m_LastClickedID: 468936845
+      m_ExpandedIDs: eeaebbc191bb25caca3b2acb1334d9e787f4c069ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1197,9 +1211,9 @@ MonoBehaviour:
       uniqueId: '[EmuWarEconomicSimulation][suite]'
       name: EmuWarEconomicSimulation
       fullName: EmuWarEconomicSimulation
-      resultStatus: 2
-      duration: 0.2013075
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.8550469
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1214,7 +1228,7 @@ MonoBehaviour:
       name: CombatSystem.Tests.dll
       fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/CombatSystem.Tests.dll
       resultStatus: 1
-      duration: 4.620737
+      duration: 0.4524142
       messages: 
       output: 
       stacktrace: 
@@ -1230,7 +1244,7 @@ MonoBehaviour:
       name: CombatSystem
       fullName: CombatSystem
       resultStatus: 1
-      duration: 3.9596684
+      duration: 0.4504383
       messages: 
       output: 
       stacktrace: 
@@ -1246,7 +1260,7 @@ MonoBehaviour:
       name: Tests
       fullName: CombatSystem.Tests
       resultStatus: 1
-      duration: 3.6775296
+      duration: 0.448708
       messages: 
       output: 
       stacktrace: 
@@ -1262,7 +1276,7 @@ MonoBehaviour:
       name: DataWatcherTests
       fullName: CombatSystem.Tests.DataWatcherTests
       resultStatus: 1
-      duration: 2.4671674
+      duration: 0.1276639
       messages: 
       output: 
       stacktrace: 
@@ -1278,7 +1292,7 @@ MonoBehaviour:
       name: ModifierCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierCalledTest
       resultStatus: 1
-      duration: 0.8985718
+      duration: 0.0026598
       messages: 
       output: 
       stacktrace: 
@@ -1295,7 +1309,7 @@ MonoBehaviour:
       name: ModifierChageBufferTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierChageBufferTest
       resultStatus: 1
-      duration: 0.2540525
+      duration: 0.106206
       messages: 
       output: 
       stacktrace: 
@@ -1312,7 +1326,7 @@ MonoBehaviour:
       name: ModifierRemovedTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierRemovedTest
       resultStatus: 1
-      duration: 0.0310202
+      duration: 0.0010725
       messages: 
       output: 
       stacktrace: 
@@ -1329,7 +1343,7 @@ MonoBehaviour:
       name: ModifiersAndReactionsCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifiersAndReactionsCalledTest
       resultStatus: 1
-      duration: 0.0189024
+      duration: 0.0014815
       messages: 
       output: 
       stacktrace: 
@@ -1346,7 +1360,7 @@ MonoBehaviour:
       name: NoDataTest
       fullName: CombatSystem.Tests.DataWatcherTests.NoDataTest
       resultStatus: 1
-      duration: 0.0004163
+      duration: 0.0004246
       messages: 
       output: 
       stacktrace: 
@@ -1363,7 +1377,7 @@ MonoBehaviour:
       name: ReactionCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionCalledTest
       resultStatus: 1
-      duration: 0.0007132
+      duration: 0.0005547
       messages: 
       output: 
       stacktrace: 
@@ -1380,7 +1394,7 @@ MonoBehaviour:
       name: ReactionRemovedTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionRemovedTest
       resultStatus: 1
-      duration: 0.0104565
+      duration: 0.001577
       messages: 
       output: 
       stacktrace: 
@@ -1397,7 +1411,7 @@ MonoBehaviour:
       name: ReactionSeesModifiersChange
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionSeesModifiersChange
       resultStatus: 1
-      duration: 0.0128746
+      duration: 0.0007254
       messages: 
       output: 
       stacktrace: 
@@ -1414,7 +1428,7 @@ MonoBehaviour:
       name: ReorderModifiersTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReorderModifiersTest
       resultStatus: 1
-      duration: 0.127309
+      duration: 0.0014593
       messages: 
       output: 
       stacktrace: 
@@ -1431,7 +1445,7 @@ MonoBehaviour:
       name: ReorderReactionsTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReorderReactionsTest
       resultStatus: 1
-      duration: 0.0252798
+      duration: 0.0007425
       messages: 
       output: 
       stacktrace: 
@@ -1448,7 +1462,7 @@ MonoBehaviour:
       name: SeveralModifiersChageBufferTest
       fullName: CombatSystem.Tests.DataWatcherTests.SeveralModifiersChageBufferTest
       resultStatus: 1
-      duration: 0.0008633
+      duration: 0.0006256
       messages: 
       output: 
       stacktrace: 
@@ -1465,7 +1479,7 @@ MonoBehaviour:
       name: StandardResourcesManagerTests
       fullName: CombatSystem.Tests.StandardResourcesManagerTests
       resultStatus: 1
-      duration: 0.4277988
+      duration: 0.1270557
       messages: 
       output: 
       stacktrace: 
@@ -1481,7 +1495,7 @@ MonoBehaviour:
       name: ModifiesResourceCorrectly
       fullName: CombatSystem.Tests.StandardResourcesManagerTests.ModifiesResourceCorrectly
       resultStatus: 1
-      duration: 0.2158949
+      duration: 0.0055647
       messages: 
       output: 
       stacktrace: 
@@ -1498,7 +1512,7 @@ MonoBehaviour:
       name: ModifiesResourceWithModifiers
       fullName: CombatSystem.Tests.StandardResourcesManagerTests.ModifiesResourceWithModifiers
       resultStatus: 1
-      duration: 0.027774
+      duration: 0.0014766
       messages: 
       output: 
       stacktrace: 
@@ -1515,7 +1529,7 @@ MonoBehaviour:
       name: ThrowsExceptionForInvalidResource
       fullName: CombatSystem.Tests.StandardResourcesManagerTests.ThrowsExceptionForInvalidResource
       resultStatus: 1
-      duration: 0.043926
+      duration: 0.1016366
       messages: 
       output: 
       stacktrace: 
@@ -1532,7 +1546,7 @@ MonoBehaviour:
       name: StatusManagerTests
       fullName: CombatSystem.Tests.StatusManagerTests
       resultStatus: 1
-      duration: 0.6446119
+      duration: 0.1882029
       messages: 
       output: 
       stacktrace: 
@@ -1548,7 +1562,7 @@ MonoBehaviour:
       name: AddStacks
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacks
       resultStatus: 1
-      duration: 0.2116355
+      duration: 0.0397728
       messages: 
       output: 
       stacktrace: 
@@ -1565,7 +1579,7 @@ MonoBehaviour:
       name: AddStacksWithMax
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithMax
       resultStatus: 1
-      duration: 0.0007347
+      duration: 0.0014726
       messages: 
       output: 
       stacktrace: 
@@ -1582,7 +1596,7 @@ MonoBehaviour:
       name: AddStacksWithModifier
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithModifier
       resultStatus: 1
-      duration: 0.0248063
+      duration: 0.0022843
       messages: 
       output: 
       stacktrace: 
@@ -1599,7 +1613,7 @@ MonoBehaviour:
       name: GetDataWatcher
       fullName: CombatSystem.Tests.StatusManagerTests.GetDataWatcher
       resultStatus: 1
-      duration: 0.0336351
+      duration: 0.003593
       messages: 
       output: 
       stacktrace: 
@@ -1616,7 +1630,7 @@ MonoBehaviour:
       name: RemoveStacks
       fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacks
       resultStatus: 1
-      duration: 0.0009583
+      duration: 0.0008897
       messages: 
       output: 
       stacktrace: 
@@ -1633,7 +1647,7 @@ MonoBehaviour:
       name: RemoveStacksNegative
       fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacksNegative
       resultStatus: 1
-      duration: 0.0007711
+      duration: 0.0012174
       messages: 
       output: 
       stacktrace: 
@@ -1649,9 +1663,9 @@ MonoBehaviour:
       uniqueId: '[Tabletop.Tests.dll][suite]'
       name: Tabletop.Tests.dll
       fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/Tabletop.Tests.dll
-      resultStatus: 2
-      duration: 0.0361916
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.3505392
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1665,9 +1679,9 @@ MonoBehaviour:
       uniqueId: Tabletop.Tests.dll/[Tabletop][suite]
       name: Tabletop
       fullName: Tabletop
-      resultStatus: 2
-      duration: 0.024684
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.3111088
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1681,9 +1695,9 @@ MonoBehaviour:
       uniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
       name: Tests
       fullName: Tabletop.Tests
-      resultStatus: 2
-      duration: 0.0228869
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.2989406
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1697,9 +1711,9 @@ MonoBehaviour:
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.ActionsManagerTests][suite]
       name: ActionsManagerTests
       fullName: Tabletop.Tests.ActionsManagerTests
-      resultStatus: 2
-      duration: 0.02138
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0230813
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1714,14 +1728,9 @@ MonoBehaviour:
       name: AddAction
       fullName: Tabletop.Tests.ActionsManagerTests.AddAction
       resultStatus: 1
-      duration: 0.1084894
+      duration: 0.0069168
       messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1735,19 +1744,11 @@ MonoBehaviour:
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/ActionsManagerTests/[Tabletop.Tests][Tabletop.Tests.ActionsManagerTests.AddActionComplex]
       name: AddActionComplex
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionComplex
-      resultStatus: 2
-      duration: 0.0184548
-      messages: "  Expected: 40\r\n  But was:  20\r\n"
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
-      stacktrace: 'at Tabletop.Tests.ActionsManagerTests.AddActionComplex () [0x00037]
-        in C:\Users\Chaussure\Documents\Unity\EmuWarEconomicSimulation\Assets\Tabletop\Tests\ActionsManagerTests.cs:117
-
-'
+      resultStatus: 1
+      duration: 0.0026438
+      messages: 
+      output: 
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1761,14 +1762,9 @@ MonoBehaviour:
       name: AddActionImmediate
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionImmediate
       resultStatus: 1
-      duration: 0.0021835
+      duration: 0.0011302
       messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1783,14 +1779,9 @@ MonoBehaviour:
       name: AddActionImmediateComplex
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionImmediateComplex
       resultStatus: 1
-      duration: 0.0016678
+      duration: 0.0008391
       messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1805,14 +1796,9 @@ MonoBehaviour:
       name: AddActionImmediateNoMatchingWatcher
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionImmediateNoMatchingWatcher
       resultStatus: 1
-      duration: 0.0021503
+      duration: 0.0013951
       messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1827,14 +1813,9 @@ MonoBehaviour:
       name: AddActionNoMatchingWatcher
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionNoMatchingWatcher
       resultStatus: 1
-      duration: 0.0019476
+      duration: 0.0010055
       messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1849,14 +1830,9 @@ MonoBehaviour:
       name: TriggerNoActions
       fullName: Tabletop.Tests.ActionsManagerTests.TriggerNoActions
       resultStatus: 1
-      duration: 0.0013737
+      duration: 0.0006298
       messages: 
-      output: 'You are trying to create a MonoBehaviour using the ''new'' keyword. 
-        This is not allowed.  MonoBehaviours can only be added using AddComponent().
-        Alternatively, your script can inherit from ScriptableObject or no base class
-        at all
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1871,7 +1847,7 @@ MonoBehaviour:
       name: ActionWatcherTests
       fullName: Tabletop.Tests.ActionWatcherTests
       resultStatus: 1
-      duration: 0.0701931
+      duration: 0.0291428
       messages: 
       output: 
       stacktrace: 
@@ -1887,7 +1863,7 @@ MonoBehaviour:
       name: AddAction
       fullName: Tabletop.Tests.ActionWatcherTests.AddAction
       resultStatus: 1
-      duration: 0.0352487
+      duration: 0.0036657
       messages: 
       output: 
       stacktrace: 
@@ -1904,7 +1880,7 @@ MonoBehaviour:
       name: AddActionImmediate
       fullName: Tabletop.Tests.ActionWatcherTests.AddActionImmediate
       resultStatus: 1
-      duration: 0.0035956
+      duration: 0.0009207
       messages: 
       output: 
       stacktrace: 
@@ -1921,7 +1897,7 @@ MonoBehaviour:
       name: AddActions
       fullName: Tabletop.Tests.ActionWatcherTests.AddActions
       resultStatus: 1
-      duration: 0.0007181
+      duration: 0.0006035
       messages: 
       output: 
       stacktrace: 
@@ -1938,7 +1914,7 @@ MonoBehaviour:
       name: GetSizeNoActions
       fullName: Tabletop.Tests.ActionWatcherTests.GetSizeNoActions
       resultStatus: 1
-      duration: 0.0010324
+      duration: 0.0006478
       messages: 
       output: 
       stacktrace: 
@@ -1955,7 +1931,7 @@ MonoBehaviour:
       name: TriggerActions
       fullName: Tabletop.Tests.ActionWatcherTests.TriggerActions
       resultStatus: 1
-      duration: 0.002067
+      duration: 0.0008038
       messages: 
       output: 
       stacktrace: 
@@ -1972,7 +1948,7 @@ MonoBehaviour:
       name: TriggerNoActions
       fullName: Tabletop.Tests.ActionWatcherTests.TriggerNoActions
       resultStatus: 1
-      duration: 0.0008137
+      duration: 0.0005844
       messages: 
       output: 
       stacktrace: 
@@ -1984,12 +1960,300 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1027
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.ActionWatcherTests][suite]
+    - id: 1042
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+      name: CardManagerTests
+      fullName: Tabletop.Tests.CardManagerTests
+      resultStatus: 1
+      duration: 0.1353214
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/[Tabletop.Tests][Tabletop.Tests][suite]
+    - id: 1045
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.CreateInstance]
+      name: CreateInstance
+      fullName: Tabletop.Tests.CardManagerTests.CreateInstance
+      resultStatus: 1
+      duration: 0.0035987
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1043
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.CreateInstanceCardNotInPool]
+      name: CreateInstanceCardNotInPool
+      fullName: Tabletop.Tests.CardManagerTests.CreateInstanceCardNotInPool
+      resultStatus: 1
+      duration: 0.0012109
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1044
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.CreateInstanceDefaultData]
+      name: CreateInstanceDefaultData
+      fullName: Tabletop.Tests.CardManagerTests.CreateInstanceDefaultData
+      resultStatus: 1
+      duration: 0.0008048
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1046
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.DestroyInstance]
+      name: DestroyInstance
+      fullName: Tabletop.Tests.CardManagerTests.DestroyInstance
+      resultStatus: 1
+      duration: 0.0019918
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1045
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.DestroyInstanceCardIDDoesNotExist]
+      name: DestroyInstanceCardIDDoesNotExist
+      fullName: Tabletop.Tests.CardManagerTests.DestroyInstanceCardIDDoesNotExist
+      resultStatus: 1
+      duration: 0.0007033
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1057
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.GetCardInstance]
+      name: GetCardInstance
+      fullName: Tabletop.Tests.CardManagerTests.GetCardInstance
+      resultStatus: 1
+      duration: 0.0020205
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1058
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.GetCardInstanceInvalidID]
+      name: GetCardInstanceInvalidID
+      fullName: Tabletop.Tests.CardManagerTests.GetCardInstanceInvalidID
+      resultStatus: 1
+      duration: 0.000785
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1055
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.GetCardPos]
+      name: GetCardPos
+      fullName: Tabletop.Tests.CardManagerTests.GetCardPos
+      resultStatus: 1
+      duration: 0.0671852
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1056
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.GetCardPosInvalidID]
+      name: GetCardPosInvalidID
+      fullName: Tabletop.Tests.CardManagerTests.GetCardPosInvalidID
+      resultStatus: 1
+      duration: 0.0011022
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1048
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.MoveCard]
+      name: MoveCard
+      fullName: Tabletop.Tests.CardManagerTests.MoveCard
+      resultStatus: 1
+      duration: 0.0023722
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1049
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.MoveCardInvalid]
+      name: MoveCardInvalid
+      fullName: Tabletop.Tests.CardManagerTests.MoveCardInvalid
+      resultStatus: 1
+      duration: 0.0012065
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1054
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.TransformCard]
+      name: TransformCard
+      fullName: Tabletop.Tests.CardManagerTests.TransformCard
+      resultStatus: 1
+      duration: 0.0017038
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1053
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.TransformCardInvalidID]
+      name: TransformCardInvalidID
+      fullName: Tabletop.Tests.CardManagerTests.TransformCardInvalidID
+      resultStatus: 1
+      duration: 0.0011035
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1052
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.TransformCardInvalidModel]
+      name: TransformCardInvalidModel
+      fullName: Tabletop.Tests.CardManagerTests.TransformCardInvalidModel
+      resultStatus: 1
+      duration: 0.0007625
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1050
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.UpdateCard]
+      name: UpdateCard
+      fullName: Tabletop.Tests.CardManagerTests.UpdateCard
+      resultStatus: 1
+      duration: 0.0013933
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
+    - id: 1051
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardManagerTests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests.UpdateCardInvalid]
+      name: UpdateCardInvalid
+      fullName: Tabletop.Tests.CardManagerTests.UpdateCardInvalid
+      resultStatus: 1
+      duration: 0.0010204
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardManagerTests][suite]
     - id: 1027
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardPoolTests][suite]
       name: CardPoolTests
       fullName: Tabletop.Tests.CardPoolTests
       resultStatus: 1
-      duration: 0.1650073
+      duration: 0.0462559
       messages: 
       output: 
       stacktrace: 
@@ -2005,7 +2269,7 @@ MonoBehaviour:
       name: GetCardFromID
       fullName: Tabletop.Tests.CardPoolTests.GetCardFromID
       resultStatus: 1
-      duration: 0.0864753
+      duration: 0.003111
       messages: 
       output: 
       stacktrace: 
@@ -2022,7 +2286,7 @@ MonoBehaviour:
       name: GetCardFromInstance
       fullName: Tabletop.Tests.CardPoolTests.GetCardFromInstance
       resultStatus: 1
-      duration: 0.0016091
+      duration: 0.0008918
       messages: 
       output: 
       stacktrace: 
@@ -2039,7 +2303,7 @@ MonoBehaviour:
       name: GetCardFromName
       fullName: Tabletop.Tests.CardPoolTests.GetCardFromName
       resultStatus: 1
-      duration: 0.0011622
+      duration: 0.0010281
       messages: 
       output: 
       stacktrace: 
@@ -2056,7 +2320,7 @@ MonoBehaviour:
       name: GetCardIndex
       fullName: Tabletop.Tests.CardPoolTests.GetCardIndex
       resultStatus: 1
-      duration: 0.0198526
+      duration: 0.0006259
       messages: 
       output: 
       stacktrace: 
@@ -2073,7 +2337,7 @@ MonoBehaviour:
       name: GetCardIndexInvalid
       fullName: Tabletop.Tests.CardPoolTests.GetCardIndexInvalid
       resultStatus: 1
-      duration: 0.0009972
+      duration: 0.0007998
       messages: 
       output: 
       stacktrace: 
@@ -2090,7 +2354,7 @@ MonoBehaviour:
       name: GetCardInvalidName
       fullName: Tabletop.Tests.CardPoolTests.GetCardInvalidName
       resultStatus: 1
-      duration: 0.0009158
+      duration: 0.0006814
       messages: 
       output: 
       stacktrace: 
@@ -2107,7 +2371,7 @@ MonoBehaviour:
       name: GetHiddenCardTemplate
       fullName: Tabletop.Tests.CardPoolTests.GetHiddenCardTemplate
       resultStatus: 1
-      duration: 0.0007635
+      duration: 0.000717
       messages: 
       output: 
       stacktrace: 
@@ -2124,7 +2388,7 @@ MonoBehaviour:
       name: CardStackTests
       fullName: Tabletop.Tests.CardStackTests
       resultStatus: 1
-      duration: 0.2365186
+      duration: 0.060096
       messages: 
       output: 
       stacktrace: 
@@ -2140,7 +2404,7 @@ MonoBehaviour:
       name: AddNewCardInstance
       fullName: Tabletop.Tests.CardStackTests.AddNewCardInstance
       resultStatus: 1
-      duration: 0.1232601
+      duration: 0.0038266
       messages: 
       output: 
       stacktrace: 
@@ -2157,7 +2421,7 @@ MonoBehaviour:
       name: GetCard
       fullName: Tabletop.Tests.CardStackTests.GetCard
       resultStatus: 1
-      duration: 0.0079916
+      duration: 0.0007623
       messages: 
       output: 
       stacktrace: 
@@ -2174,7 +2438,7 @@ MonoBehaviour:
       name: GetCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.GetCardInvalidIndex
       resultStatus: 1
-      duration: 0.0224816
+      duration: 0.0007045
       messages: 
       output: 
       stacktrace: 
@@ -2191,7 +2455,7 @@ MonoBehaviour:
       name: GetCardPos
       fullName: Tabletop.Tests.CardStackTests.GetCardPos
       resultStatus: 1
-      duration: 0.0222289
+      duration: 0.0124169
       messages: 
       output: 
       stacktrace: 
@@ -2208,7 +2472,7 @@ MonoBehaviour:
       name: GetCardPosCardIDDoesNotExist
       fullName: Tabletop.Tests.CardStackTests.GetCardPosCardIDDoesNotExist
       resultStatus: 1
-      duration: 0.0007684
+      duration: 0.000672
       messages: 
       output: 
       stacktrace: 
@@ -2225,7 +2489,7 @@ MonoBehaviour:
       name: InsertCard
       fullName: Tabletop.Tests.CardStackTests.InsertCard
       resultStatus: 1
-      duration: 0.0007463
+      duration: 0.0007178
       messages: 
       output: 
       stacktrace: 
@@ -2242,7 +2506,7 @@ MonoBehaviour:
       name: InsertCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.InsertCardInvalidIndex
       resultStatus: 1
-      duration: 0.0007072
+      duration: 0.0013213
       messages: 
       output: 
       stacktrace: 
@@ -2259,7 +2523,7 @@ MonoBehaviour:
       name: RemoveCard
       fullName: Tabletop.Tests.CardStackTests.RemoveCard
       resultStatus: 1
-      duration: 0.0010253
+      duration: 0.0007938
       messages: 
       output: 
       stacktrace: 
@@ -2276,7 +2540,7 @@ MonoBehaviour:
       name: RemoveCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.RemoveCardInvalidIndex
       resultStatus: 1
-      duration: 0.0009357
+      duration: 0.0006168
       messages: 
       output: 
       stacktrace: 
@@ -2288,12 +2552,46 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1027
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1079
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.SetCard]
+      name: SetCard
+      fullName: Tabletop.Tests.CardStackTests.SetCard
+      resultStatus: 1
+      duration: 0.0008922
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
+    - id: 1078
+      uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.SetCardInvalidIndex]
+      name: SetCardInvalidIndex
+      fullName: Tabletop.Tests.CardStackTests.SetCardInvalidIndex
+      resultStatus: 1
+      duration: 0.000603
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
     - id: 1028
       uniqueId: Tabletop.Tests.dll/Tabletop/Tests/CardStackTests/[Tabletop.Tests][Tabletop.Tests.CardStackTests.SizeNewStack]
       name: SizeNewStack
       fullName: Tabletop.Tests.CardStackTests.SizeNewStack
       resultStatus: 1
-      duration: 0.0019628
+      duration: 0.0008893
       messages: 
       output: 
       stacktrace: 
@@ -2310,7 +2608,7 @@ MonoBehaviour:
       name: UpdateCard
       fullName: Tabletop.Tests.CardStackTests.UpdateCard
       resultStatus: 1
-      duration: 0.0012086
+      duration: 0.0006987
       messages: 
       output: 
       stacktrace: 
@@ -2327,7 +2625,7 @@ MonoBehaviour:
       name: UpdateCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.UpdateCardInvalidIndex
       resultStatus: 1
-      duration: 0.000619
+      duration: 0.0005229
       messages: 
       output: 
       stacktrace: 
@@ -2339,18 +2637,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1027
       parentUniqueId: Tabletop.Tests.dll/Tabletop/Tests/[Tabletop.Tests][Tabletop.Tests.CardStackTests][suite]
-    m_ResultText: 'ActionsManagerTests (0,021s)
-
-      ---
-
-      One or more child
-      tests had errors'
+    m_ResultText: TransformCardInvalidModel (0,001s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d42ab53b
-      m_LastClickedID: 1001728724
-      m_ExpandedIDs: 2eca7da132ac8caceeaebbc191bb25caca3b2acbc50c2fed87f4c069ffffff7f
+      m_SelectedIDs: f21369dc
+      m_LastClickedID: -597093390
+      m_ExpandedIDs: 2eca7da132ac8caceeaebbc191bb25cac50c2fed87f4c069ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

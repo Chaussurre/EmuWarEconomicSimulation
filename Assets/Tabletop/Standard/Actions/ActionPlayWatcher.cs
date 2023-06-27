@@ -10,7 +10,7 @@ namespace Tabletop.Standard
             public int CardID;
         }
 
-        public StandardCardStack PlayingField;
+        public CardStack PlayingField;
 
         protected override void Apply(PlayData actionData)
         {
@@ -19,14 +19,13 @@ namespace Tabletop.Standard
             if (!cardInstance.HasValue)
                 return;
 
-            var cardModel = manager.CardPool.GetCard(cardInstance.Value) as StandardCard;
+            var cardModel = manager.CardPool.GetCard(cardInstance.Value) as Card;
 
             cardModel.OnPlay?.Invoke(manager, cardInstance.Value);
 
             if (cardModel.IsAUnit)
-                manager.ActionsManager.AddAction(new ActionSummonWatcher.SummonData()
+                manager.ActionsManager.AddActionImmediate(new ActionSummonWatcher.SummonData()
                 {
-                    stack = PlayingField,
                     CardID = cardInstance.Value.CardID,
                     CardData = cardInstance.Value.data,
                     CardModel = cardModel,
