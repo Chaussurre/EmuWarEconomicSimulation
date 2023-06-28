@@ -13,7 +13,7 @@ namespace Tabletop.Standard
         public bool ShowOnRight;
         public SortingLayerPicker displayedLayer;
 
-        private CardVisual<StandardCardData> CurrentVisual;
+        private CardVisual<CardData> CurrentVisual;
         private bool locked;
         private bool lockLocker; // the lock on the lock ... when true can't change the value of locked
         private float timer;
@@ -24,7 +24,7 @@ namespace Tabletop.Standard
                 DestroyVisual();
         }
 
-        public override void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        public override void OnCardInteract(CardStackVisualHandler<CardData>.CardInteractionData data)
         {
             if (!data.isHovered() && !locked)
             {
@@ -40,7 +40,7 @@ namespace Tabletop.Standard
             HandleLock(data);
         }
 
-        private void CreateVisual(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        private void CreateVisual(CardStackVisualHandler<CardData>.CardInteractionData data)
         {
             if (CurrentVisual)
                 return;
@@ -55,7 +55,7 @@ namespace Tabletop.Standard
             CurrentVisual.transform.position = FindPos(data.Target);
         }
 
-        private void HandleLock(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        private void HandleLock(CardStackVisualHandler<CardData>.CardInteractionData data)
         {
             if (data.RightClick)
             {
@@ -81,7 +81,7 @@ namespace Tabletop.Standard
             }
         }
 
-        Vector3 FindPos(CardVisual<StandardCardData> original)
+        Vector3 FindPos(CardVisual<CardData> original)
         {
             var camera = Camera.main;
             var screenHalfSize = new Vector3(camera.orthographicSize * camera.aspect, camera.orthographicSize);

@@ -10,12 +10,8 @@ namespace Tabletop.Standard
         [ContextMenu("Create Card")]
         public void Create()
         {
-            var cardModelID = CardManager.CardPool.GetCardIndex(cardToCreate);
-            CardManager.ActionsManager.AddAction(new ActionCreateCardWatcher.CreateCardData()
-            {
-                CardModelID = cardModelID,
-                Position = new() { stack = this }
-            });
+            var createCardData = ActionCreateCardWatcher.CreateCard(cardToCreate, new() { stack = this });
+            CardManager.ActionsManager.AddAction(createCardData);
         }
     }
 }

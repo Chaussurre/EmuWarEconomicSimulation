@@ -2,7 +2,7 @@ using System;
 
 namespace Tabletop.Standard
 {
-    public class ActionPlayWatcher : ActionWatcher<StandardCardData, ActionPlayWatcher.PlayData>
+    public class ActionPlayWatcher : ActionWatcher<CardData, ActionPlayWatcher.PlayData>
     {
         [Serializable]
         public struct PlayData
@@ -24,12 +24,15 @@ namespace Tabletop.Standard
             cardModel.OnPlay?.Invoke(manager, cardInstance.Value);
 
             if (cardModel.IsAUnit)
-                manager.ActionsManager.AddActionImmediate(new ActionSummonWatcher.SummonData()
-                {
-                    CardID = cardInstance.Value.CardID,
-                    CardData = cardInstance.Value.data,
-                    CardModel = cardModel,
-                });
+            {
+                var summonData = ActionSummonWatcher.Summon(cardInstance.Value.CardID, cardInstance.Value.data);
+                manager.ActionsManager.AddActionImmediate(summonData);
+            }
+        }
+
+        public static PlayData Play(int CardID)
+        {
+            return new() { CardID = CardID };
         }
     }
 }

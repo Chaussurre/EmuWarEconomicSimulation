@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tabletop.Standard
 {
-    public class CardStackVisualHandler : CardStackVisualHandler<StandardCardData>
+    public class CardStackVisualHandler : CardStackVisualHandler<CardData>
     {
 
     }

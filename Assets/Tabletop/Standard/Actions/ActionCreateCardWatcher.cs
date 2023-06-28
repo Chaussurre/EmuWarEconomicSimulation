@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Tabletop.Standard
 {
 
-    public class ActionCreateCardWatcher : ActionWatcher<StandardCardData, ActionCreateCardWatcher.CreateCardData>
+    public class ActionCreateCardWatcher : ActionWatcher<CardData, ActionCreateCardWatcher.CreateCardData>
     {
         [Serializable]
         public struct CreateCardData
@@ -18,6 +18,24 @@ namespace Tabletop.Standard
             var card = manager.CardPool.GetCard(actionData.CardModelID);
 
             manager.CreateInstance(card, actionData.Position);
+        }
+
+        public static CreateCardData CreateCard(int CardModelID, CardStack.CardPosition position)
+        {
+            return new()
+            {
+                CardModelID = CardModelID,
+                Position = position,
+            };
+        }
+
+        public static CreateCardData CreateCard(Card card, CardStack.CardPosition position)
+        {
+            return new()
+            {
+                CardModelID = manager.CardPool.GetCardIndex(card),
+                Position = position,
+            };
         }
     }
 }

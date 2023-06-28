@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Tabletop.Standard
 {
-    public class CardVisual : CardVisual<StandardCardData>
+    public class CardVisual : CardVisual<CardData>
     {
         public Canvas canvas;
 
@@ -12,7 +12,7 @@ namespace Tabletop.Standard
         public TMP_Text TextAttack;
         public TMP_Text TextCost;
 
-        public override void UpdateData(StandardCardData cardData)
+        public override void UpdateData(CardData cardData)
         {
             TextHp.text = cardData.Hp.ToString();
             TextAttack.text = cardData.Attack.ToString();

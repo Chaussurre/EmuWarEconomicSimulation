@@ -2,5 +2,5 @@ using Mirror;
 
 namespace Tabletop.Standard
 {
-    public class CardStack : CardStack<StandardCardData> { }
+    public class CardStack : CardStack<CardData> { }
 }

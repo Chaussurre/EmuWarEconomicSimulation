@@ -7,9 +7,9 @@ namespace Tabletop.Standard.Assets.Tabletop.Standard.Visuals.Handlers.ArrowDrawe
     {
         public Arrow Arrow;
 
-        public void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        public void OnCardInteract(CardStackVisualHandler<CardData>.CardInteractionData data)
         {
-            if (data.LeftClickStatus == CardStackVisualHandler<StandardCardData>.ClickStatus.Drop)
+            if (data.LeftClickStatus == CardStackVisualHandler<CardData>.ClickStatus.Drop)
             {
                 Arrow.gameObject.SetActive(false);
             }

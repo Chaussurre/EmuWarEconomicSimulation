@@ -12,22 +12,17 @@ namespace Tabletop.Standard
         {
             public Card CardToSummon;
             public bool UseDefaultData;
-            public StandardCardData data;
+            public CardData data;
         }
 
         [SerializeField] private List<SummonData> CardsToSummon = new();
         [SerializeField] private bool Immediate;
 
-        public void OnEffectTrigger(CardManager<StandardCardData> CardManager, Card.CardInstance card)
+        public void OnEffectTrigger(CardManager<CardData> CardManager, Card.CardInstance card)
         {
             foreach (var summonData in CardsToSummon)
             {
-                var actionData = new ActionSummonWatcher.SummonData()
-                {
-                    CardID = null,
-                    CardModel = summonData.CardToSummon,
-                    CardData = summonData.UseDefaultData ? null : summonData.data,
-                };
+                var actionData = ActionSummonWatcher.Summon(summonData.CardToSummon, summonData.UseDefaultData ? null : summonData.data);
                 if (Immediate)
                     CardManager.ActionsManager.AddActionImmediate(actionData);
                 else

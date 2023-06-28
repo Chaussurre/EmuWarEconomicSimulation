@@ -8,15 +8,13 @@ namespace Tabletop.Standard
     {
         [SerializeField] float PlayHeight;
 
-        public override void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        public override void OnCardInteract(CardStackVisualHandler<CardData>.CardInteractionData data)
         {
-            if (data.MousePosition.y < PlayHeight || data.LeftClickStatus != CardStackVisualHandler<StandardCardData>.ClickStatus.Drop)
+            if (data.MousePosition.y < PlayHeight || data.LeftClickStatus != CardStackVisualHandler<CardData>.ClickStatus.Drop)
                 return;
 
-            data.CardManager.ActionsManager.AddAction(new ActionPlayWatcher.PlayData()
-            {
-                CardID = data.Target.CardID
-            });
+            var playData = ActionPlayWatcher.Play(data.Target.CardID);
+            data.CardManager.ActionsManager.AddAction(playData);
         }
 
 #if UNITY_EDITOR

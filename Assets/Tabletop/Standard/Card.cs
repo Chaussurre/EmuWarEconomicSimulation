@@ -5,7 +5,7 @@ using UnityEngine.Events;
 namespace Tabletop.Standard
 {
     [Serializable]
-    public struct StandardCardData
+    public struct CardData
     {
         public int cost;
         public int MaxHp;
@@ -14,18 +14,18 @@ namespace Tabletop.Standard
         public int Tokens;
     }
 
-    public class Card : Card<StandardCardData>
+    public class Card : Card<CardData>
     {
         public bool IsAUnit;
 
-        public UnityEvent<CardManager<StandardCardData>, CardInstance> OnPlay = new();
+        public UnityEvent<CardManager<CardData>, CardInstance> OnPlay = new();
 
-        public UnityEvent<CardManager<StandardCardData>, CardInstance> OnSummon = new();
+        public UnityEvent<CardManager<CardData>, CardInstance> OnSummon = new();
     }
 
     public static class CardInstanceReaderWriter
     {
-        public static void WriteCardData(this NetworkWriter writer, StandardCardData data)
+        public static void WriteCardData(this NetworkWriter writer, CardData data)
         {
             writer.WriteInt(data.cost);
             writer.WriteInt(data.MaxHp);
@@ -34,7 +34,7 @@ namespace Tabletop.Standard
             writer.WriteInt(data.Tokens);
         }
 
-        public static StandardCardData ReadCardData(this NetworkReader reader)
+        public static CardData ReadCardData(this NetworkReader reader)
         {
             return new()
             {
@@ -46,7 +46,7 @@ namespace Tabletop.Standard
             };
         }
 
-        public static void WriteCardDataNullable(this NetworkWriter writer, StandardCardData? dataNullable)
+        public static void WriteCardDataNullable(this NetworkWriter writer, CardData? dataNullable)
         {
             writer.WriteBool(dataNullable.HasValue);
 
@@ -56,12 +56,12 @@ namespace Tabletop.Standard
             writer.Write(dataNullable.Value);
         }
 
-        public static StandardCardData? ReadCardDataNullable(this NetworkReader reader)
+        public static CardData? ReadCardDataNullable(this NetworkReader reader)
         {
             if (!reader.ReadBool())
                 return null;
 
-            return reader.Read<StandardCardData>();
+            return reader.Read<CardData>();
         }
     }
 }

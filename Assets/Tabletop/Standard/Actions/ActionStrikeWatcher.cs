@@ -2,7 +2,7 @@ using System;
 
 namespace Tabletop.Standard
 {
-    public class ActionStrikeWatcher : ActionWatcher<StandardCardData, ActionStrikeWatcher.StrikeData>
+    public class ActionStrikeWatcher : ActionWatcher<CardData, ActionStrikeWatcher.StrikeData>
     {
         [Serializable]
         public struct StrikeData
@@ -25,10 +25,38 @@ namespace Tabletop.Standard
             var card2 = Card2Pos.Value.GetCard().Value;
 
             if (actionData.From1to2 && card1.data.Attack > 0)
-                manager.ActionsManager.AddAction(ActionDamageWatcher.DamageData.DealDamage(card2.CardID, card1.data.Attack, card1.CardID));
+            {
+                var damageData = ActionDamageWatcher.DealDamage(card2.CardID, card1.data.Attack, card1.CardID);
+                manager.ActionsManager.AddAction(damageData);
+            }
 
             if (actionData.From2to1 && card2.data.Attack > 0)
-                manager.ActionsManager.AddAction(ActionDamageWatcher.DamageData.DealDamage(card1.CardID, card2.data.Attack, card2.CardID));
+            {
+                var damageData = ActionDamageWatcher.DealDamage(card1.CardID, card2.data.Attack, card2.CardID);
+                manager.ActionsManager.AddAction(damageData);
+            }
+        }
+
+        public static StrikeData Strike(int StrikerID, int StrikedID)
+        {
+            return new()
+            {
+                CardID1 = StrikerID,
+                CardID2 = StrikedID,
+                From1to2 = true,
+                From2to1 = false,
+            };
+        }
+
+        public static StrikeData Fight(int Fighter1ID, int Fighter2ID)
+        {
+            return new()
+            {
+                CardID1 = Fighter1ID,
+                CardID2 = Fighter2ID,
+                From1to2 = true,
+                From2to1 = true,
+            };
         }
     }
 }

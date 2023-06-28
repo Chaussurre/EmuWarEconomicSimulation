@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Tabletop.Standard
 {
 
-    public class ActionDamageWatcher : ActionWatcher<StandardCardData, ActionDamageWatcher.DamageData>
+    public class ActionDamageWatcher : ActionWatcher<CardData, ActionDamageWatcher.DamageData>
     {
         [Serializable]
         public struct DamageData
@@ -14,16 +14,6 @@ namespace Tabletop.Standard
             public bool dealDamage;
             public int damages;
 
-            public static DamageData DealDamage(int TargetID, int damage, int? SourceID = null)
-            {
-                return new()
-                {
-                    CardID = TargetID,
-                    SourceID = SourceID,
-                    dealDamage = true,
-                    damages = damage,
-                };
-            }
         }
         protected override void Apply(DamageData actionData)
         {
@@ -39,6 +29,17 @@ namespace Tabletop.Standard
             cardData.Hp -= Mathf.Min(actionData.damages, cardData.Hp);
 
             manager.UpdateCard(actionData.CardID, cardData);
+        }
+
+        public static DamageData DealDamage(int TargetID, int damage, int? SourceID = null)
+        {
+            return new()
+            {
+                CardID = TargetID,
+                SourceID = SourceID,
+                dealDamage = true,
+                damages = damage,
+            };
         }
     }
 }

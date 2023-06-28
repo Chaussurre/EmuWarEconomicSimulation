@@ -3,14 +3,14 @@ using Mirror;
 namespace Tabletop.Standard
 {
 
-    public class ActionSummonWatcher : ActionWatcher<StandardCardData, ActionSummonWatcher.SummonData>
+    public class ActionSummonWatcher : ActionWatcher<CardData, ActionSummonWatcher.SummonData>
     {
         [Serializable]
         public struct SummonData
         {
             public int? CardID;
             public Card CardModel;
-            public StandardCardData? CardData;
+            public CardData? CardData;
             //public StandardCardStack stack;
         }
 
@@ -34,6 +34,26 @@ namespace Tabletop.Standard
             }
 
             manager.CreateInstance(actionData.CardModel, topPos, actionData.CardData);
+        }
+
+        public static SummonData Summon(Card CardModel, CardData? cardData)
+        {
+            return new()
+            {
+                CardID = null,
+                CardModel = CardModel,
+                CardData = cardData,
+            };
+        }
+
+        public static SummonData Summon(int CardID, CardData? cardData)
+        {
+            return new()
+            {
+                CardID = CardID,
+                CardModel = null,
+                CardData = cardData,
+            };
         }
     }
 }

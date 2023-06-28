@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tabletop.Standard
 {
-    public class CardManager : CardManager<StandardCardData>
+    public class CardManager : CardManager<CardData>
     {
     }
 }
