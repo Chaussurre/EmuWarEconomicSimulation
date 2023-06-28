@@ -15,8 +15,8 @@ namespace Tabletop.Standard
 
         protected override void Apply(StrikeData actionData)
         {
-            var Card1Pos = manager.GetCardPos(actionData.CardID1);
-            var Card2Pos = manager.GetCardPos(actionData.CardID2);
+            var Card1Pos = CardManager.GetCardPos(actionData.CardID1);
+            var Card2Pos = CardManager.GetCardPos(actionData.CardID2);
 
             if (!Card1Pos.HasValue || !Card2Pos.HasValue)
                 return;
@@ -27,13 +27,13 @@ namespace Tabletop.Standard
             if (actionData.From1to2 && card1.data.Attack > 0)
             {
                 var damageData = ActionDamageWatcher.DealDamage(card2.CardID, card1.data.Attack, card1.CardID);
-                manager.ActionsManager.AddAction(damageData);
+                CardManager.ActionsManager.AddAction(damageData);
             }
 
             if (actionData.From2to1 && card2.data.Attack > 0)
             {
                 var damageData = ActionDamageWatcher.DealDamage(card1.CardID, card2.data.Attack, card2.CardID);
-                manager.ActionsManager.AddAction(damageData);
+                CardManager.ActionsManager.AddAction(damageData);
             }
         }
 

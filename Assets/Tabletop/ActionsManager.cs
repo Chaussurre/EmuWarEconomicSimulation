@@ -28,22 +28,22 @@ namespace Tabletop
                 action.Init(CardManager);
         }
 
-        public bool AddAction<TActionData>(TActionData actionData) where TActionData : struct
+        public void AddAction<TActionData>(TActionData actionData) where TActionData : struct
         {
             foreach (var watcher in ActionWatchers)
                 if (AddActionToWatcher(watcher, actionData))
-                    return true;
+                    return;
 
-            return false;
+            throw new ArgumentOutOfRangeException("actionData");
         }
 
-        public bool AddActionImmediate<TActionData>(TActionData actionData) where TActionData : struct
+        public void AddActionImmediate<TActionData>(TActionData actionData) where TActionData : struct
         {
             foreach (var watcher in ActionWatchers)
                 if (AddActionToWatcher(watcher, actionData, Immediate: true))
-                    return true;
+                    return;
 
-            return false;
+            throw new ArgumentOutOfRangeException("actionData");
         }
 
         private bool AddActionToWatcher<TActionData>(IActionWatcher<TCardData> watcher, TActionData actionData, bool Immediate = false) where TActionData : struct

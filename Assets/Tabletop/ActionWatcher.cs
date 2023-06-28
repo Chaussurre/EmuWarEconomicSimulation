@@ -18,7 +18,7 @@ namespace Tabletop
     
     public abstract class ActionWatcher<TCardData, TActionData> : MonoBehaviour, IActionWatcher<TCardData> where TActionData : struct where TCardData : struct
     {
-        protected CardManager<TCardData> manager;
+        protected CardManager<TCardData> CardManager;
 
         private List<TActionData> Actions = new();
 
@@ -26,7 +26,7 @@ namespace Tabletop
 
         void IActionWatcher<TCardData>.Init(CardManager<TCardData> manager)
         {
-            this.manager = manager;
+            this.CardManager = manager;
         }
 
         public int GetSize() => Actions.Count;

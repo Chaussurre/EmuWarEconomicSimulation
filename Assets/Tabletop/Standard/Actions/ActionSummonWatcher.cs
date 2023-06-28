@@ -27,13 +27,13 @@ namespace Tabletop.Standard
             if (actionData.CardID.HasValue)
             {
                 if (actionData.CardData.HasValue)
-                    manager.UpdateCard(actionData.CardID.Value, actionData.CardData.Value);
+                    CardManager.UpdateCard(actionData.CardID.Value, actionData.CardData.Value);
 
-                manager.MoveCard(actionData.CardID.Value, topPos);
+                CardManager.MoveCard(actionData.CardID.Value, topPos);
                 return;
             }
 
-            manager.CreateInstance(actionData.CardModel, topPos, actionData.CardData);
+            CardManager.CreateInstance(actionData.CardModel, topPos, actionData.CardData);
         }
 
         public static SummonData Summon(Card CardModel, CardData? cardData)

@@ -20,7 +20,7 @@ namespace Tabletop.Standard
             if (!actionData.dealDamage)
                 return;
 
-            var card = manager.GetCardInstance(actionData.CardID);
+            var card = CardManager.GetCardInstance(actionData.CardID);
             if (!card.HasValue)
                 return;
 
@@ -28,7 +28,10 @@ namespace Tabletop.Standard
             
             cardData.Hp -= Mathf.Min(actionData.damages, cardData.Hp);
 
-            manager.UpdateCard(actionData.CardID, cardData);
+            if (cardData.Hp <= 0)
+                CardManager.ActionsManager.AddAction(ActionDeathWatcher.Kill(actionData.CardID));
+
+            CardManager.UpdateCard(actionData.CardID, cardData);
         }
 
         public static DamageData DealDamage(int TargetID, int damage, int? SourceID = null)

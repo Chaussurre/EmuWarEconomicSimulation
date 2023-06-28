@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 15}
+  - {fileID: 16}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 34185
+  controlID: 142
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -34,96 +34,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Console
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 404.80002
-    y: 407.2
-    width: 510
-    height: 376.19998
+    x: 916.8
+    y: 560
+    width: 618.2
+    height: 223.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_fullscreenMonitorIdx: 0
-  m_playModeBehaviorIdx: 0
-  m_UseMipMap: 0
-  m_isFullscreen: 0
-  m_suppressRenderingForFullscreen: 0
-  m_VSyncEnabled: 0
-  m_PlayFocused: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -768
-    m_HBaseRangeMax: 768
-    m_VBaseRangeMin: -432
-    m_VBaseRangeMax: 432
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 510
-      height: 355.19998
-    m_Scale: {x: 0.33203125, y: 0.33203125}
-    m_Translation: {x: 255, y: 177.59999}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -768
-      y: -534.8894
-      width: 1536
-      height: 1069.7788
-    m_MinimalGUI: 1
-  m_defaultScale: 0.33203125
-  m_LastWindowPixelSize: {x: 637.5, y: 470.24997}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
-  m_showToolbar: 1
-  m_showToolbarOnFullscreen: 0
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +77,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 34186
+  controlID: 43
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +102,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 34107
+  controlID: 44
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,7 +145,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -231,20 +160,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2a640000
-      m_LastClickedID: 25642
-      m_ExpandedIDs: b82ffeff3c34fefffca9feff82cafeff12cbfeff1097ffff22fbffff24fbffff1c640000
+      m_SelectedIDs: 0a6b0000
+      m_LastClickedID: 27402
+      m_ExpandedIDs: bcd6ffffe4f7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Card Stack
-        m_OriginalName: Card Stack
+        m_Name: Card Manager
+        m_OriginalName: Card Manager
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 25612
+        m_UserData: -2078
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -299,7 +228,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -541,9 +470,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0.10566667, z: 0}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 0.10566667, z: 0}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -593,9 +522,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.79172724
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 0.79172724
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -644,7 +573,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 34187
+  controlID: 115
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -687,7 +616,7 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -712,22 +641,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tabletop/Standard/Example/CardEffects
+    - Assets/Tabletop/Standard
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Tabletop/Standard/Example/CardEffects
+  - Assets/Tabletop/Standard
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Chaussure\Documents\Unity\EmuWarEconomicSimulation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 107.80002}
-    m_SelectedIDs: 686a0000
-    m_LastClickedID: 27240
-    m_ExpandedIDs: 00000000026800000468000006680000086800000e680000646800006a6800008c6800009a68000000ca9a3b
+    scrollPos: {x: 0, y: 159.80002}
+    m_SelectedIDs: 16670000
+    m_LastClickedID: 26390
+    m_ExpandedIDs: 00000000b2660000b4660000b6660000b8660000ba660000bc660000be66000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -755,7 +684,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000026800000468000006680000086800000e680000646800006a6800008c6800009a68000000ca9a3b
+    m_ExpandedIDs: 00000000b2660000b4660000b6660000b8660000ba660000bc660000be660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -780,8 +709,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2a640000
-    m_LastClickedInstanceID: 25642
+    m_SelectedInstanceIDs: 0a6b0000
+    m_LastClickedInstanceID: 27402
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000828800001cc6000020c600007e880000806a0000ea6b0000f86d0000406f0000846b0000
     m_RenameOverlay:
@@ -832,14 +761,113 @@ MonoBehaviour:
     height: 397.19998
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 2}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 2}
   - {fileID: 13}
   - {fileID: 14}
+  - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 404.80002
+    y: 407.2
+    width: 510
+    height: 376.19998
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1920, y: 1080}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_fullscreenMonitorIdx: 0
+  m_playModeBehaviorIdx: 0
+  m_UseMipMap: 0
+  m_isFullscreen: 0
+  m_suppressRenderingForFullscreen: 0
+  m_VSyncEnabled: 0
+  m_PlayFocused: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -768
+    m_HBaseRangeMax: 768
+    m_VBaseRangeMin: -432
+    m_VBaseRangeMax: 432
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 510
+      height: 355.19998
+    m_Scale: {x: 0.33203125, y: 0.33203125}
+    m_Translation: {x: 255, y: 177.59999}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -768
+      y: -534.8894
+      width: 1536
+      height: 1069.7788
+    m_MinimalGUI: 1
+  m_defaultScale: 0.33203125
+  m_LastWindowPixelSize: {x: 637.5, y: 470.24997}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+  m_showToolbar: 1
+  m_showToolbarOnFullscreen: 0
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -855,7 +883,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animator
-    m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -903,7 +931,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -919,7 +947,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animation
-    m_Image: {fileID: -8166618308981325432, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -933,8 +961,8 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -26864
---- !u!114 &15
+  m_LastSelectedObjectID: 27264
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -947,8 +975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 16}
-  - {fileID: 21}
+  - {fileID: 17}
+  - {fileID: 22}
   m_Position:
     serializedVersion: 2
     x: 916.8
@@ -958,8 +986,8 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 34210
---- !u!114 &16
+  controlID: 143
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -980,15 +1008,15 @@ MonoBehaviour:
     height: 486.4
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 2
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1004,7 +1032,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1029,7 +1057,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1045,7 +1073,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Package Manager
-    m_Image: {fileID: -2824328813065806953, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 5076950121296946556, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1057,7 +1085,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1086,7 +1114,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 194
+    ID: 1630
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1111,7 +1139,7 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 19}
+    m_Window: {fileID: 20}
     m_NewResultList:
     - id: 1018
       uniqueId: '[EmuWarEconomicSimulation][suite]'
@@ -1177,14 +1205,14 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 19}
+    m_Window: {fileID: 20}
     m_NewResultList:
     - id: 1000
       uniqueId: '[EmuWarEconomicSimulation][suite]'
       name: EmuWarEconomicSimulation
       fullName: EmuWarEconomicSimulation
       resultStatus: 1
-      duration: 0.8550469
+      duration: 0.7525219
       messages: 
       output: 
       stacktrace: 
@@ -1200,7 +1228,7 @@ MonoBehaviour:
       name: CombatSystem.Tests.dll
       fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/CombatSystem.Tests.dll
       resultStatus: 1
-      duration: 0.4524142
+      duration: 0.3675571
       messages: 
       output: 
       stacktrace: 
@@ -1216,7 +1244,7 @@ MonoBehaviour:
       name: CombatSystem
       fullName: CombatSystem
       resultStatus: 1
-      duration: 0.4504383
+      duration: 0.3539886
       messages: 
       output: 
       stacktrace: 
@@ -1232,7 +1260,7 @@ MonoBehaviour:
       name: Tests
       fullName: CombatSystem.Tests
       resultStatus: 1
-      duration: 0.448708
+      duration: 0.3476568
       messages: 
       output: 
       stacktrace: 
@@ -1248,7 +1276,7 @@ MonoBehaviour:
       name: DataWatcherTests
       fullName: CombatSystem.Tests.DataWatcherTests
       resultStatus: 1
-      duration: 0.1276639
+      duration: 0.0659468
       messages: 
       output: 
       stacktrace: 
@@ -1264,7 +1292,7 @@ MonoBehaviour:
       name: ModifierCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierCalledTest
       resultStatus: 1
-      duration: 0.0026598
+      duration: 0.0181372
       messages: 
       output: 
       stacktrace: 
@@ -1281,7 +1309,7 @@ MonoBehaviour:
       name: ModifierChageBufferTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierChageBufferTest
       resultStatus: 1
-      duration: 0.106206
+      duration: 0.0062598
       messages: 
       output: 
       stacktrace: 
@@ -1298,7 +1326,7 @@ MonoBehaviour:
       name: ModifierRemovedTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifierRemovedTest
       resultStatus: 1
-      duration: 0.0010725
+      duration: 0.0015358
       messages: 
       output: 
       stacktrace: 
@@ -1315,7 +1343,7 @@ MonoBehaviour:
       name: ModifiersAndReactionsCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ModifiersAndReactionsCalledTest
       resultStatus: 1
-      duration: 0.0014815
+      duration: 0.0019352
       messages: 
       output: 
       stacktrace: 
@@ -1332,7 +1360,7 @@ MonoBehaviour:
       name: NoDataTest
       fullName: CombatSystem.Tests.DataWatcherTests.NoDataTest
       resultStatus: 1
-      duration: 0.0004246
+      duration: 0.0005357
       messages: 
       output: 
       stacktrace: 
@@ -1349,7 +1377,7 @@ MonoBehaviour:
       name: ReactionCalledTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionCalledTest
       resultStatus: 1
-      duration: 0.0005547
+      duration: 0.0005715
       messages: 
       output: 
       stacktrace: 
@@ -1366,7 +1394,7 @@ MonoBehaviour:
       name: ReactionRemovedTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionRemovedTest
       resultStatus: 1
-      duration: 0.001577
+      duration: 0.0010457
       messages: 
       output: 
       stacktrace: 
@@ -1383,7 +1411,7 @@ MonoBehaviour:
       name: ReactionSeesModifiersChange
       fullName: CombatSystem.Tests.DataWatcherTests.ReactionSeesModifiersChange
       resultStatus: 1
-      duration: 0.0007254
+      duration: 0.0006448
       messages: 
       output: 
       stacktrace: 
@@ -1400,7 +1428,7 @@ MonoBehaviour:
       name: ReorderModifiersTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReorderModifiersTest
       resultStatus: 1
-      duration: 0.0014593
+      duration: 0.0016727
       messages: 
       output: 
       stacktrace: 
@@ -1417,7 +1445,7 @@ MonoBehaviour:
       name: ReorderReactionsTest
       fullName: CombatSystem.Tests.DataWatcherTests.ReorderReactionsTest
       resultStatus: 1
-      duration: 0.0007425
+      duration: 0.0007243
       messages: 
       output: 
       stacktrace: 
@@ -1434,7 +1462,7 @@ MonoBehaviour:
       name: SeveralModifiersChageBufferTest
       fullName: CombatSystem.Tests.DataWatcherTests.SeveralModifiersChageBufferTest
       resultStatus: 1
-      duration: 0.0006256
+      duration: 0.0007431
       messages: 
       output: 
       stacktrace: 
@@ -1451,7 +1479,7 @@ MonoBehaviour:
       name: StandardResourcesManagerTests
       fullName: CombatSystem.Tests.StandardResourcesManagerTests
       resultStatus: 1
-      duration: 0.1270557
+      duration: 0.0924592
       messages: 
       output: 
       stacktrace: 
@@ -1467,7 +1495,7 @@ MonoBehaviour:
       name: ModifiesResourceCorrectly
       fullName: CombatSystem.Tests.StandardResourcesManagerTests.ModifiesResourceCorrectly
       resultStatus: 1
-      duration: 0.0055647
+      duration: 0.0649563
       messages: 
       output: 
       stacktrace: 
@@ -1484,7 +1512,7 @@ MonoBehaviour:
       name: ModifiesResourceWithModifiers
       fullName: CombatSystem.Tests.StandardResourcesManagerTests.ModifiesResourceWithModifiers
       resultStatus: 1
-      duration: 0.0014766
+      duration: 0.0014128
       messages: 
       output: 
       stacktrace: 
@@ -1501,7 +1529,7 @@ MonoBehaviour:
       name: ThrowsExceptionForInvalidResource
       fullName: CombatSystem.Tests.StandardResourcesManagerTests.ThrowsExceptionForInvalidResource
       resultStatus: 1
-      duration: 0.1016366
+      duration: 0.00428
       messages: 
       output: 
       stacktrace: 
@@ -1518,7 +1546,7 @@ MonoBehaviour:
       name: StatusManagerTests
       fullName: CombatSystem.Tests.StatusManagerTests
       resultStatus: 1
-      duration: 0.1882029
+      duration: 0.184742
       messages: 
       output: 
       stacktrace: 
@@ -1534,7 +1562,7 @@ MonoBehaviour:
       name: AddStacks
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacks
       resultStatus: 1
-      duration: 0.0397728
+      duration: 0.1447408
       messages: 
       output: 
       stacktrace: 
@@ -1551,7 +1579,7 @@ MonoBehaviour:
       name: AddStacksWithMax
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithMax
       resultStatus: 1
-      duration: 0.0014726
+      duration: 0.0009118
       messages: 
       output: 
       stacktrace: 
@@ -1568,7 +1596,7 @@ MonoBehaviour:
       name: AddStacksWithModifier
       fullName: CombatSystem.Tests.StatusManagerTests.AddStacksWithModifier
       resultStatus: 1
-      duration: 0.0022843
+      duration: 0.0041071
       messages: 
       output: 
       stacktrace: 
@@ -1585,7 +1613,7 @@ MonoBehaviour:
       name: GetDataWatcher
       fullName: CombatSystem.Tests.StatusManagerTests.GetDataWatcher
       resultStatus: 1
-      duration: 0.003593
+      duration: 0.0059872
       messages: 
       output: 
       stacktrace: 
@@ -1602,7 +1630,7 @@ MonoBehaviour:
       name: RemoveStacks
       fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacks
       resultStatus: 1
-      duration: 0.0008897
+      duration: 0.0010169
       messages: 
       output: 
       stacktrace: 
@@ -1619,7 +1647,7 @@ MonoBehaviour:
       name: RemoveStacksNegative
       fullName: CombatSystem.Tests.StatusManagerTests.RemoveStacksNegative
       resultStatus: 1
-      duration: 0.0012174
+      duration: 0.0007044
       messages: 
       output: 
       stacktrace: 
@@ -1636,7 +1664,7 @@ MonoBehaviour:
       name: Tabletop.Tests.dll
       fullName: C:/Users/Chaussure/Documents/Unity/EmuWarEconomicSimulation/Library/ScriptAssemblies/Tabletop.Tests.dll
       resultStatus: 1
-      duration: 0.3505392
+      duration: 0.2482018
       messages: 
       output: 
       stacktrace: 
@@ -1652,7 +1680,7 @@ MonoBehaviour:
       name: Tabletop
       fullName: Tabletop
       resultStatus: 1
-      duration: 0.3111088
+      duration: 0.2193941
       messages: 
       output: 
       stacktrace: 
@@ -1668,7 +1696,7 @@ MonoBehaviour:
       name: Tests
       fullName: Tabletop.Tests
       resultStatus: 1
-      duration: 0.2989406
+      duration: 0.2130159
       messages: 
       output: 
       stacktrace: 
@@ -1684,7 +1712,7 @@ MonoBehaviour:
       name: ActionsManagerTests
       fullName: Tabletop.Tests.ActionsManagerTests
       resultStatus: 1
-      duration: 0.0230813
+      duration: 0.0277653
       messages: 
       output: 
       stacktrace: 
@@ -1700,7 +1728,7 @@ MonoBehaviour:
       name: AddAction
       fullName: Tabletop.Tests.ActionsManagerTests.AddAction
       resultStatus: 1
-      duration: 0.0069168
+      duration: 0.0088323
       messages: 
       output: 
       stacktrace: 
@@ -1717,7 +1745,7 @@ MonoBehaviour:
       name: AddActionComplex
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionComplex
       resultStatus: 1
-      duration: 0.0026438
+      duration: 0.0031324
       messages: 
       output: 
       stacktrace: 
@@ -1734,7 +1762,7 @@ MonoBehaviour:
       name: AddActionImmediate
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionImmediate
       resultStatus: 1
-      duration: 0.0011302
+      duration: 0.001779
       messages: 
       output: 
       stacktrace: 
@@ -1751,7 +1779,7 @@ MonoBehaviour:
       name: AddActionImmediateComplex
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionImmediateComplex
       resultStatus: 1
-      duration: 0.0008391
+      duration: 0.0011816
       messages: 
       output: 
       stacktrace: 
@@ -1768,7 +1796,7 @@ MonoBehaviour:
       name: AddActionImmediateNoMatchingWatcher
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionImmediateNoMatchingWatcher
       resultStatus: 1
-      duration: 0.0013951
+      duration: 0.0013168
       messages: 
       output: 
       stacktrace: 
@@ -1785,7 +1813,7 @@ MonoBehaviour:
       name: AddActionNoMatchingWatcher
       fullName: Tabletop.Tests.ActionsManagerTests.AddActionNoMatchingWatcher
       resultStatus: 1
-      duration: 0.0010055
+      duration: 0.0014149
       messages: 
       output: 
       stacktrace: 
@@ -1802,7 +1830,7 @@ MonoBehaviour:
       name: TriggerNoActions
       fullName: Tabletop.Tests.ActionsManagerTests.TriggerNoActions
       resultStatus: 1
-      duration: 0.0006298
+      duration: 0.0007625
       messages: 
       output: 
       stacktrace: 
@@ -1819,7 +1847,7 @@ MonoBehaviour:
       name: ActionWatcherTests
       fullName: Tabletop.Tests.ActionWatcherTests
       resultStatus: 1
-      duration: 0.0291428
+      duration: 0.0279782
       messages: 
       output: 
       stacktrace: 
@@ -1835,7 +1863,7 @@ MonoBehaviour:
       name: AddAction
       fullName: Tabletop.Tests.ActionWatcherTests.AddAction
       resultStatus: 1
-      duration: 0.0036657
+      duration: 0.0026573
       messages: 
       output: 
       stacktrace: 
@@ -1852,7 +1880,7 @@ MonoBehaviour:
       name: AddActionImmediate
       fullName: Tabletop.Tests.ActionWatcherTests.AddActionImmediate
       resultStatus: 1
-      duration: 0.0009207
+      duration: 0.0007891
       messages: 
       output: 
       stacktrace: 
@@ -1869,7 +1897,7 @@ MonoBehaviour:
       name: AddActions
       fullName: Tabletop.Tests.ActionWatcherTests.AddActions
       resultStatus: 1
-      duration: 0.0006035
+      duration: 0.0008132
       messages: 
       output: 
       stacktrace: 
@@ -1886,7 +1914,7 @@ MonoBehaviour:
       name: GetSizeNoActions
       fullName: Tabletop.Tests.ActionWatcherTests.GetSizeNoActions
       resultStatus: 1
-      duration: 0.0006478
+      duration: 0.0007928
       messages: 
       output: 
       stacktrace: 
@@ -1903,7 +1931,7 @@ MonoBehaviour:
       name: TriggerActions
       fullName: Tabletop.Tests.ActionWatcherTests.TriggerActions
       resultStatus: 1
-      duration: 0.0008038
+      duration: 0.0025178
       messages: 
       output: 
       stacktrace: 
@@ -1920,7 +1948,7 @@ MonoBehaviour:
       name: TriggerNoActions
       fullName: Tabletop.Tests.ActionWatcherTests.TriggerNoActions
       resultStatus: 1
-      duration: 0.0005844
+      duration: 0.0008207
       messages: 
       output: 
       stacktrace: 
@@ -1937,7 +1965,7 @@ MonoBehaviour:
       name: CardManagerTests
       fullName: Tabletop.Tests.CardManagerTests
       resultStatus: 1
-      duration: 0.1353214
+      duration: 0.0658741
       messages: 
       output: 
       stacktrace: 
@@ -1953,7 +1981,7 @@ MonoBehaviour:
       name: CreateInstance
       fullName: Tabletop.Tests.CardManagerTests.CreateInstance
       resultStatus: 1
-      duration: 0.0035987
+      duration: 0.0080094
       messages: 
       output: 
       stacktrace: 
@@ -1970,7 +1998,7 @@ MonoBehaviour:
       name: CreateInstanceCardNotInPool
       fullName: Tabletop.Tests.CardManagerTests.CreateInstanceCardNotInPool
       resultStatus: 1
-      duration: 0.0012109
+      duration: 0.0034563
       messages: 
       output: 
       stacktrace: 
@@ -1987,7 +2015,7 @@ MonoBehaviour:
       name: CreateInstanceDefaultData
       fullName: Tabletop.Tests.CardManagerTests.CreateInstanceDefaultData
       resultStatus: 1
-      duration: 0.0008048
+      duration: 0.0012141
       messages: 
       output: 
       stacktrace: 
@@ -2004,7 +2032,7 @@ MonoBehaviour:
       name: DestroyInstance
       fullName: Tabletop.Tests.CardManagerTests.DestroyInstance
       resultStatus: 1
-      duration: 0.0019918
+      duration: 0.0033291
       messages: 
       output: 
       stacktrace: 
@@ -2021,7 +2049,7 @@ MonoBehaviour:
       name: DestroyInstanceCardIDDoesNotExist
       fullName: Tabletop.Tests.CardManagerTests.DestroyInstanceCardIDDoesNotExist
       resultStatus: 1
-      duration: 0.0007033
+      duration: 0.0009239
       messages: 
       output: 
       stacktrace: 
@@ -2038,7 +2066,7 @@ MonoBehaviour:
       name: GetCardInstance
       fullName: Tabletop.Tests.CardManagerTests.GetCardInstance
       resultStatus: 1
-      duration: 0.0020205
+      duration: 0.0029627
       messages: 
       output: 
       stacktrace: 
@@ -2055,7 +2083,7 @@ MonoBehaviour:
       name: GetCardInstanceInvalidID
       fullName: Tabletop.Tests.CardManagerTests.GetCardInstanceInvalidID
       resultStatus: 1
-      duration: 0.000785
+      duration: 0.0015527
       messages: 
       output: 
       stacktrace: 
@@ -2072,7 +2100,7 @@ MonoBehaviour:
       name: GetCardPos
       fullName: Tabletop.Tests.CardManagerTests.GetCardPos
       resultStatus: 1
-      duration: 0.0671852
+      duration: 0.0029128
       messages: 
       output: 
       stacktrace: 
@@ -2089,7 +2117,7 @@ MonoBehaviour:
       name: GetCardPosInvalidID
       fullName: Tabletop.Tests.CardManagerTests.GetCardPosInvalidID
       resultStatus: 1
-      duration: 0.0011022
+      duration: 0.000917
       messages: 
       output: 
       stacktrace: 
@@ -2106,7 +2134,7 @@ MonoBehaviour:
       name: MoveCard
       fullName: Tabletop.Tests.CardManagerTests.MoveCard
       resultStatus: 1
-      duration: 0.0023722
+      duration: 0.0012449
       messages: 
       output: 
       stacktrace: 
@@ -2123,7 +2151,7 @@ MonoBehaviour:
       name: MoveCardInvalid
       fullName: Tabletop.Tests.CardManagerTests.MoveCardInvalid
       resultStatus: 1
-      duration: 0.0012065
+      duration: 0.0009674
       messages: 
       output: 
       stacktrace: 
@@ -2140,7 +2168,7 @@ MonoBehaviour:
       name: TransformCard
       fullName: Tabletop.Tests.CardManagerTests.TransformCard
       resultStatus: 1
-      duration: 0.0017038
+      duration: 0.0015724
       messages: 
       output: 
       stacktrace: 
@@ -2157,7 +2185,7 @@ MonoBehaviour:
       name: TransformCardInvalidID
       fullName: Tabletop.Tests.CardManagerTests.TransformCardInvalidID
       resultStatus: 1
-      duration: 0.0011035
+      duration: 0.0009277
       messages: 
       output: 
       stacktrace: 
@@ -2174,7 +2202,7 @@ MonoBehaviour:
       name: TransformCardInvalidModel
       fullName: Tabletop.Tests.CardManagerTests.TransformCardInvalidModel
       resultStatus: 1
-      duration: 0.0007625
+      duration: 0.0009754
       messages: 
       output: 
       stacktrace: 
@@ -2191,7 +2219,7 @@ MonoBehaviour:
       name: UpdateCard
       fullName: Tabletop.Tests.CardManagerTests.UpdateCard
       resultStatus: 1
-      duration: 0.0013933
+      duration: 0.0026496
       messages: 
       output: 
       stacktrace: 
@@ -2208,7 +2236,7 @@ MonoBehaviour:
       name: UpdateCardInvalid
       fullName: Tabletop.Tests.CardManagerTests.UpdateCardInvalid
       resultStatus: 1
-      duration: 0.0010204
+      duration: 0.0012221
       messages: 
       output: 
       stacktrace: 
@@ -2225,7 +2253,7 @@ MonoBehaviour:
       name: CardPoolTests
       fullName: Tabletop.Tests.CardPoolTests
       resultStatus: 1
-      duration: 0.0462559
+      duration: 0.034536
       messages: 
       output: 
       stacktrace: 
@@ -2241,7 +2269,7 @@ MonoBehaviour:
       name: GetCardFromID
       fullName: Tabletop.Tests.CardPoolTests.GetCardFromID
       resultStatus: 1
-      duration: 0.003111
+      duration: 0.0029306
       messages: 
       output: 
       stacktrace: 
@@ -2258,7 +2286,7 @@ MonoBehaviour:
       name: GetCardFromInstance
       fullName: Tabletop.Tests.CardPoolTests.GetCardFromInstance
       resultStatus: 1
-      duration: 0.0008918
+      duration: 0.0010736
       messages: 
       output: 
       stacktrace: 
@@ -2275,7 +2303,7 @@ MonoBehaviour:
       name: GetCardFromName
       fullName: Tabletop.Tests.CardPoolTests.GetCardFromName
       resultStatus: 1
-      duration: 0.0010281
+      duration: 0.0013081
       messages: 
       output: 
       stacktrace: 
@@ -2292,7 +2320,7 @@ MonoBehaviour:
       name: GetCardIndex
       fullName: Tabletop.Tests.CardPoolTests.GetCardIndex
       resultStatus: 1
-      duration: 0.0006259
+      duration: 0.0013886
       messages: 
       output: 
       stacktrace: 
@@ -2309,7 +2337,7 @@ MonoBehaviour:
       name: GetCardIndexInvalid
       fullName: Tabletop.Tests.CardPoolTests.GetCardIndexInvalid
       resultStatus: 1
-      duration: 0.0007998
+      duration: 0.0011207
       messages: 
       output: 
       stacktrace: 
@@ -2326,7 +2354,7 @@ MonoBehaviour:
       name: GetCardInvalidName
       fullName: Tabletop.Tests.CardPoolTests.GetCardInvalidName
       resultStatus: 1
-      duration: 0.0006814
+      duration: 0.0007718
       messages: 
       output: 
       stacktrace: 
@@ -2343,7 +2371,7 @@ MonoBehaviour:
       name: GetHiddenCardTemplate
       fullName: Tabletop.Tests.CardPoolTests.GetHiddenCardTemplate
       resultStatus: 1
-      duration: 0.000717
+      duration: 0.000817
       messages: 
       output: 
       stacktrace: 
@@ -2360,7 +2388,7 @@ MonoBehaviour:
       name: CardStackTests
       fullName: Tabletop.Tests.CardStackTests
       resultStatus: 1
-      duration: 0.060096
+      duration: 0.0490693
       messages: 
       output: 
       stacktrace: 
@@ -2376,7 +2404,7 @@ MonoBehaviour:
       name: AddNewCardInstance
       fullName: Tabletop.Tests.CardStackTests.AddNewCardInstance
       resultStatus: 1
-      duration: 0.0038266
+      duration: 0.0034871
       messages: 
       output: 
       stacktrace: 
@@ -2393,7 +2421,7 @@ MonoBehaviour:
       name: GetCard
       fullName: Tabletop.Tests.CardStackTests.GetCard
       resultStatus: 1
-      duration: 0.0007623
+      duration: 0.0006495
       messages: 
       output: 
       stacktrace: 
@@ -2410,7 +2438,7 @@ MonoBehaviour:
       name: GetCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.GetCardInvalidIndex
       resultStatus: 1
-      duration: 0.0007045
+      duration: 0.0025424
       messages: 
       output: 
       stacktrace: 
@@ -2427,7 +2455,7 @@ MonoBehaviour:
       name: GetCardPos
       fullName: Tabletop.Tests.CardStackTests.GetCardPos
       resultStatus: 1
-      duration: 0.0124169
+      duration: 0.0010801
       messages: 
       output: 
       stacktrace: 
@@ -2444,7 +2472,7 @@ MonoBehaviour:
       name: GetCardPosCardIDDoesNotExist
       fullName: Tabletop.Tests.CardStackTests.GetCardPosCardIDDoesNotExist
       resultStatus: 1
-      duration: 0.000672
+      duration: 0.000755
       messages: 
       output: 
       stacktrace: 
@@ -2461,7 +2489,7 @@ MonoBehaviour:
       name: InsertCard
       fullName: Tabletop.Tests.CardStackTests.InsertCard
       resultStatus: 1
-      duration: 0.0007178
+      duration: 0.0007416
       messages: 
       output: 
       stacktrace: 
@@ -2478,7 +2506,7 @@ MonoBehaviour:
       name: InsertCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.InsertCardInvalidIndex
       resultStatus: 1
-      duration: 0.0013213
+      duration: 0.0008168
       messages: 
       output: 
       stacktrace: 
@@ -2495,7 +2523,7 @@ MonoBehaviour:
       name: RemoveCard
       fullName: Tabletop.Tests.CardStackTests.RemoveCard
       resultStatus: 1
-      duration: 0.0007938
+      duration: 0.0019558
       messages: 
       output: 
       stacktrace: 
@@ -2512,7 +2540,7 @@ MonoBehaviour:
       name: RemoveCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.RemoveCardInvalidIndex
       resultStatus: 1
-      duration: 0.0006168
+      duration: 0.0008585
       messages: 
       output: 
       stacktrace: 
@@ -2529,7 +2557,7 @@ MonoBehaviour:
       name: SetCard
       fullName: Tabletop.Tests.CardStackTests.SetCard
       resultStatus: 1
-      duration: 0.0008922
+      duration: 0.0010407
       messages: 
       output: 
       stacktrace: 
@@ -2546,7 +2574,7 @@ MonoBehaviour:
       name: SetCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.SetCardInvalidIndex
       resultStatus: 1
-      duration: 0.000603
+      duration: 0.0009798
       messages: 
       output: 
       stacktrace: 
@@ -2563,7 +2591,7 @@ MonoBehaviour:
       name: SizeNewStack
       fullName: Tabletop.Tests.CardStackTests.SizeNewStack
       resultStatus: 1
-      duration: 0.0008893
+      duration: 0.0028887
       messages: 
       output: 
       stacktrace: 
@@ -2580,7 +2608,7 @@ MonoBehaviour:
       name: UpdateCard
       fullName: Tabletop.Tests.CardStackTests.UpdateCard
       resultStatus: 1
-      duration: 0.0006987
+      duration: 0.0008901
       messages: 
       output: 
       stacktrace: 
@@ -2597,7 +2625,7 @@ MonoBehaviour:
       name: UpdateCardInvalidIndex
       fullName: Tabletop.Tests.CardStackTests.UpdateCardInvalidIndex
       resultStatus: 1
-      duration: 0.0005229
+      duration: 0.0007214
       messages: 
       output: 
       stacktrace: 
@@ -2641,7 +2669,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2657,7 +2685,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Lighting
-    m_Image: {fileID: -1347227620855488341, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -1477008817101679558, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -2669,7 +2697,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &21
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2690,36 +2718,8 @@ MonoBehaviour:
     height: 244.4
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 2}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 2}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 916.8
-    y: 560
-    width: 618.2
-    height: 223.4
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []

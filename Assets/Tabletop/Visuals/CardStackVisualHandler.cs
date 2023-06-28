@@ -57,6 +57,17 @@ namespace Tabletop
         public UnityEvent<CardInteractionData> OnCardInteract = new();
         private CardInteractionData interactionData;
 
+        private void Awake()
+        {
+            CardManager.ActionsManager.OnResolved.AddListener(resetInteractionData);
+        }
+
+        private void OnDestroy()
+        {
+            CardManager.ActionsManager.OnResolved.RemoveListener(resetInteractionData);
+        }
+
+
         private void Update()
         {
             interactionData.Handler = this;
@@ -142,6 +153,11 @@ namespace Tabletop
                 return interactionData.Target;
 
             return null;
+        }
+
+        private void resetInteractionData()
+        {
+            interactionData = new();
         }
     }
 }

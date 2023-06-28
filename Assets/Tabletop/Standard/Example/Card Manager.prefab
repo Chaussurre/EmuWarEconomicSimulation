@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2077149333}
   - component: {fileID: 2077149332}
   - component: {fileID: 7732695143958914052}
+  - component: {fileID: 1645868119616736741}
   m_Layer: 0
   m_Name: Watchers
   m_TagString: Untagged
@@ -133,6 +134,25 @@ MonoBehaviour:
     Reactions:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &1645868119616736741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077149330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdee484c2c1c2e84c8c97d3661b224da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataWatcher:
+    Modifiers:
+      m_PersistentCalls:
+        m_Calls: []
+    Reactions:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &4062185834906769548
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +185,7 @@ Transform:
   - {fileID: 2077149331}
   - {fileID: 2293870495124640675}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8788403214041120605
 MonoBehaviour:

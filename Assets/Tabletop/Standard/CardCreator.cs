@@ -10,7 +10,7 @@ namespace Tabletop.Standard
         [ContextMenu("Create Card")]
         public void Create()
         {
-            var createCardData = ActionCreateCardWatcher.CreateCard(cardToCreate, new() { stack = this });
+            var createCardData = ActionCreateCardWatcher.CreateCard(cardToCreate, new() { stack = this }, CardManager);
             CardManager.ActionsManager.AddAction(createCardData);
         }
     }

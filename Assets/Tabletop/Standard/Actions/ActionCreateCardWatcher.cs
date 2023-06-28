@@ -15,9 +15,9 @@ namespace Tabletop.Standard
 
         protected override void Apply(CreateCardData actionData)
         {
-            var card = manager.CardPool.GetCard(actionData.CardModelID);
+            var card = CardManager.CardPool.GetCard(actionData.CardModelID);
 
-            manager.CreateInstance(card, actionData.Position);
+            CardManager.CreateInstance(card, actionData.Position);
         }
 
         public static CreateCardData CreateCard(int CardModelID, CardStack.CardPosition position)
@@ -29,7 +29,7 @@ namespace Tabletop.Standard
             };
         }
 
-        public static CreateCardData CreateCard(Card card, CardStack.CardPosition position)
+        public static CreateCardData CreateCard(Card card, CardStack.CardPosition position, CardManager manager)
         {
             return new()
             {

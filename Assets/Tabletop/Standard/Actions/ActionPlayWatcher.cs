@@ -14,19 +14,19 @@ namespace Tabletop.Standard
 
         protected override void Apply(PlayData actionData)
         {
-            var cardInstance = manager.GetCardInstance(actionData.CardID);
+            var cardInstance = CardManager.GetCardInstance(actionData.CardID);
 
             if (!cardInstance.HasValue)
                 return;
 
-            var cardModel = manager.CardPool.GetCard(cardInstance.Value) as Card;
+            var cardModel = CardManager.CardPool.GetCard(cardInstance.Value) as Card;
 
-            cardModel.OnPlay?.Invoke(manager, cardInstance.Value);
+            cardModel.OnPlay?.Invoke(CardManager, cardInstance.Value);
 
             if (cardModel.IsAUnit)
             {
                 var summonData = ActionSummonWatcher.Summon(cardInstance.Value.CardID, cardInstance.Value.data);
-                manager.ActionsManager.AddActionImmediate(summonData);
+                CardManager.ActionsManager.AddActionImmediate(summonData);
             }
         }
 
