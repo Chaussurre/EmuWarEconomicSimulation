@@ -216,6 +216,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4062185834866305263}
+        m_TargetAssemblyTypeName: Tabletop.Standard.Assets.Tabletop.Standard.Visuals.Handlers.ArrowDrawer.ArrowDrawerHandler,
+          TabletopStandard
+        m_MethodName: OnCardInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4062185834866305269}
+        m_TargetAssemblyTypeName: Tabletop.Standard.Assets.Tabletop.Standard.Visuals.Handlers.AttackCardHandler,
+          TabletopStandard
+        m_MethodName: OnCardInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &337306954
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardManager: {fileID: 4062185834866305258}
-  cardToCreate: {fileID: 5956019918132699202, guid: 6459e7b696e515746ae15ab49e7cd9c0, type: 3}
+  cardToCreate: {fileID: 6728816379730957392, guid: 6459e7b696e515746ae15ab49e7cd9c0, type: 3}
 --- !u!114 &1479513453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +643,10 @@ PrefabInstance:
       propertyPath: PlayingField
       value: 
       objectReference: {fileID: 270430954}
+    - target: {fileID: 2479787566392507762, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+      propertyPath: TargetStackVisual
+      value: 
+      objectReference: {fileID: 270430955}
     - target: {fileID: 4062185834906769548, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
       propertyPath: m_Name
       value: Card Manager
@@ -666,8 +696,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7460161483919418682, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
-      propertyPath: RelativePosition.x
-      value: 4.2
+      propertyPath: displayedLayer.Index
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460161483919418682, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+      propertyPath: displayedLayer.Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -714,5 +748,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47094bbf253b53e439d36995f195943b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4062185834866305263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4062185834866305263, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+  m_PrefabInstance: {fileID: 4062185834866305256}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2bce40365a49449bd78688450d6c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4062185834866305269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2479787566392507762, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+  m_PrefabInstance: {fileID: 4062185834866305256}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709f8325e58e6d04bbe96ce0683fd379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

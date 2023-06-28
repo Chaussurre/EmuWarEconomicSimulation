@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4135626018481597900}
-  - component: {fileID: 4135626018481597901}
+  - component: {fileID: 3939866427954534879}
   m_Layer: 6
   m_Name: Card Template
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4135626018481597901
+--- !u!114 &3939866427954534879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,17 +41,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4135626018481597903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a2c6db061ca04d933c71f78e6f649, type: 3}
+  m_Script: {fileID: 11500000, guid: 76b442ae3d8626a4f8effa8003765da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VisualPrefab: {fileID: 384114877037452077, guid: 0e8377815cfd0c146a3b0729ee8722f1, type: 3}
+  VisualPrefab: {fileID: 0}
   DefaultData:
-    cost: 1
-    MaxHp: 1
-    Hp: 1
+    cost: 0
+    MaxHp: 0
+    Hp: 0
     Attack: 0
     Tokens: 0
   IsAUnit: 0
   OnPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSummon:
     m_PersistentCalls:
       m_Calls: []

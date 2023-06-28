@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Tabletop.Standard
 {
-    public class MoveCardHandler : MonoBehaviour
+    public class MoveCardHandler : InteractionHandler
     {
 
-        public void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        public override void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
         {
             if (data.LeftClickStatus == CardStackVisualHandler<StandardCardData>.ClickStatus.Grab)
             {

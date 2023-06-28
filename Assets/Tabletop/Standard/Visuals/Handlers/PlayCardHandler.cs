@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Tabletop.Standard
 {
-    public class PlayCardHandler : MonoBehaviour
+    public class PlayCardHandler : InteractionHandler
     {
         [SerializeField] float PlayHeight;
 
-        public void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        public override void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
         {
             if (data.MousePosition.y < PlayHeight || data.LeftClickStatus != CardStackVisualHandler<StandardCardData>.ClickStatus.Drop)
                 return;

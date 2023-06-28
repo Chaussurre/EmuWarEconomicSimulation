@@ -8,6 +8,58 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: IsAUnit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: VisualPrefab
+      value: 
+      objectReference: {fileID: 500830126018501818, guid: 718f12e62cd07ff4f9e8fabebeee29ad, type: 3}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: DefaultData.Hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: DefaultData.cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: DefaultData.MaxHp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: DefaultData.Attack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: OnPlay.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6063853198943704650}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnEffectTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Tabletop.Standard.SummonCards, TabletopStandard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: OnPlay.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4135626018481597900, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -133,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardsToSummon:
-  - CardToSummon: {fileID: 5956019918132699202, guid: 660f4ce7c333c2c4a8a20746092db04e, type: 3}
+  - CardToSummon: {fileID: 6728816379730957392, guid: 660f4ce7c333c2c4a8a20746092db04e, type: 3}
     UseDefaultData: 1
     data:
       cost: 0
@@ -141,7 +193,7 @@ MonoBehaviour:
       Hp: 0
       Attack: 0
       Tokens: 0
-  - CardToSummon: {fileID: 5956019918132699202, guid: 660f4ce7c333c2c4a8a20746092db04e, type: 3}
+  - CardToSummon: {fileID: 6728816379730957392, guid: 660f4ce7c333c2c4a8a20746092db04e, type: 3}
     UseDefaultData: 1
     data:
       cost: 0
@@ -149,4 +201,4 @@ MonoBehaviour:
       Hp: 0
       Attack: 0
       Tokens: 0
-  Immediate: 1
+  Immediate: 0

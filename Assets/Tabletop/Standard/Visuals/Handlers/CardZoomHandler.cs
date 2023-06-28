@@ -5,12 +5,13 @@ using UnityEngine;
 
 namespace Tabletop.Standard
 {
-    public class CardZoomHandler : MonoBehaviour
+    public class CardZoomHandler : InteractionHandler
     {
         public float Margin;
         public float HoverTimer;
         public float ZoomFactor;
         public bool ShowOnRight;
+        public SortingLayerPicker displayedLayer;
 
         private CardVisual<StandardCardData> CurrentVisual;
         private bool locked;
@@ -23,7 +24,7 @@ namespace Tabletop.Standard
                 DestroyVisual();
         }
 
-        public void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
+        public override void OnCardInteract(CardStackVisualHandler<StandardCardData>.CardInteractionData data)
         {
             if (!data.isHovered() && !locked)
             {
@@ -47,6 +48,7 @@ namespace Tabletop.Standard
             var instance = data.CardManager.GetCardInstance(data.Target.CardID).Value;
             var card = data.CardManager.CardPool.GetCard(instance.CardModelID);
             CurrentVisual = card.CreateVisual(instance);
+            (CurrentVisual as CardVisual).canvas.sortingLayerID = displayedLayer.id;
             CurrentVisual.enabled = false;
             CurrentVisual.transform.parent = transform;
             CurrentVisual.transform.localScale *= ZoomFactor;

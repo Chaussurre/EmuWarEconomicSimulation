@@ -136,6 +136,7 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8082439967256603993, guid: 0e8377815cfd0c146a3b0729ee8722f1, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e8377815cfd0c146a3b0729ee8722f1, type: 3}

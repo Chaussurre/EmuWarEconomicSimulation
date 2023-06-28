@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3939866427954534879, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
+      propertyPath: VisualPrefab
+      value: 
+      objectReference: {fileID: 500830126018501818, guid: cad387adf1170464eaf1b9aef1804038, type: 3}
     - target: {fileID: 4135626018481597900, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4135626018481597900, guid: 582ee444b68788d41ac306d056938d7a, type: 3}
       propertyPath: m_LocalPosition.x

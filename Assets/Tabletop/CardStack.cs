@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine;
 [assembly: InternalsVisibleTo("Tabletop.Tests")]
 namespace Tabletop
 {
-    public class CardStack<TCardData> : MonoBehaviour where TCardData : struct
+    public class CardStack<TCardData> : MonoBehaviour, IEnumerable<Card<TCardData>.CardInstance> where TCardData : struct
     {
         public struct CardPosition
         {
@@ -57,6 +58,20 @@ namespace Tabletop
                 return null;
 
             return Cards[index];
+        }
+
+        public bool Contains(int CardID)
+        {
+            foreach(var card in this)
+                if (card.CardID == CardID)
+                    return true;
+
+            return false;
+        }
+
+        public IEnumerator<Card<TCardData>.CardInstance> GetEnumerator()
+        {
+            return Cards.GetEnumerator();
         }
 
         internal void Clear()
@@ -119,6 +134,11 @@ namespace Tabletop
 
             Cards.RemoveAt(index);
             return true;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return Cards.GetEnumerator();
         }
     }
 }

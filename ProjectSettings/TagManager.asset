@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Cards
-  - Zommed Card
+  - 
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3065703627
+    locked: 0
+  - name: Cards
+    uniqueID: 1168119063
+    locked: 0
+  - name: Zoomed Cards
+    uniqueID: 2423582985
+    locked: 0
+  - name: Effects
+    uniqueID: 794513081
     locked: 0

@@ -15,7 +15,7 @@ namespace Tabletop
         }
 
         [SerializeField] private CardManager<TCardData> CardManager;
-        [SerializeField] private CardStack<TCardData> CardStack;
+        public CardStack<TCardData> CardStack;
         [SerializeField] protected DisplayStyle Style;
         [SerializeField] protected float FixedSpacing;
         [SerializeField] protected int margins;
@@ -42,11 +42,13 @@ namespace Tabletop
         public void InsertCard(Card<TCardData>.CardInstance card, int index)
         {
             CardVisuals.Insert(index, CardManager.VisualManager.GetVisual(card));
+            CardVisuals[index].UpdateData(card.data);
         }
 
         public void SetCard(Card<TCardData>.CardInstance card, int index)
         {
             CardVisuals[index] = CardManager.VisualManager.GetVisual(card);
+            CardVisuals[index].UpdateData(card.data);
         }
 
         public void UpdateCard(TCardData data, int index)

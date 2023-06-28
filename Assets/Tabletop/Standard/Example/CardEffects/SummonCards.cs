@@ -26,7 +26,7 @@ namespace Tabletop.Standard
                 {
                     CardID = null,
                     CardModel = summonData.CardToSummon,
-                    CardData = summonData.UseDefaultData ? summonData.data : null,
+                    CardData = summonData.UseDefaultData ? null : summonData.data,
                 };
                 if (Immediate)
                     CardManager.ActionsManager.AddActionImmediate(actionData);
