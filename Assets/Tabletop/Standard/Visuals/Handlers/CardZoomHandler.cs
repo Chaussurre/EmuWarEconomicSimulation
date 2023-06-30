@@ -45,9 +45,7 @@ namespace Tabletop.Standard
             if (CurrentVisual)
                 return;
 
-            var instance = data.CardManager.GetCardInstance(data.Target.CardID).Value;
-            var card = data.CardManager.CardPool.GetCard(instance.CardModelID);
-            CurrentVisual = card.CreateVisual(instance);
+            CurrentVisual = data.VisualManager.CreateUntrackedVisual(data.Target.CardID);
             (CurrentVisual as CardVisual).canvas.sortingLayerID = displayedLayer.id;
             CurrentVisual.enabled = false;
             CurrentVisual.transform.parent = transform;

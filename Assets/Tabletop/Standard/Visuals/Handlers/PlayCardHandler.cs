@@ -7,14 +7,15 @@ namespace Tabletop.Standard
     public class PlayCardHandler : InteractionHandler
     {
         [SerializeField] float PlayHeight;
+        public PlayerManager PlayerManager;
 
         public override void OnCardInteract(CardStackVisualHandler<CardData>.CardInteractionData data)
         {
             if (data.MousePosition.y < PlayHeight || data.LeftClickStatus != CardStackVisualHandler<CardData>.ClickStatus.Drop)
                 return;
 
-            var playData = ActionPlayWatcher.Play(data.Target.CardID);
-            data.CardManager.ActionsManager.AddAction(playData);
+            var player = PlayerManager.ActivePlayer;
+            player.PlayCard(data.Target.CardID);
         }
 
 #if UNITY_EDITOR

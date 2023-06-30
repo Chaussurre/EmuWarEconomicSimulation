@@ -25,7 +25,11 @@ namespace Tabletop
 
         public Dictionary<int, CardStack<TCardData>>.KeyCollection Cards => PositionTracker.Keys;
 
-        public Card<TCardData>.CardInstance? CreateInstance(Card<TCardData> Card, CardStack<TCardData>.CardPosition position, TCardData? data = null)
+        public Card<TCardData>.CardInstance? CreateInstance(
+            Card<TCardData> Card, 
+            CardStack<TCardData>.CardPosition position, 
+            TCardData? data = null,
+            PlayerManager.PlayerMask? VisibleTo = null)
         {
             if (!CardPool.Cards.Contains(Card))
                 throw new ArgumentOutOfRangeException("Card");
@@ -35,12 +39,13 @@ namespace Tabletop
 
             var index = CardPool.GetCardIndex(Card);
 
-            Card<TCardData>.CardInstance instance =  new()
+            Card<TCardData>.CardInstance instance = new()
             {
                 CardModelID = index,
                 CardID = InstanceIDIncrementer++,
                 hidden = false,
                 data = data ?? Card.DefaultData,
+                VisibleMask = VisibleTo ?? PlayerManager.PlayerMask.All,
             };
 
             position.InsertCard(instance);

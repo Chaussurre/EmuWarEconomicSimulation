@@ -66,6 +66,17 @@ namespace Tabletop
             if (VisualTracker.TryGetValue(cardID, out var visual))
                 return visual;
 
+            var createdVisual = CreateUntrackedVisual(cardID);
+            VisualTracker.Add(cardID, createdVisual);
+            return createdVisual;
+        }
+
+        public CardVisual<TCardData> CreateUntrackedVisual(Card<TCardData>.CardInstance card)
+        {
+            return CreateUntrackedVisual(card.CardID);
+        }
+        public CardVisual<TCardData> CreateUntrackedVisual(int cardID)
+        {
             var Card = CardManager.GetCardInstance(cardID);
 
             if (!Card.HasValue)
@@ -73,8 +84,6 @@ namespace Tabletop
 
             var model = CardManager.CardPool.GetCard(Card.Value);
             var createdVisual = model.CreateVisual(Card.Value);
-
-            VisualTracker.Add(cardID, createdVisual);
 
             return createdVisual;
         }

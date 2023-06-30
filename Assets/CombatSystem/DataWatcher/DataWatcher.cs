@@ -74,12 +74,19 @@ namespace CombatSystem
             ReactionActions.ForEach(AddReactionToUnityEvent);
         }
 
-        public Data WatchData(Data Data)
+        public Data WatchData(Data data)
         {
-            Buffer.DataBuffer = Data;
+            var result = WatchDataNoReaction(data);
+            ForceReact(result);
+
+            return result;
+        }
+
+        public Data WatchDataNoReaction(Data data)
+        {
+            Buffer.DataBuffer = data;
 
             Modifiers.Invoke(Buffer);
-            Reactions.Invoke(Buffer.DataBuffer);
 
             return Buffer.DataBuffer;
         }

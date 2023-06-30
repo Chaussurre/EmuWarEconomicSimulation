@@ -31,8 +31,8 @@ namespace Tabletop
             public MouseStatus MouseStatus;
             public Vector3 MousePosition;
 
-            public CardManager<TCardData> CardManager;
             public CardStackVisualHandler<TCardData> Handler;
+            public CardVisualManager<TCardData> VisualManager;
 
             public bool isHovered()
             {
@@ -71,7 +71,7 @@ namespace Tabletop
         private void Update()
         {
             interactionData.Handler = this;
-            interactionData.CardManager = CardManager;
+            interactionData.VisualManager = CardManager.VisualManager;
 
             interactionData.LeftClick = Input.GetMouseButton(0);
             interactionData.RightClick = Input.GetMouseButton(1);

@@ -28,7 +28,13 @@ namespace Tabletop.Standard
 
             var scale = ArrowBody.transform.localScale;
             scale.y = (delta.magnitude - BodyDistance) * sizeRatio;
-            ArrowBody.transform.localScale = scale;
+            if (scale.y > 0)
+            {
+                ArrowBody.SetActive(true);
+                ArrowBody.transform.localScale = scale;
+            }
+            else
+                ArrowBody.SetActive(false);
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Tabletop
             public int CardModelID;
             public int CardID;
             public bool hidden;
+            public PlayerManager.PlayerMask VisibleMask;
             public TCardData data;
         }
 

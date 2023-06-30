@@ -3,6 +3,7 @@
     "rootNamespace": "Tabletop.Standard",
     "references": [
         "GUID:bad225133fa2cfc4aa029e9fb9f64968",
+        "GUID:e3e17ec05ec762746aa4a6bb6eac64a7",
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
         "GUID:30817c1a0e6d646d99c048fc403f5979"
     ],
