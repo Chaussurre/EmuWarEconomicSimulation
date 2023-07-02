@@ -1,0 +1,21 @@
+{
+    "name": "Cardinator.Tests",
+    "rootNamespace": "Cardinator.Tests",
+    "references": [
+        "CombatSystem",
+        "Cardinator"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
