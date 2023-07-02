@@ -29,7 +29,7 @@ namespace Tabletop
             Card<TCardData> Card, 
             CardStack<TCardData>.CardPosition position, 
             TCardData? data = null,
-            PlayerManager.PlayerMask? VisibleTo = null)
+            PlayerMask? VisibleTo = null)
         {
             if (!CardPool.Cards.Contains(Card))
                 throw new ArgumentOutOfRangeException("Card");
@@ -43,9 +43,8 @@ namespace Tabletop
             {
                 CardModelID = index,
                 CardID = InstanceIDIncrementer++,
-                hidden = false,
                 data = data ?? Card.DefaultData,
-                VisibleMask = VisibleTo ?? PlayerManager.PlayerMask.All,
+                VisibleMask = VisibleTo ?? PlayerMask.All,
             };
 
             position.InsertCard(instance);
@@ -111,9 +110,23 @@ namespace Tabletop
             {
                 CardModelID = modelID,
                 CardID = card.CardID,
-                hidden = card.hidden,
                 data = card.data,
             });
+        }
+
+        public bool ChangeVisibility(int CardID, PlayerMask mask)
+        {
+            var pos = GetCardPos(CardID);
+            var card = pos?.GetCard();
+
+            if (!card.HasValue)
+                return false;
+
+            var newCard = card.Value;
+            newCard.VisibleMask = mask;
+            pos.Value.SetCard(newCard);
+
+            return true;
         }
 
         public CardStack<TCardData>.CardPosition? GetCardPos(int CardID)

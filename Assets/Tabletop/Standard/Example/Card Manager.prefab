@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2077149332}
   - component: {fileID: 7732695143958914052}
   - component: {fileID: 1645868119616736741}
+  - component: {fileID: 2620198158336260597}
   m_Layer: 0
   m_Name: Watchers
   m_TagString: Untagged
@@ -153,6 +154,26 @@ MonoBehaviour:
     Reactions:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &2620198158336260597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077149330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dc0a81b74c8fb4cabe9f4f6fbf3e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DataWatcher:
+    Modifiers:
+      m_PersistentCalls:
+        m_Calls: []
+    Reactions:
+      m_PersistentCalls:
+        m_Calls: []
+  PlayerFields: {fileID: 0}
 --- !u!1 &4062185834906769548
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayHeight: -0.8
+  PlayerManager: {fileID: 0}
 --- !u!114 &7460161483919418682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetStackVisual: {fileID: 0}
+  PlayerManager: {fileID: 0}
 --- !u!1001 &4062185835167544234
 PrefabInstance:
   m_ObjectHideFlags: 0

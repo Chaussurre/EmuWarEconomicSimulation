@@ -17,6 +17,8 @@ namespace Tabletop.Standard
             PlayerManager = playerManager;
         }
 
+        public static implicit operator int(Player player) => player.playerID;
+
         public bool PlayCard(int CardID) => PlayerManager.PlayCard(this, CardID);
 
         public bool Attack(int AttackerID, int TargetID) => PlayerManager.AttackCard(this, AttackerID, TargetID);

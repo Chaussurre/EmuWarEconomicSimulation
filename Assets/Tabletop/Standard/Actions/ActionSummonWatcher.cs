@@ -18,11 +18,7 @@ namespace Tabletop.Standard
 
         protected override void Apply(SummonData actionData)
         {
-            CardStack.CardPosition topPos = new()
-            {
-                stack = Stack,
-                index = null,
-            };
+            CardStack.CardPosition topPos = new(Stack);
 
             if (actionData.CardID.HasValue)
             {

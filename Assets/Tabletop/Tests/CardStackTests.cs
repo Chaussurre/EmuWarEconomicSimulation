@@ -22,7 +22,6 @@ namespace Tabletop.Tests
                 CardID = 3,
                 CardModelID = 3,
                 data = 300,
-                hidden = false,
             };
 
             // Create a new instance of CardStack and initialize card instances for testing
@@ -33,21 +32,18 @@ namespace Tabletop.Tests
                 {
                     CardModelID = 0,
                     CardID = 0,
-                    hidden = false,
                     data = 0
                 },
                 new()
                 {
                     CardModelID = 1,
                     CardID = 1,
-                    hidden = true,
                     data = 100
                 },
                 new()
                 {
                     CardModelID = 2,
                     CardID = 2,
-                    hidden = false,
                     data = 200
                 }
             };

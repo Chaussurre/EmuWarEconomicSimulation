@@ -45,7 +45,7 @@ namespace Tabletop.Standard
             if (CurrentVisual)
                 return;
 
-            CurrentVisual = data.VisualManager.CreateUntrackedVisual(data.Target.CardID);
+            CurrentVisual = data.VisualManager.CreateUntrackedVisual(data.TargetInstance);
             (CurrentVisual as CardVisual).canvas.sortingLayerID = displayedLayer.id;
             CurrentVisual.enabled = false;
             CurrentVisual.transform.parent = transform;

@@ -48,7 +48,6 @@ namespace Tabletop.Tests
             {
                 CardModelID = 0,
                 CardID = 1,
-                hidden = false,
             };
 
             var result = cardPool.GetCard(instance);

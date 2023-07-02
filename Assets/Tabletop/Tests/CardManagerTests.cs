@@ -144,8 +144,8 @@ namespace Tabletop.Tests
         public void MoveCard()
         {
             // Arrange
-            var cardInstance = cardManager.CreateInstance(Card1, new() { stack = Stack1 });
-            var destinationPosition = new CardStack<int>.CardPosition() { stack = Stack2 };
+            var cardInstance = cardManager.CreateInstance(Card1, new(Stack1));
+            var destinationPosition = new CardStack<int>.CardPosition(Stack2);
 
             // Assert
             Assert.IsTrue(cardManager.MoveCard(cardInstance.Value.CardID, destinationPosition));

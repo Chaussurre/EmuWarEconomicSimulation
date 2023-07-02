@@ -10,8 +10,7 @@ namespace Tabletop
         {
             public int CardModelID;
             public int CardID;
-            public bool hidden;
-            public PlayerManager.PlayerMask VisibleMask;
+            public PlayerMask VisibleMask;
             public TCardData data;
         }
 
@@ -24,6 +23,7 @@ namespace Tabletop
             var visual = Instantiate(VisualPrefab);
             visual.UpdateData(Card.data);
             visual.CardID = Card.CardID;
+
             return visual;
         }
     }

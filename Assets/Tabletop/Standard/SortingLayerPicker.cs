@@ -13,7 +13,11 @@ namespace Tabletop.Standard
     {
         public int index;
 
-        public int id => SortingLayer.layers[index].id;
+        public int id => layer.id;
+
+        public SortingLayer layer => SortingLayer.layers[index];
+
+        public static implicit operator SortingLayer(SortingLayerPicker sortingLayerPicker) => sortingLayerPicker.layer;
     }
 
 #if UNITY_EDITOR

@@ -709,6 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedLerp: 10
   CardCollider: {fileID: 5916696804830225471}
+  visualBody: {fileID: 6911715629238991102}
   canvas: {fileID: 5006077712332288989}
   TextHp: {fileID: 4871489506763126879}
   TextAttack: {fileID: 6879422546899999945}

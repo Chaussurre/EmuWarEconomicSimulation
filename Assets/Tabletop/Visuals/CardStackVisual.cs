@@ -19,13 +19,14 @@ namespace Tabletop
         [SerializeField] protected DisplayStyle Style;
         [SerializeField] protected float FixedSpacing;
         [SerializeField] protected int margins;
+        [SerializeField] protected bool DisplayHidden;
 
         private List<CardVisual<TCardData>> CardVisuals = new();
         private HashSet<CardVisual<TCardData>> UncontroledCards = new();
 
         [SerializeField] private Vector2 Size;
 
-        private void Start()
+        private void Awake()
         {
             CardManager.VisualManager.RegisterStack(CardStack, this);
         }
@@ -39,15 +40,15 @@ namespace Tabletop
 
         public int Count => CardVisuals.Count;
 
-        public void InsertCard(Card<TCardData>.CardInstance card, int index)
+        public void InsertCard(Card<TCardData>.CardInstance card, int index, PlayerMask? Visibility = null)
         {
-            CardVisuals.Insert(index, CardManager.VisualManager.GetVisual(card));
+            CardVisuals.Insert(index, CardManager.VisualManager.GetVisual(card, Visibility));
             CardVisuals[index].UpdateData(card.data);
         }
 
-        public void SetCard(Card<TCardData>.CardInstance card, int index)
+        public void SetCard(Card<TCardData>.CardInstance card, int index, PlayerMask? Visibility = null)
         {
-            CardVisuals[index] = CardManager.VisualManager.GetVisual(card);
+            CardVisuals[index] = CardManager.VisualManager.GetVisual(card, Visibility);
             CardVisuals[index].UpdateData(card.data);
         }
 

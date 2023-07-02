@@ -14,6 +14,12 @@ namespace Tabletop
             public CardStack<TCardData> stack;
             public int? index;
 
+            public CardPosition(CardStack<TCardData> stack, int? index = null)
+            {
+                this.stack = stack;
+                this.index = index;
+            }
+
             public Card<TCardData>.CardInstance? GetCard()
             {
                 return stack.GetCard(index ?? stack.Size - 1);

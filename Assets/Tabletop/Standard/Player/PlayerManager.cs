@@ -50,6 +50,11 @@ namespace Tabletop.Standard
             return IsActionValid(data, AttackWatcher);
         }
 
+        public void PlayerDraw(int player)
+        {
+            CardManager.ActionsManager.AddAction(ActionDrawWatcher.Draw(Players[player], 1));
+        }
+
         public struct PlayData : IActionData
         {
             public bool isActionAllowed;

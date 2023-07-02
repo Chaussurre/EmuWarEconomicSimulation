@@ -21,6 +21,7 @@ namespace Tabletop
         public struct CardInteractionData
         {
             public CardVisual<TCardData> Target;
+            public Card<TCardData>.CardInstance TargetInstance;
 
             public ClickStatus LeftClickStatus;
             public ClickStatus RightClickStatus;
@@ -84,8 +85,10 @@ namespace Tabletop
             UpdateClick(0);
             UpdateClick(1);
             UpdateTarget(HoverTarget);
-            if (interactionData.Target != null)
+            if (interactionData.Target != null && CardManager.VisualManager.LockMouseHandler(this))
                 OnCardInteract?.Invoke(interactionData);
+            else
+                CardManager.VisualManager.UnlockMouseHandler(this);
 
             foreach (var cardVisual in StackVisual)
                 if (cardVisual != interactionData.Target)
@@ -95,7 +98,17 @@ namespace Tabletop
         private void UpdateTarget(CardVisual<TCardData> hoverTarget)
         {
             if (!interactionData.isAnythingHappening())
+            {
+                if (hoverTarget)
+                {
+                    var card = CardManager.GetCardInstance(hoverTarget.CardID);
+                    if (!card.HasValue)
+                        return;
+                    interactionData.TargetInstance = card.Value;
+                }
+
                 interactionData.Target = hoverTarget;
+            }
         }
 
         private void UpdateHover(CardVisual<TCardData> HoverTarget)
@@ -119,22 +132,16 @@ namespace Tabletop
 
         private void UpdateClick(int click)
         {
-            ClickStatus clickValue;
+            var clickValue = click == 0 ? interactionData.LeftClickStatus : interactionData.RightClickStatus;
 
-            if(interactionData.isClicking(click))
-            {
+            if (clickValue == ClickStatus.Grab)
                 clickValue = ClickStatus.Hold;
-
-                if (!Input.GetMouseButton(click))
-                    clickValue = ClickStatus.Drop;
-            }
-            else
-            {
+            else if (clickValue == ClickStatus.Hold && !Input.GetMouseButton(click))
+                clickValue = ClickStatus.Drop;
+            else if (clickValue == ClickStatus.Drop)
                 clickValue = ClickStatus.Nothing;
-
-                if (interactionData.isHovered() && Input.GetMouseButton(click))
-                    clickValue = ClickStatus.Grab;
-            }
+            else if (clickValue == ClickStatus.Nothing && interactionData.isHovered() && Input.GetMouseButtonDown(click))
+                clickValue = ClickStatus.Grab;
 
             if (click == 0)
                 interactionData.LeftClickStatus = clickValue;
