@@ -1,5 +1,6 @@
 using Mirror;
 using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Tabletop.Standard
@@ -12,6 +13,7 @@ namespace Tabletop.Standard
         public int Hp;
         public int Attack;
         public int Tokens;
+        [HideInInspector] public int Owner;
     }
 
     public class Card : Card<CardData>
@@ -21,6 +23,10 @@ namespace Tabletop.Standard
         public UnityEvent<CardManager<CardData>, CardInstance> OnPlay = new();
 
         public UnityEvent<CardManager<CardData>, CardInstance> OnSummon = new();
+
+        public UnityEvent<CardManager<CardData>, CardData> OnDeath = new();
+
+        public UnityEvent<CardManager<CardData>, CardData> OnRemoved = new();
     }
 
     public static class CardInstanceReaderWriter
@@ -32,6 +38,7 @@ namespace Tabletop.Standard
             writer.WriteInt(data.Hp);
             writer.WriteInt(data.Attack);
             writer.WriteInt(data.Tokens);
+            writer.WriteInt(data.Owner);
         }
 
         public static CardData ReadCardData(this NetworkReader reader)
@@ -43,6 +50,7 @@ namespace Tabletop.Standard
                 Hp = reader.ReadInt(),
                 Attack = reader.ReadInt(),
                 Tokens = reader.ReadInt(),
+                Owner = reader.ReadInt(),
             };
         }
 

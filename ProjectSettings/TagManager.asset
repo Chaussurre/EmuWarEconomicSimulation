@@ -47,7 +47,7 @@ TagManager:
   - name: Cards
     uniqueID: 1168119063
     locked: 0
-  - name: Zoomed Cards
+  - name: Manipulated Cards
     uniqueID: 2423582985
     locked: 0
   - name: Effects

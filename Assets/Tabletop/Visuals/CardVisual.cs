@@ -9,7 +9,7 @@ namespace Tabletop
         [SerializeField] private float speedLerp;
         [SerializeField] private Collider2D CardCollider;
         [SerializeField] private GameObject visualBody;
-        public bool isHidden;
+        public bool isHidden { get; internal set; }
 
         public int CardID { get; internal set; }
 

@@ -13,7 +13,7 @@ namespace Tabletop.Standard
         public bool ShowOnRight;
         public SortingLayerPicker displayedLayer;
 
-        private CardVisual<CardData> CurrentVisual;
+        private CardVisual CurrentVisual;
         private bool locked;
         private bool lockLocker; // the lock on the lock ... when true can't change the value of locked
         private float timer;
@@ -45,12 +45,12 @@ namespace Tabletop.Standard
             if (CurrentVisual)
                 return;
 
-            CurrentVisual = data.VisualManager.CreateUntrackedVisual(data.TargetInstance);
-            (CurrentVisual as CardVisual).canvas.sortingLayerID = displayedLayer.id;
+            var position = FindPos(data.Target as CardVisual);
+            CurrentVisual = data.VisualManager.CreateUntrackedVisual(data.TargetInstance, position) as CardVisual;
+            CurrentVisual.canvas.sortingLayerID = displayedLayer.id;
             CurrentVisual.enabled = false;
             CurrentVisual.transform.parent = transform;
             CurrentVisual.transform.localScale *= ZoomFactor;
-            CurrentVisual.transform.position = FindPos(data.Target);
         }
 
         private void HandleLock(CardStackVisualHandler<CardData>.CardInteractionData data)
@@ -79,7 +79,7 @@ namespace Tabletop.Standard
             }
         }
 
-        Vector3 FindPos(CardVisual<CardData> original)
+        Vector3 FindPos(CardVisual original)
         {
             var camera = Camera.main;
             var screenHalfSize = new Vector3(camera.orthographicSize * camera.aspect, camera.orthographicSize);
@@ -88,7 +88,7 @@ namespace Tabletop.Standard
             var cameraLeftBottom = camera.transform.position - screenHalfSize;
             var cameraTopRight = camera.transform.position + screenHalfSize;
 
-            var HalfSize = CurrentVisual.Bounds.size / 2;
+            var HalfSize = original.Bounds.size / 2;
             var halfBigSize = HalfSize * ZoomFactor;
             Vector3 dir = ShowOnRight ? Vector3.right : Vector3.left;
             var targetPos = original.transform.position + dir * (HalfSize.x + halfBigSize.x + Margin);

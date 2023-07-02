@@ -249,7 +249,8 @@ MonoBehaviour:
   Style: 2
   FixedSpacing: 1.2
   margins: 0
-  DisplayHidden: 0
+  CardOnTopIsShownFirst: 1
+  OnlyShowTop: 0
   Size: {x: 10, y: 0}
 --- !u!114 &270430956
 MonoBehaviour:
@@ -608,7 +609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -877,9 +878,10 @@ MonoBehaviour:
   CardManager: {fileID: 4062185834866305258}
   CardStack: {fileID: 1479513455}
   Style: 2
-  FixedSpacing: 0
+  FixedSpacing: 1.2
   margins: 0
-  DisplayHidden: 0
+  CardOnTopIsShownFirst: 0
+  OnlyShowTop: 1
   Size: {x: 13, y: 0}
 --- !u!114 &1479513454
 MonoBehaviour:
@@ -1164,7 +1166,8 @@ MonoBehaviour:
   Style: 2
   FixedSpacing: 1.2
   margins: 1
-  DisplayHidden: 0
+  CardOnTopIsShownFirst: 0
+  OnlyShowTop: 0
   Size: {x: 5, y: 0}
 --- !u!114 &2093185223
 MonoBehaviour:
@@ -1247,6 +1250,14 @@ PrefabInstance:
       propertyPath: PlayerFields
       value: 
       objectReference: {fileID: 1628277465}
+    - target: {fileID: 3322021644322972965, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+      propertyPath: MovingLayer.index
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322021644322972965, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+      propertyPath: NonMovingLayer.index
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4062185834906769548, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
       propertyPath: m_Name
       value: Card Manager

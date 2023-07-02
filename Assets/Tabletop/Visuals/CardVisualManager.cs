@@ -16,9 +16,9 @@ namespace Tabletop
         private CardManager<TCardData> CardManager;
 
         private Dictionary<int, CardVisual<TCardData>> VisualTracker = new();
-        private Dictionary<CardStack<TCardData>, CardStackVisual<TCardData>> StackVisuals = new();
+        private HashSet<CardStackVisual<TCardData>> StackVisuals = new();
 
-        private List<int> DumpBuffer = new();
+        private HashSet<int> DumpBuffer = new();
 
         private CardStackVisualHandler<TCardData> HandlerMouseLock; //only one handler can use the mouse
 
@@ -33,24 +33,8 @@ namespace Tabletop
             foreach(var cardID in VisualTracker.Keys)
                 DumpBuffer.Add(cardID);
 
-            foreach (var stack in StackVisuals.Keys)
-            {
-                var stackVisual = StackVisuals[stack];
-
-                for (int i = 0; i < stack.Size; i++)
-                {
-                    var card = stack.GetCard(i);
-
-                    if (i >= stackVisual.Count)
-                        stackVisual.InsertCard(card.Value, i, new(PlayerPointOfView));
-                    else
-                        stackVisual.SetCard(card.Value, i, new(PlayerPointOfView));
-                    DumpBuffer.Remove(card.Value.CardID);
-                }
-
-                for (int i = stackVisual.Count - 1; i >= stack.Size; i--)
-                    stackVisual.RemoveCard(i);
-            }
+            foreach (var stackVis in StackVisuals)
+                stackVis.DumpVisuals(DumpBuffer, new(PlayerPointOfView));
 
             foreach (var cardID in DumpBuffer)
                 DeleteVisual(cardID);
@@ -64,9 +48,11 @@ namespace Tabletop
             cardManager.ActionsManager.OnResolved.AddListener(OnResolve);
         }
 
-        public CardVisual<TCardData> GetVisual(Card<TCardData>.CardInstance card, PlayerMask? Visibility = null)
+        public CardVisual<TCardData> GetVisual(Card<TCardData>.CardInstance card,
+                                               PlayerMask? Visibility = null,
+                                               Vector3? DefaultPosition = null)
         {
-            var position = CreationPosition;
+            var position = DefaultPosition ?? CreationPosition;
 
             if (VisualTracker.TryGetValue(card.CardID, out var visual))
             {
@@ -90,20 +76,22 @@ namespace Tabletop
         }
 
         public CardVisual<TCardData> CreateUntrackedVisual(Card<TCardData>.CardInstance card, 
-            Vector3? position = null,
+            Vector3? DefaultPosition = null,
             PlayerMask? Visibility = null)
         {
             if (!card.VisibleMask * (Visibility ?? PlayerMask.All))
             {
                 var hiddenModel = CardManager.CardPool.GetHiddenCardTemplate();
                 var hiddenVisual = hiddenModel.CreateVisual(card);
+                hiddenVisual.transform.position = DefaultPosition ?? CreationPosition;
+                hiddenVisual.isHidden = true;
 
                 return hiddenVisual;
             }
 
             var model = CardManager.CardPool.GetCard(card);
             var createdVisual = model.CreateVisual(card);
-            createdVisual.transform.position = position ?? CreationPosition;
+            createdVisual.transform.position = DefaultPosition ?? CreationPosition;
 
             return createdVisual;
         }
@@ -116,9 +104,9 @@ namespace Tabletop
             VisualTracker.Remove(CardID);
         }
 
-        public void RegisterStack(CardStack<TCardData> stack, CardStackVisual<TCardData> stackVisual)
+        public void RegisterStack(CardStackVisual<TCardData> stackVisual)
         {
-            StackVisuals.Add(stack, stackVisual);
+            StackVisuals.Add(stackVisual);
         }
 
         public bool LockMouseHandler(CardStackVisualHandler<TCardData> Handler)
