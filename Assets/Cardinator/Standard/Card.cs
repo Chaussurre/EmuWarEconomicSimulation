@@ -24,9 +24,9 @@ namespace Cardinator.Standard
 
         public UnityEvent<CardManager<CardData>, CardInstance> OnSummon = new();
 
-        public UnityEvent<CardManager<CardData>, CardData> OnDeath = new();
+        public UnityEvent<CardManager<CardData>, CardInstance> OnDeath = new();
 
-        public UnityEvent<CardManager<CardData>, CardData> OnRemoved = new();
+        public UnityEvent<CardManager<CardData>, CardInstance> OnRemoved = new();
     }
 
     public static class CardInstanceReaderWriter

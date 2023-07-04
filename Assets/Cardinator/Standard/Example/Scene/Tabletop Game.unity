@@ -923,6 +923,7 @@ MonoBehaviour:
   - {fileID: 6728816379730957392, guid: 1ed4a86a8ee090e41b44503e6d4dafc7, type: 3}
   - {fileID: 6728816379730957392, guid: 6459e7b696e515746ae15ab49e7cd9c0, type: 3}
   - {fileID: 6728816379730957392, guid: 6459e7b696e515746ae15ab49e7cd9c0, type: 3}
+  - {fileID: 1113990375451941287, guid: 269a117ebb3c2344b80a3b5b245f704e, type: 3}
   CreateVisible: 0
 --- !u!1 &1628277463
 GameObject:
@@ -1353,6 +1354,14 @@ PrefabInstance:
       propertyPath: DataWatcher.Modifiers.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8788403214041120605, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+      propertyPath: CardPool.Cards.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788403214041120605, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
+      propertyPath: CardPool.Cards.Array.data[4]
+      value: 
+      objectReference: {fileID: 1113990375451941287, guid: 269a117ebb3c2344b80a3b5b245f704e, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 33cbc2d86afb35545a95f608a11ecb7d, type: 3}
