@@ -15,5 +15,14 @@ namespace Cardinator.Standard
         }
 
         public List<PlayerField> Fields;
+
+        internal bool IsOnField(int CardID)
+        {
+            foreach (var field in Fields)
+                if (field.Field.Contains(CardID))
+                    return true;
+
+            return false;
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace Cardinator.Standard
     {
         List<Player> Players = new();
         public CardManager CardManager;
+        public PlayField PlayField;
 
         public Player ActivePlayer => Players[0];
 
@@ -34,7 +35,7 @@ namespace Cardinator.Standard
 
         public bool AttackCard(Player player, int AttackerID, int TargetID)
         {
-            var data = AttackData.Create(player, AttackerID, TargetID, CardManager);
+            var data = AttackData.Create(player, AttackerID, TargetID, CardManager, PlayField);
             return DoAction(data, AttackWatcher, CardManager);
         }
 
@@ -46,7 +47,7 @@ namespace Cardinator.Standard
 
         public bool IsAttackCardValid(Player player, int AttackerID, int TargetID)
         {
-            var data = AttackData.Create(player, AttackerID, TargetID, CardManager);
+            var data = AttackData.Create(player, AttackerID, TargetID, CardManager, PlayField);
             return IsActionValid(data, AttackWatcher);
         }
 
@@ -90,20 +91,35 @@ namespace Cardinator.Standard
             public Player player;
 
 
-            public static AttackData Create<TCardData>(Player player, int AttackerID, int TargetID, CardManager<TCardData> cardManager)
+            public static AttackData Create<TCardData>(Player player,
+                int AttackerID, 
+                int TargetID, 
+                CardManager<TCardData> cardManager, 
+                PlayField playField)
                 where TCardData : struct
             {
                 var cardAttacker = cardManager.GetCardInstance(AttackerID);
                 var cardTarget = cardManager.GetCardInstance(TargetID);
 
-                bool validAttacker = cardAttacker?.VisibleMask * player.playerID ?? false;
+                var isActionAllowed = true;
+
+                if (!cardAttacker.HasValue || !cardTarget.HasValue)
+                    isActionAllowed = false;
+                else
+                {
+                    if (!playField.IsOnField(AttackerID) || !playField.IsOnField(TargetID))
+                        isActionAllowed = false;
+                    if (cardAttacker.Value.CardID == cardTarget.Value.CardID)
+                        isActionAllowed = false;
+                }
+                
 
                 return new()
                 {
                     AttackerID = AttackerID,
                     TargetID = TargetID,
                     player = player,
-                    isActionAllowed = validAttacker && cardTarget.HasValue,
+                    isActionAllowed = isActionAllowed,
                 };
             }
 
